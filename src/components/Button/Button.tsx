@@ -1,8 +1,44 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text, ActivityIndicator, TouchableOpacity} from 'react-native';
+import {ButtonProps} from './Button.types';
+import styles from './Button.style';
 
-const Button = () => {
-  return null;
+const Button = ({
+  text,
+  loading,
+  testID,
+  onPress,
+  disabled,
+  ...rest
+}: ButtonProps) => {
+  const styleKey = disabled ? 'disabled' : 'default';
+  const handlePress = () => {
+    if (loading || disabled || !onPress) {
+      return;
+    }
+
+    onPress();
+  };
+
+  return (
+    <TouchableOpacity
+      testID={`${testID}_button_touchable`}
+      style={styles[styleKey].container}
+      disabled={loading || disabled}
+      onPress={handlePress}
+      {...rest}>
+      {loading ? (
+        <ActivityIndicator
+          testID={`${testID}_button_loading_indicator`}
+          color="white"
+        />
+      ) : (
+        <Text testID={`${testID}_button_text`} style={styles[styleKey].text}>
+          {text}
+        </Text>
+      )}
+    </TouchableOpacity>
+  );
 };
 
 export default Button;

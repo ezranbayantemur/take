@@ -6,7 +6,9 @@ let wrapper: ReturnType<typeof render>;
 
 describe('Button unit tests', () => {
   beforeEach(() => {
-    wrapper = render(<Button testID="basetest" text="test title" />);
+    wrapper = render(
+      <Button testID="basetest" text="test title" onPress={jest.fn} />,
+    );
   });
 
   it('should render correctly', () => {
@@ -19,10 +21,24 @@ describe('Button unit tests', () => {
   });
 
   it('should render loading indicator if given', () => {
-    const _wrapper = render(<Button testID="basetest" text="" loading />);
+    const _wrapper = render(
+      <Button testID="basetest" text="" loading onPress={jest.fn} />,
+    );
 
     const loading = _wrapper.queryByTestId('basetest_button_loading_indicator');
     expect(loading).not.toBeNull();
+  });
+
+  it('should trigger onPress correctly', () => {
+    const mockOnPress = jest.fn();
+    const _wrapper = render(
+      <Button testID="basetest" text="" onPress={mockOnPress} />,
+    );
+
+    const touchable = _wrapper.getByTestId('basetest_button_touchable');
+    fireEvent(touchable, 'onPress');
+
+    expect(mockOnPress).toBeCalled();
   });
 
   it('should not trigger onPress on loading', () => {
