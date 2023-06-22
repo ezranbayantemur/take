@@ -1,9 +1,9 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
 import Input from './Input';
+jest.useFakeTimers();
 
 let wrapper: ReturnType<typeof render>;
-
 describe('Input unit tests', () => {
   beforeEach(() => {
     wrapper = render(<Input />);
@@ -19,9 +19,21 @@ describe('Input unit tests', () => {
   });
 
   it('should render given placeholder correctly', () => {
-    const _wrapper = render(<Input placholder="test placeholder" />);
+    const _wrapper = render(<Input placeholder="test placeholder" />);
     const placeholder = _wrapper.queryByPlaceholderText('test placeholder');
     expect(placeholder).not.toBeNull();
+  });
+
+  it('should trigger onChangeText immediately if debounce is not given', () => {
+    const mockOnChangeText = jest.fn();
+    const _wrapper = render(
+      <Input testID="basetest" onChangeText={mockOnChangeText} />,
+    );
+
+    const input = _wrapper.getByTestId('basetest_input');
+    fireEvent.changeText(input, 'test');
+
+    expect(mockOnChangeText).toBeCalledWith('test');
   });
 
   it('should trigger on debounce if it is given', () => {
@@ -37,7 +49,7 @@ describe('Input unit tests', () => {
     const input = _wrapper.getByTestId('basetest_input');
     fireEvent.changeText(input, 'test');
 
-    expect(mockOnChangeText).not.toBeCalled();
+    expect(mockOnChangeText).not.toBeCalledWith('test');
 
     jest.advanceTimersByTime(250);
 

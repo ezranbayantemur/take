@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input unit tests should render correctly 1`] = `null`;
+exports[`Input unit tests should render correctly 1`] = `
+<TextInput
+  placeholder="Ürün ara..."
+  testID="undefined_input"
+/>
+`;

@@ -1,8 +1,10 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "paths": {
-      "@style": ["src/style"]
+      "@style": ["src/style"],
+      "@components": ["src/components"]
     }
   }
 }

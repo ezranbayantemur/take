@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button unit tests should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#DB040E",
+      "borderRadius": 10,
+      "margin": 8,
+      "opacity": 1,
+      "padding": 16,
+    }
+  }
+  testID="basetest_button_touchable"
+>
+  <Text
+    style={
+      {
+        "color": "#FBFBFB",
+        "fontFamily": "Lato-Bold",
+        "fontSize": 15,
+      }
+    }
+    testID="basetest_button_text"
+  >
+    test title
+  </Text>
+</View>
+`;
