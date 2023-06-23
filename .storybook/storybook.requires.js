@@ -48,7 +48,9 @@ try {
 const getStories = () => {
   return {
     "./src/components/Button/Button.stories.tsx": require("../src/components/Button/Button.stories.tsx"),
+    "./src/components/CategoryCard/CategoryCard.stories.tsx": require("../src/components/CategoryCard/CategoryCard.stories.tsx"),
     "./src/components/Input/Input.stories.tsx": require("../src/components/Input/Input.stories.tsx"),
+    "./src/components/ShowCaseProductCard/ShowCaseProductCard.stories.tsx": require("../src/components/ShowCaseProductCard/ShowCaseProductCard.stories.tsx"),
   };
 };
 

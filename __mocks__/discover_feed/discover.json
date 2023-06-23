@@ -1,0 +1,82 @@
+[
+  {
+    "category_title": "Cep Telefonu",
+    "showcase_products": [
+      {
+        "id": 1000,
+        "product_name": "iPhone 14 Pro",
+        "product_image": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png",
+        "seller_name": "Apple",
+        "product_price": "42.000"
+      },
+      {
+        "id": 1002,
+        "product_name": "ThinkPhone",
+        "product_image": "https://motorolaus.vtexassets.com/arquivos/ids/162812/thinkphone-pdp-ecom-render-1-carbon-black-n5re8wvk.png?v=638084623518870000",
+        "seller_name": "Motorola",
+        "product_price": "17.500"
+      },
+      {
+        "id": 1004,
+        "product_name": "Galaxy S23 Ultra",
+        "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
+        "seller_name": "Samsung",
+        "product_price": "18.000",
+        "description": "Cillum culpa adipisicing nisi veniam. Officia labore adipisicing in officia quis dolor cillum amet incididunt veniam dolore fugiat exercitation. Sit dolore id dolore esse. Nostrud in ipsum ex ad labore irure ad. Ex cupidatat consequat pariatur tempor et fugiat ipsum reprehenderit in nostrud. Fugiat irure incididunt cupidatat dolor Lorem."
+      }
+    ]
+  },
+  {
+    "category_title": "Kadın Giyim",
+    "showcase_products": [
+      {
+        "id": 2000,
+        "product_name": "LA Club Silver",
+        "product_image": "https://sc04.alicdn.com/kf/Hc7634a7a6e384ba691728a83f9f9f8d3Z.png",
+        "seller_name": "A&A",
+        "product_price": "3.750"
+      },
+      {
+        "id": 2003,
+        "product_name": "Bahar Gülü Elbise",
+        "product_image": "https://cdn11.bigcommerce.com/s-sdpah020b3/images/stencil/500x659/products/14355/24095/f91c32a1Charlotte_Jumpsuit_in_Abstract_Floral-removebg__90477.1686586202.png?c=2",
+        "seller_name": "Boyner Outfit",
+        "product_price": "2.100"
+      },
+      {
+        "id": 2004,
+        "product_name": "Pink S Short",
+        "product_image": "https://mooseclothingcompany.com/wp-content/uploads/2022/09/Chino-Short-Moose-Clothing-Company-433x652.png",
+        "seller_name": "Moose CC",
+        "product_price": "1.300",
+        "description": "Reprehenderit tempor consectetur eiusmod pariatur consectetur elit. Laborum sint ex ex veniam voluptate ipsum eiusmod adipisicing ex consectetur excepteur duis nulla elit. Lorem quis sit qui ex non esse proident incididunt."
+      }
+    ]
+  },
+  {
+    "category_title": "Erkek Giyim",
+    "showcase_products": [
+      {
+        "id": 3000,
+        "product_name": "Blackout Jean 34",
+        "product_image": "https://locusfashion.com/wp-content/uploads/2021/01/favpng_fashion-model-hugo-boss-pinpoint-resource-of-oklahoma-city.png",
+        "seller_name": "Locus",
+        "product_price": "950"
+      },
+      {
+        "id": 3003,
+        "product_name": "RGX Casual Shirt",
+        "product_image": "https://cdn11.bigcommerce.com/s-sdpah020b3/images/stencil/500x659/products/14355/24095/f91c32a1Charlotte_Jumpsuit_in_Abstract_Floral-removebg__90477.1686586202.png?c=2",
+        "seller_name": "Fodrox",
+        "product_price": "1.350"
+      },
+      {
+        "id": 3004,
+        "product_name": "Turuncu NO 1 Spor T-s",
+        "product_image": "https://isteam.wsimg.com/ip/a8efe83b-6857-477d-9d0f-f13ca0229a20/ols/4055_original/:/rs=w:600,h:600",
+        "seller_name": "f-LEX",
+        "product_price": "600"
+      }
+    ]
+  }
+]

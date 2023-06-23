@@ -5,7 +5,9 @@
     "paths": {
       "@style": ["src/style"],
       "@components": ["src/components"],
-      "@route": ["src/router/routes.ts"],
+      "@types": ["src/types"],
+      "@mocks/*": ["__mocks__/*"],
+      "@route": ["src/router/routes.ts"]
     }
   }
 }

@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowCaseProductCard unit tests should render correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+    }
+  }
+  testID="test_showcasecard_touchable"
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png",
+      }
+    }
+    style={
+      {
+        "height": 150,
+        "width": 150,
+        "zIndex": 1,
+      }
+    }
+  />
+  <View
+    style={
+      {
+        "alignSelf": "center",
+        "bottom": 10,
+        "justifyContent": "center",
+        "position": "absolute",
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "#DB040E",
+          "borderRadius": 10,
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </View>
+  <Text
+    style={
+      {
+        "fontFamily": "Lato-Regular",
+        "fontSize": 13,
+      }
+    }
+  >
+    iPhone 14 Pro
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#BDBDBD",
+        "fontFamily": "Lato-Bold",
+        "fontSize": 13,
+      }
+    }
+  >
+    Apple
+  </Text>
+  <Text
+    style={
+      {
+        "fontFamily": "Lato-Bold",
+      }
+    }
+  >
+    42.000
+     TL
+  </Text>
+</View>
+`;

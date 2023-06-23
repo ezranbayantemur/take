@@ -7,7 +7,7 @@ import App from './src/App';
 import StorybookApp from './.storybook';
 import {name as appName} from './app.json';
 
-const isStorybook = false;
+const isStorybook = true;
 
 AppRegistry.registerComponent(appName, () =>
   isStorybook ? StorybookApp : App,

@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryCard unit tests should render correctly 1`] = `
+<View>
+  <Text
+    style={
+      {
+        "fontFamily": "Lato-BlackItalic",
+        "fontSize": 32,
+      }
+    }
+  >
+    Cep Telefonu
+  </Text>
+  <RCTScrollView
+    horizontal={true}
+    showsHorizontalScrollIndicator={false}
+  >
+    <View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+          }
+        }
+        testID="categorycard_0_showcasecard_touchable"
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            {
+              "uri": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png",
+            }
+          }
+          style={
+            {
+              "height": 150,
+              "width": 150,
+              "zIndex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "alignSelf": "center",
+              "bottom": 10,
+              "justifyContent": "center",
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#DB040E",
+                "borderRadius": 10,
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
+            {
+              "fontFamily": "Lato-Regular",
+              "fontSize": 13,
+            }
+          }
+        >
+          iPhone 14 Pro
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#BDBDBD",
+              "fontFamily": "Lato-Bold",
+              "fontSize": 13,
+            }
+          }
+        >
+          Apple
+        </Text>
+        <Text
+          style={
+            {
+              "fontFamily": "Lato-Bold",
+            }
+          }
+        >
+          42.000
+           TL
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+          }
+        }
+        testID="categorycard_1_showcasecard_touchable"
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            {
+              "uri": "https://motorolaus.vtexassets.com/arquivos/ids/162812/thinkphone-pdp-ecom-render-1-carbon-black-n5re8wvk.png?v=638084623518870000",
+            }
+          }
+          style={
+            {
+              "height": 150,
+              "width": 150,
+              "zIndex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "alignSelf": "center",
+              "bottom": 10,
+              "justifyContent": "center",
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#DB040E",
+                "borderRadius": 10,
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
+            {
+              "fontFamily": "Lato-Regular",
+              "fontSize": 13,
+            }
+          }
+        >
+          ThinkPhone
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#BDBDBD",
+              "fontFamily": "Lato-Bold",
+              "fontSize": 13,
+            }
+          }
+        >
+          Motorola
+        </Text>
+        <Text
+          style={
+            {
+              "fontFamily": "Lato-Bold",
+            }
+          }
+        >
+          17.500
+           TL
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+          }
+        }
+        testID="categorycard_2_showcasecard_touchable"
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            {
+              "uri": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
+            }
+          }
+          style={
+            {
+              "height": 150,
+              "width": 150,
+              "zIndex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "alignSelf": "center",
+              "bottom": 10,
+              "justifyContent": "center",
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#DB040E",
+                "borderRadius": 10,
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
+            {
+              "fontFamily": "Lato-Regular",
+              "fontSize": 13,
+            }
+          }
+        >
+          Galaxy S23 Ultra
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#BDBDBD",
+              "fontFamily": "Lato-Bold",
+              "fontSize": 13,
+            }
+          }
+        >
+          Samsung
+        </Text>
+        <Text
+          style={
+            {
+              "fontFamily": "Lato-Bold",
+            }
+          }
+        >
+          18.000
+           TL
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
