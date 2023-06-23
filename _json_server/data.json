@@ -1,0 +1,248 @@
+{
+  "users": [
+    {"id": 1, "username": "john", "password": "123"},
+    {"id": 2, "username": "jane", "password": "pass456"}
+  ],
+  "discover": [
+    {
+      "category_title": "Cep Telefonu",
+      "showcase_products": [
+        {
+          "id": 1000,
+          "product_name": "iPhone 14 Pro",
+          "product_image": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png",
+          "seller_name": "Apple",
+          "product_price": "42.000"
+        },
+        {
+          "id": 1002,
+          "product_name": "ThinkPhone",
+          "product_image": "https://motorolaus.vtexassets.com/arquivos/ids/162812/thinkphone-pdp-ecom-render-1-carbon-black-n5re8wvk.png?v=638084623518870000",
+          "seller_name": "Motorola",
+          "product_price": "17.500"
+        },
+        {
+          "id": 1004,
+          "product_name": "Galaxy S23 Ultra",
+          "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
+          "seller_name": "Samsung",
+          "product_price": "18.000",
+          "description": "Cillum culpa adipisicing nisi veniam. Officia labore adipisicing in officia quis dolor cillum amet incididunt veniam dolore fugiat exercitation. Sit dolore id dolore esse. Nostrud in ipsum ex ad labore irure ad. Ex cupidatat consequat pariatur tempor et fugiat ipsum reprehenderit in nostrud. Fugiat irure incididunt cupidatat dolor Lorem."
+        }
+      ]
+    },
+    {
+      "category_title": "Kadın Giyim",
+      "showcase_products": [
+        {
+          "id": 2000,
+          "product_name": "LA Club Silver",
+          "product_image": "https://sc04.alicdn.com/kf/Hc7634a7a6e384ba691728a83f9f9f8d3Z.png",
+          "seller_name": "A&A",
+          "product_price": "3.750"
+        },
+        {
+          "id": 2003,
+          "product_name": "Bahar Gülü Elbise",
+          "product_image": "https://cdn11.bigcommerce.com/s-sdpah020b3/images/stencil/500x659/products/14355/24095/f91c32a1Charlotte_Jumpsuit_in_Abstract_Floral-removebg__90477.1686586202.png?c=2",
+          "seller_name": "Boyner Outfit",
+          "product_price": "2.100"
+        },
+        {
+          "id": 2004,
+          "product_name": "Pink S Short",
+          "product_image": "https://mooseclothingcompany.com/wp-content/uploads/2022/09/Chino-Short-Moose-Clothing-Company-433x652.png",
+          "seller_name": "Moose CC",
+          "product_price": "1.300",
+          "description": "Reprehenderit tempor consectetur eiusmod pariatur consectetur elit. Laborum sint ex ex veniam voluptate ipsum eiusmod adipisicing ex consectetur excepteur duis nulla elit. Lorem quis sit qui ex non esse proident incididunt."
+        }
+      ]
+    },
+    {
+      "category_title": "Erkek Giyim",
+      "showcase_products": [
+        {
+          "id": 3000,
+          "product_name": "Blackout Jean 34",
+          "product_image": "https://locusfashion.com/wp-content/uploads/2021/01/favpng_fashion-model-hugo-boss-pinpoint-resource-of-oklahoma-city.png",
+          "seller_name": "Locus",
+          "product_price": "950"
+        },
+        {
+          "id": 3003,
+          "product_name": "RGX Casual Shirt",
+          "product_image": "https://cdn11.bigcommerce.com/s-sdpah020b3/images/stencil/500x659/products/14355/24095/f91c32a1Charlotte_Jumpsuit_in_Abstract_Floral-removebg__90477.1686586202.png?c=2",
+          "seller_name": "Fodrox",
+          "product_price": "1.350"
+        },
+        {
+          "id": 3004,
+          "product_name": "Turuncu NO 1 Spor T-s",
+          "product_image": "https://isteam.wsimg.com/ip/a8efe83b-6857-477d-9d0f-f13ca0229a20/ols/4055_original/:/rs=w:600,h:600",
+          "seller_name": "f-LEX",
+          "product_price": "600"
+        }
+      ]
+    }
+  ],
+  "products": {
+    "phone": [
+      {
+        "id": 1000,
+        "product_name": "iPhone 14 Pro",
+        "product_image": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png",
+        "seller_name": "Apple",
+        "product_price": "42.000",
+        "description": "Mollit nostrud pariatur elit sunt esse aliqua occaecat dolore consectetur amet nulla sit ipsum. Occaecat qui veniam anim duis anim proident est. Est laboris consequat laborum fugiat proident enim deserunt consectetur ipsum ullamco ipsum. Nostrud consequat irure excepteur ea do consequat enim non esse. Nulla ex veniam fugiat laboris tempor duis anim aliqua."
+      },
+      {
+        "id": 1001,
+        "product_name": "iPhone 12",
+        "product_image": "https://static.skyassets.com/contentstack/assets/blt143e20b03d72047e/bltab2d565224fbb987/6319db02937b9657b5f2b803/Carousel_iPhone14_Blue_Placement01-PreOrder.png",
+        "seller_name": "Apple",
+        "product_price": "20.000",
+        "description": "Esse laborum voluptate anim labore cupidatat nostrud voluptate sint mollit dolor in eu. Nulla velit proident eu fugiat ut aliqua nostrud qui irure. Magna reprehenderit pariatur dolor officia laborum elit cupidatat nulla do cupidatat anim. Veniam veniam excepteur anim excepteur. Dolor deserunt incididunt ex excepteur amet fugiat. Officia nulla cupidatat occaecat sint dolor ut ea cillum. Labore consequat nisi velit exercitation."
+      },
+      {
+        "id": 1002,
+        "product_name": "ThinkPhone",
+        "product_image": "https://motorolaus.vtexassets.com/arquivos/ids/162812/thinkphone-pdp-ecom-render-1-carbon-black-n5re8wvk.png?v=638084623518870000",
+        "seller_name": "Motorola",
+        "product_price": "17.500",
+        "description": "Adipisicing officia veniam mollit proident amet officia ex ea duis deserunt. Dolore incididunt veniam tempor non tempor do veniam. Enim nisi duis mollit nulla amet excepteur officia dolor eiusmod eiusmod labore."
+      },
+      {
+        "id": 1003,
+        "product_name": "RedMi Note 12",
+        "product_image": "https://i02.appmifile.com/373_operatorx_operatorx_opx/10/05/2023/657e399a69e188fb194c3804f33fb67d!380x380.png",
+        "seller_name": "Xiaomi",
+        "product_price": "13.750",
+        "description": "Nisi fugiat magna anim ea officia aliquip minim ipsum non laborum sunt. Duis fugiat cillum aliqua reprehenderit officia magna ut nisi nisi adipisicing. Fugiat tempor adipisicing nulla do quis mollit tempor laborum ad magna aliqua est consequat aute. Exercitation velit aliquip cillum laborum. Adipisicing eiusmod qui proident aliquip anim laboris voluptate enim. Officia ea id aliquip reprehenderit do deserunt amet sunt ea occaecat amet id magna."
+      },
+      {
+        "id": 1004,
+        "product_name": "Galaxy S23 Ultra",
+        "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
+        "seller_name": "Samsung",
+        "product_price": "18.000",
+        "description": "Cillum culpa adipisicing nisi veniam. Officia labore adipisicing in officia quis dolor cillum amet incididunt veniam dolore fugiat exercitation. Sit dolore id dolore esse. Nostrud in ipsum ex ad labore irure ad. Ex cupidatat consequat pariatur tempor et fugiat ipsum reprehenderit in nostrud. Fugiat irure incididunt cupidatat dolor Lorem."
+      },
+      {
+        "id": 1005,
+        "product_name": "Pixel 7",
+        "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Google_Pixel_7_lemongrass-full-product-front-600.png",
+        "seller_name": "Google",
+        "product_price": "12.350",
+        "description": "Deserunt sint enim Lorem ad exercitation sint ex pariatur ex mollit consectetur. Labore eu dolor ut proident in Lorem sint velit. Pariatur cupidatat Lorem officia dolore ea velit. Proident qui labore commodo nostrud enim deserunt aliqua dolor excepteur amet cillum ut. Id esse non cillum elit exercitation sunt veniam adipisicing sit. Et pariatur quis veniam nostrud proident veniam sint occaecat sit id dolor adipisicing."
+      },
+      {
+        "id": 1006,
+        "product_name": "Xperia 10 IV",
+        "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Sony_Xperia_10_IV_black-full-product-front-600.png",
+        "seller_name": "Sony",
+        "product_price": "15.000",
+        "description": "Culpa elit nisi sunt aliqua elit eu exercitation velit consectetur velit. Magna laborum qui laboris do tempor consequat Lorem irure nulla commodo deserunt. Voluptate officia labore consequat labore exercitation anim velit ipsum consectetur velit. Ipsum fugiat quis cillum eu Lorem consectetur tempor et irure. Mollit cupidatat veniam deserunt mollit pariatur et amet. In reprehenderit ad Lorem sunt et pariatur in nostrud in sint aliqua do non. Amet incididunt voluptate id mollit duis."
+      },
+      {
+        "id": 1007,
+        "product_name": "Razr 40 Ultra",
+        "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Motorola_Razr_40_Ultra_infinite_black-full-product-front-600-v2.png",
+        "seller_name": "Motorola",
+        "product_price": "12.400",
+        "description": "Officia aliquip enim veniam eu non dolore ipsum duis duis non nostrud. Ex consectetur pariatur quis elit dolore ad cillum deserunt proident aute. Amet ex anim commodo aliquip laboris qui cupidatat ullamco. Labore exercitation et occaecat anim minim reprehenderit. Anim minim Lorem deserunt Lorem culpa id magna elit. Nisi laborum qui consequat non aliquip adipisicing esse tempor qui irure deserunt ad tempor elit."
+      },
+      {
+        "id": 1008,
+        "product_name": "Magic4 PRO",
+        "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/HONOR_Magic4_PRO_black-full-product-front-600.png",
+        "seller_name": "HONOR",
+        "product_price": "10.250",
+        "description": "Laborum tempor sit irure laborum veniam incididunt exercitation esse in laboris culpa. Laboris duis eu esse nulla quis do nisi esse labore ea cupidatat tempor ad. Magna ut minim et commodo consequat ipsum. Proident laboris aute ut ex exercitation cupidatat do aliqua officia cupidatat non deserunt quis ea."
+      }
+    ],
+    "women_clothing": [
+      {
+        "id": 2000,
+        "product_name": "LA Club Silver",
+        "product_image": "https://sc04.alicdn.com/kf/Hc7634a7a6e384ba691728a83f9f9f8d3Z.png",
+        "seller_name": "A&A",
+        "product_price": "3.750",
+        "description": "Id aliquip velit minim id incididunt anim dolor. Labore esse et sit Lorem culpa voluptate fugiat minim. Fugiat fugiat est qui occaecat non mollit voluptate cillum. Cupidatat Lorem dolore cillum eu duis. Ullamco sit minim id eiusmod officia aute amet est labore quis dolor cupidatat esse. In magna proident tempor aute ut consectetur nisi commodo Lorem."
+      },
+      {
+        "id": 2001,
+        "product_name": "Yaprak Yeşili Bluz",
+        "product_image": "https://cdn11.bigcommerce.com/s-cy0zl7xv5x/images/stencil/500x659/products/3533/6454/5987171eGreen_Tiered_Sleeve_Ruffles_Top-removebg__39639.1686752025.png?c=1",
+        "seller_name": "Boyner",
+        "product_price": "850",
+        "description": "Eu ipsum ipsum consequat aliqua esse aliquip eu duis Lorem minim ad Lorem. Ea proident sunt ipsum ullamco dolore. Exercitation officia amet dolor eiusmod incididunt excepteur."
+      },
+      {
+        "id": 2002,
+        "product_name": "XMatch Jeans",
+        "product_image": "https://mdramain.com/wp-content/uploads/2020/11/hero.png",
+        "seller_name": "H&M",
+        "product_price": "1.200",
+        "description": "Dolore eiusmod magna sunt exercitation voluptate commodo consectetur ea proident sunt est occaecat ea deserunt. Exercitation enim nulla sit amet commodo labore ea officia cillum. Minim velit laboris id mollit. Id est enim tempor ipsum culpa. Cupidatat amet adipisicing nostrud veniam dolore ad laborum pariatur ex. Reprehenderit eu Lorem do non."
+      },
+      {
+        "id": 2003,
+        "product_name": "Bahar Gülü Elbise",
+        "product_image": "https://cdn11.bigcommerce.com/s-sdpah020b3/images/stencil/500x659/products/14355/24095/f91c32a1Charlotte_Jumpsuit_in_Abstract_Floral-removebg__90477.1686586202.png?c=2",
+        "seller_name": "Boyner Outfit",
+        "product_price": "2.100",
+        "description": "Consectetur sint esse deserunt occaecat aliquip quis. Dolore pariatur ullamco non incididunt velit veniam esse nisi aliqua deserunt do est incididunt. Esse eiusmod ut velit esse aliqua magna. Ea et nisi excepteur qui cupidatat esse non excepteur ea. Pariatur aliqua cupidatat sit do cillum culpa. Sint aute dolore commodo veniam exercitation sit fugiat. Consequat ea incididunt enim et."
+      },
+      {
+        "id": 2004,
+        "product_name": "Pink S Short",
+        "product_image": "https://mooseclothingcompany.com/wp-content/uploads/2022/09/Chino-Short-Moose-Clothing-Company-433x652.png",
+        "seller_name": "Moose CC",
+        "product_price": "1.300",
+        "description": "Reprehenderit tempor consectetur eiusmod pariatur consectetur elit. Laborum sint ex ex veniam voluptate ipsum eiusmod adipisicing ex consectetur excepteur duis nulla elit. Lorem quis sit qui ex non esse proident incididunt."
+      }
+    ],
+    "men_clothing": [
+      {
+        "id": 3000,
+        "product_name": "Blackout Jean 34",
+        "product_image": "https://locusfashion.com/wp-content/uploads/2021/01/favpng_fashion-model-hugo-boss-pinpoint-resource-of-oklahoma-city.png",
+        "seller_name": "Locus",
+        "product_price": "950",
+        "description": "Dolore laborum aute cupidatat Lorem est consequat mollit excepteur magna Lorem sit exercitation. Culpa reprehenderit tempor sint est cupidatat non quis enim quis adipisicing magna et qui. Cupidatat ex enim aliqua ullamco quis. Et do ut et nulla occaecat voluptate cillum Lorem labore et est tempor eiusmod veniam. Lorem sit amet non id voluptate qui aliqua elit pariatur enim."
+      },
+      {
+        "id": 3001,
+        "product_name": "Gri Blazer Ceket",
+        "product_image": "https://freepngimg.com/thumb/model/26651-8-mens-fashion-file.png",
+        "seller_name": "Locus",
+        "product_price": "1.150",
+        "description": "Consequat eu consectetur ea dolore minim magna est esse dolore sit. Qui in magna ut culpa commodo minim aute sint enim excepteur aliquip tempor commodo ad. Nulla ipsum Lorem id aute ullamco deserunt dolore est in esse fugiat veniam. Cillum aliquip exercitation in ex laborum et est fugiat nostrud elit duis et aliqua tempor. Aliqua veniam fugiat est proident mollit nulla. Duis amet mollit Lorem Lorem quis et eu amet."
+      },
+      {
+        "id": 3002,
+        "product_name": "Siyah-Gri Spor Yelek",
+        "product_image": "https://freepngimg.com/save/26747-mens-fashion-transparent-image/568x745",
+        "seller_name": "Boyner",
+        "product_price": "949",
+        "description": "Voluptate pariatur quis consequat ea adipisicing tempor irure reprehenderit non aliquip. Labore nisi Lorem id dolor adipisicing id est esse aute deserunt occaecat adipisicing mollit enim. Anim mollit sit ex est esse tempor officia consequat reprehenderit. Eu laboris adipisicing consequat enim ad amet dolor ex culpa cupidatat adipisicing irure magna."
+      },
+      {
+        "id": 3003,
+        "product_name": "RGX Casual Shirt",
+        "product_image": "https://cdn11.bigcommerce.com/s-sdpah020b3/images/stencil/500x659/products/14355/24095/f91c32a1Charlotte_Jumpsuit_in_Abstract_Floral-removebg__90477.1686586202.png?c=2",
+        "seller_name": "Fodrox",
+        "product_price": "1.350",
+        "description": "Ut est sit enim quis est labore ipsum irure officia. Aliqua esse laborum eiusmod aliqua aute sunt do dolore dolor sint velit consectetur. Aliqua ex ea non dolore. Proident in laborum ad excepteur veniam proident ea id reprehenderit aliqua ullamco aliqua aliquip. Aute adipisicing aliquip quis aute labore eiusmod mollit."
+      },
+      {
+        "id": 3004,
+        "product_name": "Turuncu NO 1 Spor T-s",
+        "product_image": "https://isteam.wsimg.com/ip/a8efe83b-6857-477d-9d0f-f13ca0229a20/ols/4055_original/:/rs=w:600,h:600",
+        "seller_name": "f-LEX",
+        "product_price": "600",
+        "description": "Nostrud enim tempor sit deserunt voluptate cillum est deserunt ex est. Mollit elit et nostrud sunt id qui sit. Consectetur est veniam pariatur magna. Consequat quis irure adipisicing officia dolor commodo deserunt mollit ut magna nisi eiusmod. Consequat aute excepteur ut officia minim laborum magna nostrud incididunt ullamco magna. Lorem anim laboris cillum occaecat enim sunt aute est occaecat Lorem."
+      }
+    ]
+  }
+}
