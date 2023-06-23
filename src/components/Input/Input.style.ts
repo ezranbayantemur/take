@@ -27,7 +27,7 @@ export default {
       marginLeft: padding.SMALL,
       color: 'red',
       fontFamily: font.REGULAR,
-      fontSize: typography.SMALL,
+      fontSize: typography.XSMALL,
     },
   }),
 };

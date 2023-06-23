@@ -14,8 +14,10 @@ import styles from './Login.style';
 
 const Login = () => {
   const navigation = useNavigation<any>();
+
   const handleFormSubmit = ({email, password}: LoginFormValuesType) => {
     console.log(email, password);
+    navigation.navigate(routes.DISCOVER);
   };
 
   const handleNavigateRegister = () => {
