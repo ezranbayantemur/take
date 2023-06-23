@@ -6,7 +6,7 @@ const base = StyleSheet.create({
     backgroundColor: color.MONZA,
     alignItems: 'center',
     padding: padding.MEDIUM,
-    borderRadius: 10,
+    borderRadius: 20,
     margin: padding.SMALL,
   },
   text: {

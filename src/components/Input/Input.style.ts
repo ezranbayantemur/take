@@ -5,7 +5,7 @@ export default StyleSheet.create({
   container: {
     backgroundColor: color.MERCURY,
     padding: padding.MEDIUM,
-    borderRadius: 10,
+    borderRadius: 5,
     margin: padding.SMALL,
   },
   input: {
