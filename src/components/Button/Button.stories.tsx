@@ -25,6 +25,12 @@ export default ButtonMeta;
 
 export const Basic: StoryObj<ButtonProps> = {};
 
+export const WithOutline: StoryObj<ButtonProps> = {
+  args: {
+    type: 'outline',
+  },
+};
+
 export const PressAction: StoryObj<ButtonProps> = {
   decorators: [
     (_, options) => {

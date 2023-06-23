@@ -4,7 +4,8 @@
     "baseUrl": "./",
     "paths": {
       "@style": ["src/style"],
-      "@components": ["src/components"]
+      "@components": ["src/components"],
+      "@route": ["src/router/routes.ts"],
     }
   }
 }

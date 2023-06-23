@@ -24,6 +24,12 @@ describe('Input unit tests', () => {
     expect(placeholder).not.toBeNull();
   });
 
+  it('should render error message correctly', () => {
+    const _wrapper = render(<Input errorMessage="test error" />);
+    const error = _wrapper.queryByText('test error');
+    expect(error).not.toBeNull();
+  });
+
   it('should trigger onChangeText immediately if debounce is not given', () => {
     const mockOnChangeText = jest.fn();
     const _wrapper = render(

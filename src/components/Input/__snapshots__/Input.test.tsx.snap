@@ -1,8 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input unit tests should render correctly 1`] = `
-<TextInput
-  placeholder="Ürün ara..."
-  testID="undefined_input"
-/>
+<View>
+  <View
+    style={
+      {
+        "backgroundColor": "#E1E1E1",
+        "borderRadius": 5,
+        "margin": 8,
+        "padding": 16,
+      }
+    }
+  >
+    <TextInput
+      placeholder="Ürün ara..."
+      style={
+        {
+          "fontFamily": "Lato-Regular",
+          "fontSize": 15,
+        }
+      }
+      testID="undefined_input"
+    />
+  </View>
+</View>
 `;

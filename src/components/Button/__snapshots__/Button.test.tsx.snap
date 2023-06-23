@@ -16,7 +16,7 @@ exports[`Button unit tests should render correctly 1`] = `
     {
       "alignItems": "center",
       "backgroundColor": "#DB040E",
-      "borderRadius": 10,
+      "borderRadius": 20,
       "margin": 8,
       "opacity": 1,
       "padding": 16,

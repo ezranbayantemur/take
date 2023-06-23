@@ -1,7 +1,6 @@
 import React from 'react';
-import {Alert, FlatList, Text, View} from 'react-native';
+import {FlatList, Text, View} from 'react-native';
 import {Input} from '@components';
-import Button from './Input';
 import type {Meta, StoryObj} from '@storybook/react-native';
 import type {InputProps} from './Input.types';
 
@@ -22,6 +21,12 @@ const InputMeta: Meta<InputProps> = {
 export default InputMeta;
 
 export const Basic: StoryObj<InputProps> = {};
+
+export const WithError: StoryObj<InputProps> = {
+  args: {
+    errorMessage: 'This is an example error message',
+  },
+};
 
 export const WithDebounce: StoryObj<InputProps> = {
   args: {

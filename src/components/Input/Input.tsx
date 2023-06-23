@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextInput, View} from 'react-native';
+import {Text, TextInput, View} from 'react-native';
 import {useDebouncedCallback} from 'use-debounce';
 import styles from './Input.style';
 import type {InputProps} from './Input.types';
@@ -8,9 +8,13 @@ const Input = ({
   testID,
   debounceTime = 0,
   placeholder = 'Ürün ara...',
+  errorMessage,
   onChangeText,
   ...rest
 }: InputProps) => {
+  const hasError = !!errorMessage;
+  const styleKey = hasError ? 'error' : 'default';
+
   const debouncedChangeText = useDebouncedCallback(value => {
     if (onChangeText) {
       onChangeText(value);
@@ -21,14 +25,23 @@ const Input = ({
     debounceTime !== 0 ? debouncedChangeText : onChangeText;
 
   return (
-    <View style={styles.container}>
-      <TextInput
-        {...rest}
-        style={styles.input}
-        testID={`${testID}_input`}
-        placeholder={placeholder}
-        onChangeText={changeTextFunction}
-      />
+    <View>
+      <View style={styles[styleKey].container}>
+        <TextInput
+          {...rest}
+          style={styles[styleKey].input}
+          testID={`${testID}_input`}
+          placeholder={placeholder}
+          onChangeText={changeTextFunction}
+        />
+      </View>
+      {hasError && (
+        <Text
+          testID={`${testID}_input_error_message`}
+          style={styles.error.error_text}>
+          {errorMessage}
+        </Text>
+      )}
     </View>
   );
 };

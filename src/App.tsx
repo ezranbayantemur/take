@@ -1,14 +1,8 @@
-import {SafeAreaView, Text} from 'react-native';
 import React from 'react';
+import Router from './router/Router';
 
-type Props = {};
-
-const App = (props: Props) => {
-  return (
-    <SafeAreaView>
-      <Text>App</Text>
-    </SafeAreaView>
-  );
+const App = () => {
+  return <Router />;
 };
 
 export default App;

@@ -5,13 +5,14 @@ import styles from './Button.style';
 
 const Button = ({
   text,
+  type = 'default',
   loading,
   testID,
   onPress,
   disabled,
   ...rest
 }: ButtonProps) => {
-  const styleKey = disabled ? 'disabled' : 'default';
+  const styleKey = disabled ? 'disabled' : type;
   const handlePress = () => {
     if (loading || disabled || !onPress) {
       return;

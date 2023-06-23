@@ -28,4 +28,16 @@ export default {
       color: color.SMOKE,
     },
   }),
+  outline: StyleSheet.create({
+    container: {
+      ...base.container,
+      backgroundColor: 'transparent',
+      borderColor: color.MONZA,
+      borderWidth: 1,
+    },
+    text: {
+      ...base.text,
+      color: color.MONZA,
+    },
+  }),
 };
