@@ -66,3 +66,7 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+
+# TEMP_coverage
+#
+coverage
