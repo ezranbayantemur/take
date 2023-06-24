@@ -1,24 +1,24 @@
-import {SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
 import routes from '@route';
 import {Button, Input} from '@components';
+import {usePostLoginMutation} from '../../redux/api';
 
-import {
-  initialLoginFormValues,
-  loginValidationSchema,
-  type LoginFormValuesType,
-} from './formHelpers';
+import {initialLoginFormValues, loginValidationSchema} from './formHelpers';
 import styles from './Login.style';
 
 const Login = () => {
+  const [login, {data: loginResponse, isLoading, isError}] =
+    usePostLoginMutation();
   const navigation = useNavigation<any>();
 
-  const handleFormSubmit = ({email, password}: LoginFormValuesType) => {
-    console.log(email, password);
-    navigation.navigate(routes.DISCOVER);
-  };
+  React.useEffect(() => {
+    if (loginResponse) {
+      navigation.navigate(routes.DISCOVER);
+    }
+  }, [loginResponse, navigation]);
 
   const handleNavigateRegister = () => {
     navigation.navigate(routes.REGISTER);
@@ -33,7 +33,7 @@ const Login = () => {
         <Formik
           validationSchema={loginValidationSchema}
           initialValues={initialLoginFormValues}
-          onSubmit={handleFormSubmit}>
+          onSubmit={login}>
           {({handleChange, handleSubmit, errors}) => (
             <>
               <Input
@@ -52,9 +52,17 @@ const Login = () => {
                 onChangeText={handleChange('password')}
               />
               <View style={styles.button_container}>
+                {isError && (
+                  <Text
+                    testID="register_error_message"
+                    style={styles.error_message}>
+                    Giriş olurken bir sorunla karşılaşıldı
+                  </Text>
+                )}
                 <Button
                   testID="login_sign"
                   text="Giriş Yap"
+                  loading={isLoading}
                   onPress={handleSubmit}
                 />
                 <Button

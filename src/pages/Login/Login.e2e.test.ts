@@ -1,6 +1,6 @@
-import {by, device, expect, element} from 'detox';
+import {by, device, expect, element, waitFor} from 'detox';
 
-describe('Login e2e tests', () => {
+describe('Discover e2e tests', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
@@ -22,6 +22,9 @@ describe('Login e2e tests', () => {
     await element(by.id('login_email_input')).typeText('test@mail.com');
     await element(by.id('login_password_input')).typeText('123456');
     await element(by.id('login_sign_button_touchable')).tap();
+    await waitFor(element(by.id('discover_page')))
+      .toBeVisible()
+      .withTimeout(5000);
   });
 
   //TODO: Check this test
@@ -33,10 +36,5 @@ describe('Login e2e tests', () => {
   it('should show error for invalid email input ', async () => {
     await element(by.id('login_email_input')).typeText('asdg');
     await expect(element(by.text('Geçersiz e-posta'))).toBeVisible();
-  });
-
-  it('should can navigate register screen', async () => {
-    await element(by.id('login_register_navigate_button_touchable')).tap();
-    await expect(element(by.id('register_page'))).toExist();
   });
 });

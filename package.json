@@ -14,12 +14,17 @@
     "e2e-ios-build": "detox build --configuration ios.sim.debug"
   },
   "dependencies": {
+    "@react-native-masked-view/masked-view": "^0.2.9",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
+    "@reduxjs/toolkit": "^1.9.5",
     "formik": "^2.4.2",
     "react": "18.1.0",
     "react-native": "0.70.5",
+    "react-native-linear-gradient": "^2.7.3",
     "react-native-screens": "^3.22.0",
+    "react-native-skeleton-placeholder": "^5.2.4",
+    "react-redux": "^8.1.1",
     "use-debounce": "9.0.4",
     "yup": "^1.2.0"
   },

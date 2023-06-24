@@ -1,5 +1,5 @@
-import {color, font} from '@style';
 import {StyleSheet} from 'react-native';
+import {color, font, padding, typography} from '@style';
 
 export default StyleSheet.create({
   outer_container: {
@@ -21,5 +21,12 @@ export default StyleSheet.create({
     color: color.MONZA,
     fontFamily: font.BOLD_ITALIC,
     fontSize: 90,
+  },
+  error_message: {
+    marginVertical: padding.SMALL,
+    textAlign: 'center',
+    color: color.MONZA,
+    fontFamily: font.REGULAR,
+    fontSize: typography.NORMAL,
   },
 });

@@ -1,5 +1,5 @@
-import {SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
 import routes from '@route';
@@ -8,15 +8,20 @@ import {Button, Input} from '@components';
 import {
   initialRegisterFormValues,
   registerValidationSchema,
-  type RegisterFormValuesType,
 } from './formHelpers';
 import styles from './Register.style';
+import {usePostRegisterMutation} from '../../redux/api';
 
 const Register = () => {
   const navigation = useNavigation<any>();
-  const handleFormSubmit = ({email, password}: RegisterFormValuesType) => {
-    console.log(email, password);
-  };
+  const [register, {data: registerResponse, isLoading, isError}] =
+    usePostRegisterMutation();
+
+  React.useEffect(() => {
+    if (registerResponse) {
+      navigation.navigate(routes.LOGIN);
+    }
+  }, [registerResponse, navigation]);
 
   const handleNavigateRegister = () => {
     navigation.navigate(routes.LOGIN);
@@ -31,7 +36,7 @@ const Register = () => {
         <Formik
           validationSchema={registerValidationSchema}
           initialValues={initialRegisterFormValues}
-          onSubmit={handleFormSubmit}>
+          onSubmit={register}>
           {({handleChange, handleSubmit, errors}) => (
             <>
               <Input
@@ -48,6 +53,7 @@ const Register = () => {
                 secureTextEntry
                 textContentType="oneTimeCode"
                 errorMessage={errors.password}
+                blurOnSubmit={false}
                 onChangeText={handleChange('password')}
               />
               <Input
@@ -56,12 +62,21 @@ const Register = () => {
                 secureTextEntry
                 textContentType="oneTimeCode"
                 errorMessage={errors.repassword}
+                blurOnSubmit={false}
                 onChangeText={handleChange('repassword')}
               />
               <View style={styles.button_container}>
+                {isError && (
+                  <Text
+                    testID="register_error_message"
+                    style={styles.error_message}>
+                    Kayıt oluşturulurken bir hatayla karşılaşıldı
+                  </Text>
+                )}
                 <Button
                   testID="register_sign"
                   text="Kayıt Ol"
+                  loading={isLoading}
                   onPress={handleSubmit}
                 />
                 <Button
