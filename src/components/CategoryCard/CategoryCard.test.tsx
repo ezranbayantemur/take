@@ -27,7 +27,7 @@ describe('CategoryCard unit tests', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should title correctly', () => {
+  it('should render title correctly', () => {
     const title = wrapper.queryByText(mockData.category_title);
     expect(title).not.toBeNull();
   });
