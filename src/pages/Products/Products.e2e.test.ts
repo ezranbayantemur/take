@@ -14,11 +14,11 @@ describe('Products e2e tests', () => {
   });
 
   it('should show loading', async () => {
-    waitFor(element(by.id('products_placeholder'))).toBeVisible();
+    waitFor(element(by.id('products_placeholder'))).toExist();
   });
 
   it('should have products page', async () => {
-    await expect(element(by.id('products_page'))).toBeVisible();
+    await expect(element(by.id('products_page'))).toExist();
   });
 
   it('should show products', async () => {

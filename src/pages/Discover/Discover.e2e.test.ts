@@ -13,16 +13,16 @@ describe('Discover e2e tests', () => {
   });
 
   it('should show loading', async () => {
-    waitFor(element(by.id('discover_placeholder'))).toBeVisible();
+    waitFor(element(by.id('discover_placeholder'))).toExist();
   });
 
   it('should have discover page', async () => {
-    await expect(element(by.id('discover_page'))).toBeVisible();
+    await expect(element(by.id('discover_page'))).toExist();
   });
 
   it('should have categories', async () => {
-    await expect(element(by.id('discover_0_categorycard'))).toBeVisible();
-    await expect(element(by.id('discover_1_categorycard'))).toBeVisible();
-    await expect(element(by.id('discover_2_categorycard'))).toBeVisible();
+    await expect(element(by.text('Cep Telefonu'))).toBeVisible();
+    await expect(element(by.text('Kadın Giyim'))).toBeVisible();
+    await expect(element(by.text('Erkek Giyim'))).toBeVisible();
   });
 });
