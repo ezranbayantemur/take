@@ -14,11 +14,14 @@ const DiscoverPage = () => {
     console.log(product);
   };
 
-  const handleOnCategorySelect = (selectedCategory: string) => {
-    navigation.navigate(routes.PRODUCTS, {
-      category_name: selectedCategory,
-    });
-  };
+  const handleOnCategorySelect = React.useCallback(
+    (selectedCategory: string) => {
+      navigation.navigate(routes.PRODUCTS, {
+        category_name: selectedCategory,
+      });
+    },
+    [navigation],
+  );
 
   const renderCategory: ListRenderItem<DiscoverResponseType> = ({
     item,

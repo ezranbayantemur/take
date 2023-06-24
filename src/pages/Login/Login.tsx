@@ -20,9 +20,9 @@ const Login = () => {
     }
   }, [loginResponse, navigation]);
 
-  const handleNavigateRegister = () => {
+  const handleNavigateRegister = React.useCallback(() => {
     navigation.navigate(routes.REGISTER);
-  };
+  }, [navigation]);
 
   return (
     <SafeAreaView testID="login_page" style={styles.outer_container}>

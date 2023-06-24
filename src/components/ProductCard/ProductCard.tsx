@@ -32,4 +32,4 @@ const ProductCard = ({testID, data, onSelect}: ProductCardProps) => {
   );
 };
 
-export default ProductCard;
+export default React.memo(ProductCard);

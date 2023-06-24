@@ -23,9 +23,9 @@ const Register = () => {
     }
   }, [registerResponse, navigation]);
 
-  const handleNavigateRegister = () => {
+  const handleNavigateRegister = React.useCallback(() => {
     navigation.navigate(routes.LOGIN);
-  };
+  }, [navigation]);
 
   return (
     <SafeAreaView testID="register_page" style={styles.outer_container}>

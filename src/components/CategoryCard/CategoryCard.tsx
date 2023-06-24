@@ -41,4 +41,4 @@ const CategoryCard = ({
   );
 };
 
-export default CategoryCard;
+export default React.memo(CategoryCard);

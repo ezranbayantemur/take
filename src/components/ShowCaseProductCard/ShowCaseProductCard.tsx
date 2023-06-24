@@ -32,4 +32,4 @@ const ShowCaseProductCard = ({
   );
 };
 
-export default ShowCaseProductCard;
+export default React.memo(ShowCaseProductCard);
