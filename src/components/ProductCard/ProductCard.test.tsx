@@ -22,7 +22,6 @@ describe('ProductCard unit tests', () => {
 
   it('should render texts correctly', () => {
     expect(wrapper.queryByText(mockData.product_name)).not.toBeNull();
-    expect(wrapper.queryByText(mockData.product_price)).not.toBeNull();
     expect(wrapper.queryByText(mockData.seller_name)).not.toBeNull();
     expect(wrapper.queryByText(`${mockData.product_price} TL`)).not.toBeNull();
   });
