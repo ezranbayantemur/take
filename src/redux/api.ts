@@ -1,11 +1,7 @@
 import {Platform} from 'react-native';
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import type {DiscoverResponseType} from '@types';
-
-interface AuthRequestType {
-  email: string;
-  password: string;
-}
+import type {DiscoverResponseType, Product} from '@types';
+import type {AuthRequestType, ProductRequestType} from './types';
 
 const URL = Platform.select({
   ios: 'http://localhost:3000',
@@ -41,6 +37,15 @@ export const api = createApi({
     getDiscoverFeed: builder.query<DiscoverResponseType[], void>({
       query: () => '/discover',
     }),
+    postProductsForCategory: builder.mutation<Product[], ProductRequestType>({
+      query: ({category_name}) => ({
+        url: '/products',
+        method: 'POST',
+        body: {
+          category_name,
+        },
+      }),
+    }),
   }),
 });
 
@@ -48,4 +53,5 @@ export const {
   useGetDiscoverFeedQuery,
   usePostLoginMutation,
   usePostRegisterMutation,
+  usePostProductsForCategoryMutation,
 } = api;

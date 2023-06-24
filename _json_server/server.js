@@ -46,6 +46,16 @@ server.get('/discover', async (req, res) => {
   return res.json(data.discover);
 });
 
+server.post('/products', async (req, res) => {
+  const {category_name} = req.body;
+
+  const products = data.products[category_name];
+
+  await delay();
+
+  return res.json(products);
+});
+
 server.use(middlewares);
 server.use(router);
 

@@ -3,8 +3,11 @@ import React from 'react';
 import {CategoryCard, DiscoverPlaceholder} from '@components';
 import {useGetDiscoverFeedQuery} from '../../redux/api';
 import type {DiscoverResponseType, ShowCaseProduct} from '@types';
+import {useNavigation} from '@react-navigation/native';
+import routes from '@route';
 
 const DiscoverPage = () => {
+  const navigation = useNavigation<any>();
   const {data: discoverData, isLoading} = useGetDiscoverFeedQuery();
 
   const handleOnProductSelect = (product: ShowCaseProduct) => {
@@ -12,7 +15,9 @@ const DiscoverPage = () => {
   };
 
   const handleOnCategorySelect = (selectedCategory: string) => {
-    console.log(selectedCategory);
+    navigation.navigate(routes.PRODUCTS, {
+      category_name: selectedCategory,
+    });
   };
 
   const renderCategory: ListRenderItem<DiscoverResponseType> = ({
