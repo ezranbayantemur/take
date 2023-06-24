@@ -1,29 +1,37 @@
-import {View, Text, SafeAreaView, Image} from 'react-native';
+import {SafeAreaView, FlatList, ListRenderItem} from 'react-native';
 import React from 'react';
+import {CategoryCard, DiscoverPlaceholder} from '@components';
+import {useGetDiscoverFeedQuery} from '../../redux/api';
+import type {DiscoverResponseType, ShowCaseProduct} from '@types';
 
-type Props = {};
+const DiscoverPage = () => {
+  const {data: discoverData, isLoading} = useGetDiscoverFeedQuery();
 
-const Discover = (props: Props) => {
+  const handleOnProductSelect = (product: ShowCaseProduct) => {
+    console.log(product);
+  };
+
+  const renderCategory: ListRenderItem<DiscoverResponseType> = ({
+    item,
+    index,
+  }) => (
+    <CategoryCard
+      testID={`discover_${index}`}
+      title={item.category_title}
+      showcaseData={item.showcase_products}
+      onSelect={handleOnProductSelect}
+    />
+  );
+
   return (
-    <SafeAreaView>
-      <Text>Discover</Text>
-      <View
-        style={{
-          backgroundColor: 'red',
-        }}>
-        <Image
-          resizeMode="contain"
-          style={{
-            height: 100,
-            width: 100,
-          }}
-          source={{
-            uri: 'https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png',
-          }}
-        />
-      </View>
+    <SafeAreaView testID="discover_page">
+      {isLoading ? (
+        <DiscoverPlaceholder />
+      ) : (
+        <FlatList data={discoverData} renderItem={renderCategory} />
+      )}
     </SafeAreaView>
   );
 };
 
-export default Discover;
+export default DiscoverPage;

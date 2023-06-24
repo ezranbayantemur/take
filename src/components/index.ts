@@ -3,4 +3,6 @@ import Button from './Button';
 import CategoryCard from './CategoryCard';
 import ShowCaseProductCard from './ShowCaseProductCard';
 
-export {Input, Button, CategoryCard, ShowCaseProductCard};
+import DiscoverPlaceholder from './placeholders/DiscoverPlaceholder';
+
+export {Input, Button, CategoryCard, ShowCaseProductCard, DiscoverPlaceholder};
