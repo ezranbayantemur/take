@@ -13,6 +13,7 @@ describe('CategoryCard unit tests', () => {
   beforeEach(() => {
     wrapper = render(
       <CategoryCard
+        testID="test"
         title={mockData.category_title}
         showcaseData={mockData.showcase_products}
         onSelect={mockOnSelect}
@@ -54,21 +55,21 @@ describe('CategoryCard unit tests', () => {
 
   it('should trigger onSelect correctly for all showed products', () => {
     fireEvent(
-      wrapper.getByTestId('categorycard_0_showcasecard_touchable'),
+      wrapper.getByTestId('test_categorycard_0_showcasecard_touchable'),
       'onPress',
     );
     expect(mockOnSelect).toBeCalledWith(mockData.showcase_products[0]);
     mockOnSelect.mockClear();
 
     fireEvent(
-      wrapper.getByTestId('categorycard_1_showcasecard_touchable'),
+      wrapper.getByTestId('test_categorycard_1_showcasecard_touchable'),
       'onPress',
     );
     expect(mockOnSelect).toBeCalledWith(mockData.showcase_products[1]);
     mockOnSelect.mockClear();
 
     fireEvent(
-      wrapper.getByTestId('categorycard_2_showcasecard_touchable'),
+      wrapper.getByTestId('test_categorycard_2_showcasecard_touchable'),
       'onPress',
     );
     expect(mockOnSelect).toBeCalledWith(mockData.showcase_products[2]);

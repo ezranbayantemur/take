@@ -47,7 +47,7 @@ exports[`ShowCaseProductCard unit tests should render correctly 1`] = `
     <View
       style={
         {
-          "backgroundColor": "#DB040E",
+          "backgroundColor": "#E1E1E1",
           "borderRadius": 10,
           "height": 100,
           "width": 100,

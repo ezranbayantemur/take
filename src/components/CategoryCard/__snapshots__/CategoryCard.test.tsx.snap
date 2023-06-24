@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CategoryCard unit tests should render correctly 1`] = `
-<View>
+<View
+  style={
+    {
+      "marginVertical": 16,
+    }
+  }
+  testID="test_categorycard"
+>
   <Text
     style={
       {
         "fontFamily": "Lato-BlackItalic",
         "fontSize": 32,
+        "marginLeft": 8,
       }
     }
   >
@@ -32,7 +40,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
             "alignItems": "center",
           }
         }
-        testID="categorycard_0_showcasecard_touchable"
+        testID="test_categorycard_0_showcasecard_touchable"
       >
         <Image
           resizeMode="contain"
@@ -63,7 +71,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#DB040E",
+                "backgroundColor": "#E1E1E1",
                 "borderRadius": 10,
                 "height": 100,
                 "width": 100,
@@ -118,7 +126,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
             "alignItems": "center",
           }
         }
-        testID="categorycard_1_showcasecard_touchable"
+        testID="test_categorycard_1_showcasecard_touchable"
       >
         <Image
           resizeMode="contain"
@@ -149,7 +157,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#DB040E",
+                "backgroundColor": "#E1E1E1",
                 "borderRadius": 10,
                 "height": 100,
                 "width": 100,
@@ -204,7 +212,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
             "alignItems": "center",
           }
         }
-        testID="categorycard_2_showcasecard_touchable"
+        testID="test_categorycard_2_showcasecard_touchable"
       >
         <Image
           resizeMode="contain"
@@ -235,7 +243,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
           <View
             style={
               {
-                "backgroundColor": "#DB040E",
+                "backgroundColor": "#E1E1E1",
                 "borderRadius": 10,
                 "height": 100,
                 "width": 100,

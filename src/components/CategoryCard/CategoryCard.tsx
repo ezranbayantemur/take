@@ -6,19 +6,24 @@ import type {CategoryCardProps} from './CategoryCard.types';
 
 import styles from './CategoryCard.style';
 
-const CategoryCard = ({title, showcaseData, onSelect}: CategoryCardProps) => {
+const CategoryCard = ({
+  testID,
+  title,
+  showcaseData,
+  onSelect,
+}: CategoryCardProps) => {
   const handleOnSelectProduct = (product: ShowCaseProduct) => {
     onSelect(product);
   };
 
   return (
-    <View>
+    <View testID={`${testID}_categorycard`} style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {showcaseData.map((product, index) => (
           <ShowCaseProductCard
             key={`categorycard_${index}`}
-            testID={`categorycard_${index}`}
+            testID={`${testID}_categorycard_${index}`}
             data={product}
             onSelect={() => handleOnSelectProduct(product)}
           />

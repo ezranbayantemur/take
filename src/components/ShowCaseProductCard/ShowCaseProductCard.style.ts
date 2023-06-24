@@ -18,7 +18,7 @@ export default StyleSheet.create({
     bottom: 10,
   },
   image_background: {
-    backgroundColor: color.MONZA,
+    backgroundColor: color.MERCURY,
     width: 100,
     height: 100,
     borderRadius: 10,
