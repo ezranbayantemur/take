@@ -1,7 +1,8 @@
 {
   "users": [
-    {"id": 1, "username": "john", "password": "123"},
-    {"id": 2, "username": "jane", "password": "pass456"}
+    {"id": 900, "email": "test@mail.com", "password": "123456"},
+    {"id": 900, "email": "ezran@mail.com", "password": "ezran123456"},
+    {"id": 901, "email": "onur@mail.com", "password": "onur654321"}
   ],
   "discover": [
     {
@@ -26,8 +27,7 @@
           "product_name": "Galaxy S23 Ultra",
           "product_image": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_S23_Ultra_green-full-product-front-600.png",
           "seller_name": "Samsung",
-          "product_price": "18.000",
-          "description": "Cillum culpa adipisicing nisi veniam. Officia labore adipisicing in officia quis dolor cillum amet incididunt veniam dolore fugiat exercitation. Sit dolore id dolore esse. Nostrud in ipsum ex ad labore irure ad. Ex cupidatat consequat pariatur tempor et fugiat ipsum reprehenderit in nostrud. Fugiat irure incididunt cupidatat dolor Lorem."
+          "product_price": "18.000"
         }
       ]
     },
@@ -53,8 +53,7 @@
           "product_name": "Pink S Short",
           "product_image": "https://mooseclothingcompany.com/wp-content/uploads/2022/09/Chino-Short-Moose-Clothing-Company-433x652.png",
           "seller_name": "Moose CC",
-          "product_price": "1.300",
-          "description": "Reprehenderit tempor consectetur eiusmod pariatur consectetur elit. Laborum sint ex ex veniam voluptate ipsum eiusmod adipisicing ex consectetur excepteur duis nulla elit. Lorem quis sit qui ex non esse proident incididunt."
+          "product_price": "1.300"
         }
       ]
     },

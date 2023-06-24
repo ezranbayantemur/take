@@ -6,27 +6,44 @@ const server = jsonServer.create();
 const router = jsonServer.router(data);
 const middlewares = jsonServer.defaults();
 
+const DELAY = 1200;
+let authDB = data.users;
+
+const delay = () =>
+  new Promise((resolve, reject) => {
+    setTimeout(resolve, DELAY);
+  });
+
 server.use(bodyParser.json());
 
-// Custom login route
-server.post('/login', (req, res) => {
-  const {username, password} = req.body;
+server.post('/login', async (req, res) => {
+  const {email, password} = req.body;
 
-  const user = data.users.find(
-    user => user.username === username && user.password === password,
+  const user = authDB.find(
+    user => user.email === email && user.password === password,
   );
 
+  await delay();
   return res.json(!!user);
 });
 
-server.post('/products', (req, res) => {
-  const {username, password} = req.body;
+server.post('/register', async (req, res) => {
+  const {email, password} = req.body;
 
-  const user = data.users.find(
-    user => user.username === username && user.password === password,
-  );
+  authDB.push({
+    id: authDB[authDB.length - 1].id + 1,
+    email,
+    password,
+  });
 
-  return res.json(!!user);
+  await delay();
+
+  return res.json(true);
+});
+
+server.get('/discover', async (req, res) => {
+  await delay();
+  return res.json(data.discover);
 });
 
 server.use(middlewares);
