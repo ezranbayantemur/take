@@ -18,6 +18,8 @@
   ],
   "discover": [
     {
+      "category_id": "10",
+      "category_name": "phone",
       "category_title": "Cep Telefonu",
       "showcase_products": [
         {
@@ -44,6 +46,8 @@
       ]
     },
     {
+      "category_id": "11",
+      "category_name": "women_clothing",
       "category_title": "Kadın Giyim",
       "showcase_products": [
         {
@@ -70,6 +74,8 @@
       ]
     },
     {
+      "category_id": "12",
+      "category_name": "men_clothing",
       "category_title": "Erkek Giyim",
       "showcase_products": [
         {

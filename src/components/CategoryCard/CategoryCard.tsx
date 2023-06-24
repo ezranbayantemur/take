@@ -1,4 +1,4 @@
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, TouchableWithoutFeedback} from 'react-native';
 import React from 'react';
 import ShowCaseProductCard from '../ShowCaseProductCard';
 import type {ShowCaseProduct} from '@types';
@@ -8,19 +8,27 @@ import styles from './CategoryCard.style';
 
 const CategoryCard = ({
   testID,
-  title,
-  showcaseData,
-  onSelect,
+  data,
+  onProductSelect,
+  onCategorySelect,
 }: CategoryCardProps) => {
   const handleOnSelectProduct = (product: ShowCaseProduct) => {
-    onSelect(product);
+    onProductSelect(product);
+  };
+
+  const handleOnSelectCategory = () => {
+    onCategorySelect(data.category_name);
   };
 
   return (
     <View testID={`${testID}_categorycard`} style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+      <TouchableWithoutFeedback
+        testID={`${testID}_categorycard_title_touchable`}
+        onPress={handleOnSelectCategory}>
+        <Text style={styles.title}>{data.category_title}</Text>
+      </TouchableWithoutFeedback>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {showcaseData.map((product, index) => (
+        {data.showcase_products.map((product, index) => (
           <ShowCaseProductCard
             key={`categorycard_${index}`}
             testID={`${testID}_categorycard_${index}`}

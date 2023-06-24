@@ -5,7 +5,8 @@ import discoverData from '@mocks/discover_feed/discover.json';
 import type {DiscoverResponseType} from '@types';
 
 const mockData: DiscoverResponseType = discoverData[0];
-const mockOnSelect = jest.fn();
+const mockOnProductSelect = jest.fn();
+const mockOnCategorySelect = jest.fn();
 
 let wrapper: ReturnType<typeof render>;
 
@@ -14,12 +15,12 @@ describe('CategoryCard unit tests', () => {
     wrapper = render(
       <CategoryCard
         testID="test"
-        title={mockData.category_title}
-        showcaseData={mockData.showcase_products}
-        onSelect={mockOnSelect}
+        data={mockData}
+        onProductSelect={mockOnProductSelect}
+        onCategorySelect={mockOnCategorySelect}
       />,
     );
-    mockOnSelect.mockClear();
+    mockOnProductSelect.mockClear();
   });
 
   it('should render correctly', () => {
@@ -53,25 +54,33 @@ describe('CategoryCard unit tests', () => {
     ).not.toBeNull();
   });
 
-  it('should trigger onSelect correctly for all showed products', () => {
+  it('should trigger onCategorySelect correctly', () => {
+    fireEvent(
+      wrapper.getByTestId('test_categorycard_title_touchable'),
+      'onPress',
+    );
+    expect(mockOnCategorySelect).toBeCalledWith(mockData.category_name);
+  });
+
+  it('should trigger onProductSelect correctly for all showed products', () => {
     fireEvent(
       wrapper.getByTestId('test_categorycard_0_showcasecard_touchable'),
       'onPress',
     );
-    expect(mockOnSelect).toBeCalledWith(mockData.showcase_products[0]);
-    mockOnSelect.mockClear();
+    expect(mockOnProductSelect).toBeCalledWith(mockData.showcase_products[0]);
+    mockOnProductSelect.mockClear();
 
     fireEvent(
       wrapper.getByTestId('test_categorycard_1_showcasecard_touchable'),
       'onPress',
     );
-    expect(mockOnSelect).toBeCalledWith(mockData.showcase_products[1]);
-    mockOnSelect.mockClear();
+    expect(mockOnProductSelect).toBeCalledWith(mockData.showcase_products[1]);
+    mockOnProductSelect.mockClear();
 
     fireEvent(
       wrapper.getByTestId('test_categorycard_2_showcasecard_touchable'),
       'onPress',
     );
-    expect(mockOnSelect).toBeCalledWith(mockData.showcase_products[2]);
+    expect(mockOnProductSelect).toBeCalledWith(mockData.showcase_products[2]);
   });
 });

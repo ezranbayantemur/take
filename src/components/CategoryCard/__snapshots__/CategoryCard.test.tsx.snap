@@ -10,6 +10,15 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
   testID="test_categorycard"
 >
   <Text
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       {
         "fontFamily": "Lato-BlackItalic",
@@ -17,6 +26,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
         "marginLeft": 8,
       }
     }
+    testID="test_categorycard_title_touchable"
   >
     Cep Telefonu
   </Text>

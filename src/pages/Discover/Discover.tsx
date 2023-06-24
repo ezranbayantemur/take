@@ -11,15 +11,19 @@ const DiscoverPage = () => {
     console.log(product);
   };
 
+  const handleOnCategorySelect = (selectedCategory: string) => {
+    console.log(selectedCategory);
+  };
+
   const renderCategory: ListRenderItem<DiscoverResponseType> = ({
     item,
     index,
   }) => (
     <CategoryCard
       testID={`discover_${index}`}
-      title={item.category_title}
-      showcaseData={item.showcase_products}
-      onSelect={handleOnProductSelect}
+      data={item}
+      onProductSelect={handleOnProductSelect}
+      onCategorySelect={handleOnCategorySelect}
     />
   );
 
