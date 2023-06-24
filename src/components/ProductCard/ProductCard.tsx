@@ -16,11 +16,13 @@ const ProductCard = ({testID, data, onSelect}: ProductCardProps) => {
       testID={`${testID}_productcard_touchable`}
       style={styles.container}
       onPress={handleOnSelect}>
-      <Image
-        style={styles.image}
-        source={{uri: product_image}}
-        resizeMode="contain"
-      />
+      <View style={styles.image_container}>
+        <Image
+          style={styles.image}
+          source={{uri: product_image}}
+          resizeMode="contain"
+        />
+      </View>
       <View style={styles.info_container}>
         <Text style={styles.name}>{product_name}</Text>
         <Text style={styles.seller}>{seller_name}</Text>

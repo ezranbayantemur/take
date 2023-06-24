@@ -8,6 +8,8 @@ const IMAGE_WIDTH_LIMIT = 0.4;
 
 export default StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: color.ALABASTER,
     marginVertical: padding.MEDIUM,
     borderWidth: 1,
     borderColor: color.MERCURY,
@@ -15,7 +17,11 @@ export default StyleSheet.create({
     maxWidth: deviceSize.width * CONTAINER_WIDTH_LIMIT,
     alignItems: 'center',
   },
+  image_container: {
+    padding: padding.SMALL,
+  },
   image: {
+    padding: padding.SMALL,
     maxWidth: deviceSize.width * IMAGE_WIDTH_LIMIT,
     width: 155,
     height: 185,

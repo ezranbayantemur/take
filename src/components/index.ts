@@ -5,6 +5,7 @@ import CategoryCard from './CategoryCard';
 import ShowCaseProductCard from './ShowCaseProductCard';
 
 import DiscoverPlaceholder from './placeholders/DiscoverPlaceholder';
+import ProductsPlaceholder from './placeholders/ProductsPlaceholder';
 
 export {
   Input,
@@ -13,4 +14,5 @@ export {
   ProductCard,
   ShowCaseProductCard,
   DiscoverPlaceholder,
+  ProductsPlaceholder,
 };

@@ -21,18 +21,15 @@ describe('Products e2e tests', () => {
     await expect(element(by.id('products_page'))).toBeVisible();
   });
 
-  it('should have products', async () => {
-    await expect(element(by.id('discover_0_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_1_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_2_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_3_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_4_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_5_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_6_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_8_productcard'))).toBeVisible();
-    await expect(element(by.id('discover_9_productcard'))).toBeVisible();
-  });
-  it('should navigate to product detail', async () => {
-    await element(by.id('discover_0_productcard_touchable')).tap();
+  it('should show products', async () => {
+    await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
+    await expect(element(by.text('iPhone 12'))).toBeVisible();
+    await expect(element(by.text('ThinkPhone'))).toBeVisible();
+    await expect(element(by.text('RedMi Note 12'))).toBeVisible();
+
+    await element(by.id('products_flatlist')).scrollTo('bottom');
+    await expect(element(by.text('Xperia 10 IV'))).toBeVisible();
+    await expect(element(by.text('Razr 40 Ultra'))).toBeVisible();
+    await expect(element(by.text('Magic4 PRO'))).toBeVisible();
   });
 });

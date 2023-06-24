@@ -15,9 +15,11 @@ exports[`ProductCard unit tests should render correctly 1`] = `
   style={
     {
       "alignItems": "center",
+      "backgroundColor": "#FBFBFB",
       "borderColor": "#E1E1E1",
       "borderRadius": 10,
       "borderWidth": 1,
+      "flex": 1,
       "marginVertical": 16,
       "maxWidth": 337.5,
       "opacity": 1,
@@ -25,21 +27,30 @@ exports[`ProductCard unit tests should render correctly 1`] = `
   }
   testID="test_productcard_touchable"
 >
-  <Image
-    resizeMode="contain"
-    source={
-      {
-        "uri": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png",
-      }
-    }
+  <View
     style={
       {
-        "height": 185,
-        "maxWidth": 300,
-        "width": 155,
+        "padding": 8,
       }
     }
-  />
+  >
+    <Image
+      resizeMode="contain"
+      source={
+        {
+          "uri": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14-Pro/Deep-Purple/Apple-iPhone-14-Pro-Deep-Purple-thumbnail.png",
+        }
+      }
+      style={
+        {
+          "height": 185,
+          "maxWidth": 300,
+          "padding": 8,
+          "width": 155,
+        }
+      }
+    />
+  </View>
   <View
     style={
       {
