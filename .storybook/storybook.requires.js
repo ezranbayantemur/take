@@ -51,6 +51,7 @@ const getStories = () => {
     "./src/components/CategoryCard/CategoryCard.stories.tsx": require("../src/components/CategoryCard/CategoryCard.stories.tsx"),
     "./src/components/Input/Input.stories.tsx": require("../src/components/Input/Input.stories.tsx"),
     "./src/components/ProductCard/ProductCard.stories.tsx": require("../src/components/ProductCard/ProductCard.stories.tsx"),
+    "./src/components/SearchBar/SearchBar.stories.tsx": require("../src/components/SearchBar/SearchBar.stories.tsx"),
     "./src/components/ShowCaseProductCard/ShowCaseProductCard.stories.tsx": require("../src/components/ShowCaseProductCard/ShowCaseProductCard.stories.tsx"),
   };
 };
