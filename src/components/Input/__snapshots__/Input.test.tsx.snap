@@ -13,7 +13,6 @@ exports[`Input unit tests should render correctly 1`] = `
     }
   >
     <TextInput
-      placeholder="Ürün ara..."
       style={
         {
           "fontFamily": "Lato-Regular",

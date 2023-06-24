@@ -13,11 +13,6 @@ describe('Input unit tests', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render default placeholder correctly', () => {
-    const placeholder = wrapper.queryByPlaceholderText('Ürün ara...');
-    expect(placeholder).not.toBeNull();
-  });
-
   it('should render given placeholder correctly', () => {
     const _wrapper = render(<Input placeholder="test placeholder" />);
     const placeholder = _wrapper.queryByPlaceholderText('test placeholder');

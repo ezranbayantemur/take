@@ -7,7 +7,7 @@ import type {InputProps} from './Input.types';
 const Input = ({
   testID,
   debounceTime = 0,
-  placeholder = 'Ürün ara...',
+  placeholder,
   errorMessage,
   onChangeText,
   ...rest
