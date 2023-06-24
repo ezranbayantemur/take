@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import routes from '@route';
 import {Login, Register, Discover} from '../pages';
+import {styles} from './Router.style';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,7 +12,9 @@ export default function Router() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerShown: false,
+          headerTitle: 'take',
+          headerTitleStyle: styles.headerTitle,
+          headerBackVisible: false,
         }}>
         <Stack.Screen name={routes.LOGIN} component={Login} />
         <Stack.Screen name={routes.REGISTER} component={Register} />

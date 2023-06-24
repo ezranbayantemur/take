@@ -1,8 +1,20 @@
 {
   "users": [
-    {"id": 900, "email": "test@mail.com", "password": "123456"},
-    {"id": 900, "email": "ezran@mail.com", "password": "ezran123456"},
-    {"id": 901, "email": "onur@mail.com", "password": "onur654321"}
+    {
+      "id": 900,
+      "email": "test@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": 900,
+      "email": "ezran@mail.com",
+      "password": "ezran123456"
+    },
+    {
+      "id": 901,
+      "email": "onur@mail.com",
+      "password": "onur654321"
+    }
   ],
   "discover": [
     {
