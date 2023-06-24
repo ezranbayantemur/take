@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar unit tests should render correctly 1`] = `
+<View
+  style={{}}
+>
+  <View>
+    <View
+      style={
+        {
+          "backgroundColor": "#E1E1E1",
+          "borderRadius": 5,
+          "margin": 8,
+          "padding": 16,
+        }
+      }
+    >
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="Ara..."
+        style={
+          {
+            "fontFamily": "Lato-Regular",
+            "fontSize": 15,
+          }
+        }
+        testID="test_searchbar_input"
+      />
+    </View>
+  </View>
+</View>
+`;

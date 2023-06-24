@@ -1,14 +1,23 @@
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import type {SearchBarProps} from './SearchBar.types';
 
-import styles from './SearchBar.style';
-import {Input} from '@components';
+import Input from '../Input';
 
-const SearchBar = ({testID}: SearchBarProps) => {
+const SearchBar = ({
+  testID,
+  placeholder = 'Ara...',
+  debounceTime = 200,
+  onSearch,
+}: SearchBarProps) => {
   return (
-    <View testID={`${testID}_searchbar`} style={styles.container}>
-      <Input />
+    <View>
+      <Input
+        testID={`${testID}_searchbar`}
+        placeholder={placeholder}
+        debounceTime={debounceTime}
+        onChangeText={onSearch}
+      />
     </View>
   );
 };
