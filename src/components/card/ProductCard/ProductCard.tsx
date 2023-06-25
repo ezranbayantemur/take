@@ -26,7 +26,9 @@ const ProductCard = ({testID, data, onSelect}: ProductCardProps) => {
       <View style={styles.info_container}>
         <Text style={styles.name}>{product_name}</Text>
         <Text style={styles.seller}>{seller_name}</Text>
-        <Text style={styles.price}>{product_price} TL</Text>
+        <Text style={styles.price}>
+          {product_price.toLocaleString('tr-TR')} TL
+        </Text>
       </View>
     </TouchableOpacity>
   );

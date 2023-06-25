@@ -42,7 +42,7 @@ const ProductDetailPage = () => {
           <Text style={styles.seller}>{productDetailData.seller_name}</Text>
         </View>
         <Text style={styles.product_price}>
-          {productDetailData.product_price} TL
+          {productDetailData.product_price.toLocaleString('tr-TR')} TL
         </Text>
       </View>
       <View style={styles.product_description_container}>

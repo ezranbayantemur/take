@@ -26,7 +26,9 @@ const ShowCaseProductCard = ({
         </View>
         <Text style={styles.product_name}>{product_name}</Text>
         <Text style={styles.seller_name}>{seller_name}</Text>
-        <Text style={styles.product_price}>{product_price} TL</Text>
+        <Text style={styles.product_price}>
+          {product_price.toLocaleString('tr-TR')} TL
+        </Text>
       </View>
     </TouchableWithoutFeedback>
   );
