@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CategoryCard unit tests should render correctly 1`] = `
+exports[`CartCard unit tests should render correctly 1`] = `
 <View
   accessible={true}
   collapsable={false}

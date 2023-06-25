@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input unit tests should render correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#DB040E",
+        "borderRadius": 20,
+        "height": 25,
+        "justifyContent": "center",
+        "marginHorizontal": 8,
+        "opacity": 1,
+        "width": 25,
+      }
+    }
+    testID="test_increase_touchable"
+  >
+    <Text
+      style={
+        {
+          "color": "#FBFBFB",
+          "fontFamily": "Lato-Black",
+          "fontSize": 15,
+        }
+      }
+    >
+      +
+    </Text>
+  </View>
+  <Text
+    style={
+      {
+        "fontFamily": "Lato-Black",
+        "fontSize": 17,
+      }
+    }
+    testID="test_value_text"
+  >
+    5
+  </Text>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#DB040E",
+        "borderRadius": 20,
+        "height": 25,
+        "justifyContent": "center",
+        "marginHorizontal": 8,
+        "opacity": 1,
+        "width": 25,
+      }
+    }
+    testID="test_decrease_touchable"
+  >
+    <Text
+      style={
+        {
+          "color": "#FBFBFB",
+          "fontFamily": "Lato-Black",
+          "fontSize": 15,
+        }
+      }
+    >
+      -
+    </Text>
+  </View>
+</View>
+`;

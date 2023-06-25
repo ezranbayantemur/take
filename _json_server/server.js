@@ -7,7 +7,9 @@ const router = jsonServer.router(data);
 const middlewares = jsonServer.defaults();
 
 const DELAY = 1200;
+
 let authDB = data.users;
+let cartDB = [];
 
 const delay = () =>
   new Promise((resolve, reject) => {
@@ -46,14 +48,42 @@ server.get('/discover', async (req, res) => {
   return res.json(data.discover);
 });
 
-server.post('/products', async (req, res) => {
+server.post('/category', async (req, res) => {
   const {category_name} = req.body;
 
-  const products = data.products[category_name];
+  const products = data.products.filter(
+    product => product.category === category_name,
+  );
 
   await delay();
 
   return res.json(products);
+});
+
+server.post('/cart', async (req, res) => {
+  const {product} = req.body;
+
+  cartDB.push(product);
+
+  await delay();
+
+  return res.json(true);
+});
+
+server.get('/cart', async (_, res) => {
+  await delay();
+
+  return res.json(cartDB);
+});
+
+server.post('/product', async (req, res) => {
+  const {product_id} = req.body;
+
+  const product = data.products.find(_product => _product.id === product_id);
+
+  await delay();
+
+  return res.json(product);
 });
 
 server.use(middlewares);

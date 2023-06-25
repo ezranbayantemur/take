@@ -43,7 +43,7 @@ export const api = createApi({
     }),
     postProductsForCategory: builder.mutation<Product[], ProductRequestType>({
       query: ({category_name}) => ({
-        url: '/products',
+        url: '/category',
         method: 'POST',
         body: {
           category_name,

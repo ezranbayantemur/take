@@ -19,7 +19,7 @@ jest.mock('@react-navigation/native', () => {
 
 const store = mockStore({
   cart: {
-    productsInCart: [
+    allProductsInCart: [
       {
         id: 0,
       },
@@ -32,7 +32,7 @@ const store = mockStore({
 
 let wrapper: ReturnType<typeof render>;
 
-describe('CategoryCard unit tests', () => {
+describe('CartCard unit tests', () => {
   beforeEach(() => {
     wrapper = render(
       <Provider store={store}>

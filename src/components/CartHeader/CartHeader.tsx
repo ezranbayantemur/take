@@ -10,7 +10,7 @@ import style from './CartHeader.style';
 const CartHeader = () => {
   const navigation = useNavigation<any>();
   const productInCartCount = useSelector<RootState, number>(
-    state => state.cart.productsInCart.length,
+    state => state.cart.allProductsInCart.length,
   );
 
   const isShowBadge = productInCartCount > 0;
