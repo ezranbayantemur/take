@@ -2,5 +2,6 @@ import Login from './Login';
 import Register from './Register';
 import Discover from './Discover';
 import Products from './Products';
+import ProductDetail from './ProductDetail';
 
-export {Login, Register, Discover, Products};
+export {Login, Register, Discover, Products, ProductDetail};

@@ -3,6 +3,7 @@ export enum routes {
   REGISTER = 'RegisterScreen',
   DISCOVER = 'DiscoverScreen',
   PRODUCTS = 'ProductsScreen',
+  PRODUCT_DETAIL = 'ProductDetailScreen',
 }
 
 export default routes;
