@@ -8,7 +8,6 @@ const CartCard = ({
   testID,
   product,
   quantity,
-  onRemoveFromCart,
   onIncreaseQuantity,
   onDecreaseQuantity,
 }: CartCardProps) => {

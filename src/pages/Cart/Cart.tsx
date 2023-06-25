@@ -5,7 +5,10 @@ import {RootState} from '../../redux/store';
 import {CartProduct} from '../../redux/types';
 import {useDispatch, useSelector} from 'react-redux';
 import {CartCard} from '@components';
-import {addToCart} from '../../redux/features/cart/slice';
+import {
+  addToCart,
+  decreaseProductOnCart,
+} from '../../redux/features/cart/slice';
 import {Discount} from '@types';
 
 const CartPage = () => {
@@ -36,6 +39,7 @@ const CartPage = () => {
       product={item.product}
       quantity={item.quantity}
       onIncreaseQuantity={() => dispatch(addToCart(item.product))}
+      onDecreaseQuantity={() => dispatch(decreaseProductOnCart(item.product))}
     />
   );
 

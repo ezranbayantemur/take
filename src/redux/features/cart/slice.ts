@@ -20,7 +20,7 @@ export const cartSlice = createSlice({
       cartSlice.caseReducers.updateDiscounts(cartState);
 
       /**
-       * Get the index of the product in the cart
+       * Get the index of the product in the cart orders
        */
       const productCartIndex = cartState.productOrders.findIndex(
         product => product.product.id === selectedProduct.id,
@@ -50,10 +50,44 @@ export const cartSlice = createSlice({
       product.quantity += 1;
       product.totalPrice = product.quantity * product.product.product_price;
     },
-    removeFromCart: (cartState, action: PayloadAction<Product>) => {
-      cartState.allProductsInCart = cartState.allProductsInCart.filter(
-        product => product.id !== action.payload.id,
+    decreaseProductOnCart: (cartState, action: PayloadAction<Product>) => {
+      const selectedProduct = action.payload;
+
+      /**
+       * Remove the product to the allProductsInCart array for
+       * calculating discounts
+       */
+      const productIndex = cartState.allProductsInCart.findIndex(
+        product => product.id === selectedProduct.id,
       );
+      cartState.allProductsInCart.splice(productIndex, 1);
+      cartSlice.caseReducers.updateDiscounts(cartState);
+
+      /**
+       * Get the index of the product in the cart orders
+       */
+      const productCartIndex = cartState.productOrders.findIndex(
+        product => product.product.id === selectedProduct.id,
+      );
+
+      const product = cartState.productOrders[productCartIndex];
+      /**
+       * If the product is the last product on the cart orders,
+       * Cart order will be removed
+       * */
+      const isOrderWillRemoved = product.quantity - 1 === 0;
+
+      if (isOrderWillRemoved) {
+        cartState.productOrders.splice(productCartIndex, 1);
+        return;
+      }
+
+      /**
+       * If the product is already on the cart,
+       * Decrease the quantity and update the total price
+       * */
+      product.quantity -= 1;
+      product.totalPrice -= product.quantity;
     },
     updateDiscounts: cartState => {
       const calculatedDiscounts = discountPlans.map(plan =>
@@ -70,6 +104,6 @@ export const cartSlice = createSlice({
   },
 });
 
-export const {addToCart, removeFromCart} = cartSlice.actions;
+export const {addToCart, decreaseProductOnCart} = cartSlice.actions;
 
 export default cartSlice.reducer;
