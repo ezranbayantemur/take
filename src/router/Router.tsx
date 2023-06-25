@@ -31,7 +31,11 @@ export default function Router() {
           component={Login}
           options={{headerShown: false}}
         />
-        <Stack.Screen name={routes.REGISTER} component={Register} />
+        <Stack.Screen
+          name={routes.REGISTER}
+          component={Register}
+          options={{headerShown: false}}
+        />
         <Stack.Screen name={routes.DISCOVER} component={Discover} />
         <Stack.Screen name={routes.PRODUCTS} component={Products} />
         <Stack.Screen name={routes.PRODUCT_DETAIL} component={ProductDetail} />
