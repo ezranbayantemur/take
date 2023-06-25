@@ -15,6 +15,7 @@ export default function Router() {
           headerTitle: 'take',
           headerTitleStyle: styles.headerTitle,
           headerBackVisible: false,
+          contentStyle: styles.content,
         }}>
         <Stack.Screen
           name={routes.LOGIN}
