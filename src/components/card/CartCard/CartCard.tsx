@@ -1,6 +1,5 @@
 import {Image, Text, View} from 'react-native';
 import React from 'react';
-import numeral from 'numeral';
 import InputCounter from '../../InputCounter';
 import styles from './CartCard.style';
 import type {CartCardProps} from './CartCard.types';
@@ -13,13 +12,12 @@ const CartCard = ({
   onIncreaseQuantity,
   onDecreaseQuantity,
 }: CartCardProps) => {
-  const totalPrice = numeral(+product.product_price * quantity).format(
-    '0,0.000',
-  );
+  const totalPrice = (product.product_price * quantity).toLocaleString('tr-TR');
 
   return (
     <View testID={`${testID}_cartcard`} style={styles.container}>
       <Image
+        resizeMode="contain"
         style={styles.image}
         source={{
           uri: product.product_image,

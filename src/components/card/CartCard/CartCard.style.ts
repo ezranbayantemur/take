@@ -3,8 +3,7 @@ import {color, font, padding, typography} from '@style';
 
 export default StyleSheet.create({
   container: {
-    borderWidth: 1,
-    borderRadius: 5,
+    margin: padding.SMALL,
     borderColor: color.SMOKE,
     flexDirection: 'row',
   },
