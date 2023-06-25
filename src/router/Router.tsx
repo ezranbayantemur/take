@@ -2,7 +2,14 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import routes from '@route';
-import {Login, Register, Discover, Products, ProductDetail} from '../pages';
+import {
+  Login,
+  Register,
+  Discover,
+  Products,
+  ProductDetail,
+  Cart,
+} from '../pages';
 import {styles} from './Router.style';
 import {CartHeader} from '@components';
 
@@ -28,6 +35,7 @@ export default function Router() {
         <Stack.Screen name={routes.DISCOVER} component={Discover} />
         <Stack.Screen name={routes.PRODUCTS} component={Products} />
         <Stack.Screen name={routes.PRODUCT_DETAIL} component={ProductDetail} />
+        <Stack.Screen name={routes.CART} component={Cart} />
       </Stack.Navigator>
     </NavigationContainer>
   );
