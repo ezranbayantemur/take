@@ -17,6 +17,18 @@ function discountApplier({
     product => product.category === categoryName,
   );
 
+  if (!discountCategoryProducts.length) {
+    return {
+      totalPrice: 0,
+      categoryTitle: categoryName,
+      discountPercentage,
+      discountedPrice: 0,
+      hasDiscount: false,
+      hasProduct: false,
+      remainingPricetoApplyDiscount: 0,
+    };
+  }
+
   const totalPrice = discountCategoryProducts.reduce(
     (accProduct, currentProduct) =>
       accProduct + Number(currentProduct.product_price),
@@ -30,6 +42,7 @@ function discountApplier({
       discountPercentage,
       discountedPrice: 0,
       hasDiscount: false,
+      hasProduct: true,
       remainingPricetoApplyDiscount: discountApplyLimitPrice - totalPrice,
     };
   }
@@ -42,6 +55,7 @@ function discountApplier({
     discountPercentage,
     discountedPrice,
     hasDiscount: true,
+    hasProduct: true,
     remainingPricetoApplyDiscount: 0,
   };
 }

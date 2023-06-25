@@ -4,5 +4,6 @@ export interface Discount {
   discountedPrice: number;
   totalPrice: number;
   hasDiscount: boolean;
+  hasProduct: boolean;
   remainingPricetoApplyDiscount: number;
 }

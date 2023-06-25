@@ -64,6 +64,7 @@ describe('discountApplier unit test', () => {
       discountedPrice: 0,
       totalPrice: 1200,
       hasDiscount: false,
+      hasProduct: true,
       remainingPricetoApplyDiscount: 3800,
     });
 
@@ -80,9 +81,11 @@ describe('discountApplier unit test', () => {
       discountedPrice: 0,
       totalPrice: 770,
       hasDiscount: false,
+      hasProduct: true,
       remainingPricetoApplyDiscount: 230,
     });
   });
+
   it('should return correctly if there a discount to apply', () => {
     const discountElectronics = discountApplier({
       productsInCart: mockData,
@@ -96,6 +99,7 @@ describe('discountApplier unit test', () => {
       discountPercentage: 5,
       discountedPrice: 1140,
       hasDiscount: true,
+      hasProduct: true,
       remainingPricetoApplyDiscount: 0,
     });
 
@@ -111,6 +115,26 @@ describe('discountApplier unit test', () => {
       discountedPrice: 731.5,
       discountPercentage: 5,
       hasDiscount: true,
+      hasProduct: true,
+      remainingPricetoApplyDiscount: 0,
+    });
+  });
+
+  it('should return correctly if there is no product discount to apply', () => {
+    const discountElectronics = discountApplier({
+      productsInCart: mockData,
+      categoryName: 'men_clothing',
+      discountPercentage: 5,
+      discountApplyLimitPrice: 1000,
+    });
+
+    expect(discountElectronics).toMatchObject({
+      totalPrice: 0,
+      categoryTitle: 'men_clothing',
+      discountPercentage: 5,
+      discountedPrice: 0,
+      hasDiscount: false,
+      hasProduct: false,
       remainingPricetoApplyDiscount: 0,
     });
   });

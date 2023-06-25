@@ -48,6 +48,10 @@ const CartPage = () => {
         showsVerticalScrollIndicator={false}
       />
       {discounts.map((discount, index) => {
+        if (!discount.hasProduct) {
+          return null;
+        }
+
         if (discount.hasDiscount) {
           return (
             <Text key={index}>
@@ -58,6 +62,7 @@ const CartPage = () => {
             </Text>
           );
         }
+
         return (
           <Text key={index}>
             "{discount.categoryTitle}" kategorisindeki ürünlere "%
