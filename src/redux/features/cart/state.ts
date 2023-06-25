@@ -1,9 +1,15 @@
-import {Product} from '@types';
-
+import {Product, Discount} from '@types';
+import {CartProduct} from '../../types';
 export interface CartState {
-  productsInCart: Product[];
+  productOrders: CartProduct[];
+  allProductsInCart: Product[];
+  discounts: Discount[];
+  subTotal: number;
 }
 
 export const state: CartState = {
-  productsInCart: [],
+  productOrders: [],
+  allProductsInCart: [],
+  discounts: [],
+  subTotal: 0,
 };
