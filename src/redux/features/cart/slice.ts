@@ -3,6 +3,7 @@ import type {PayloadAction} from '@reduxjs/toolkit';
 import {state} from './state';
 import {Product} from '@types';
 import {discountApplier} from '@utils';
+import discountPlans from './discountPlans';
 
 export const cartSlice = createSlice({
   name: 'cart',
@@ -55,21 +56,16 @@ export const cartSlice = createSlice({
       );
     },
     updateDiscounts: cartState => {
-      const discountElectronics = discountApplier({
-        productsInCart: cartState.allProductsInCart,
-        categoryName: 'electronic',
-        discountPercentage: 5,
-        discountApplyLimitPrice: 1000,
-      });
+      const calculatedDiscounts = discountPlans.map(plan =>
+        discountApplier({
+          productsInCart: cartState.allProductsInCart,
+          categoryName: plan.categoryName,
+          discountPercentage: plan.discountPercentage,
+          discountApplyLimitPrice: plan.discountApplyLimitPrice,
+        }),
+      );
 
-      const discountJewelry = discountApplier({
-        productsInCart: cartState.allProductsInCart,
-        categoryName: 'jewelry',
-        discountPercentage: 10,
-        discountApplyLimitPrice: 750,
-      });
-
-      cartState.discounts = [discountElectronics, discountJewelry];
+      cartState.discounts = calculatedDiscounts;
     },
   },
 });
