@@ -25,4 +25,30 @@ describe('Discover e2e tests', () => {
     await expect(element(by.text('Kadın Giyim'))).toBeVisible();
     await expect(element(by.text('Erkek Giyim'))).toBeVisible();
   });
+
+  it('should navigate to category', async () => {
+    await element(by.id('discover_0_categorycard_title_touchable')).tap();
+
+    await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
+    await expect(element(by.text('iPhone 12'))).toBeVisible();
+    await expect(element(by.text('ThinkPhone'))).toBeVisible();
+    await expect(element(by.text('RedMi Note 12'))).toBeVisible();
+  });
+
+  it('should navigate to product detail', async () => {
+    await element(
+      by.id('discover_0_categorycard_0_showcasecard_touchable'),
+    ).tap();
+
+    await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
+    await expect(element(by.text('Apple'))).toBeVisible();
+    await expect(element(by.text('42.000 TL'))).toBeVisible();
+    await expect(
+      element(
+        by.text(
+          'Mollit nostrud pariatur elit sunt esse aliqua occaecat dolore consectetur amet nulla sit ipsum. Occaecat qui veniam anim duis anim proident est. Est laboris consequat laborum fugiat proident enim deserunt consectetur ipsum ullamco ipsum. Nostrud consequat irure excepteur ea do consequat enim non esse. Nulla ex veniam fugiat laboris tempor duis anim aliqua.',
+        ),
+      ),
+    ).toBeVisible();
+  });
 });

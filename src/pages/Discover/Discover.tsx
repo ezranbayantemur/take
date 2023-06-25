@@ -10,9 +10,14 @@ const DiscoverPage = () => {
   const navigation = useNavigation<any>();
   const {data: discoverData, isLoading} = useGetDiscoverFeedQuery();
 
-  const handleOnProductSelect = (product: ShowCaseProduct) => {
-    console.log(product);
-  };
+  const handleOnProductSelect = React.useCallback(
+    (product: ShowCaseProduct) => {
+      navigation.navigate(routes.PRODUCT_DETAIL, {
+        product_id: product.id,
+      });
+    },
+    [navigation],
+  );
 
   const handleOnCategorySelect = React.useCallback(
     (selectedCategory: string) => {
