@@ -28,8 +28,25 @@ describe('Products e2e tests', () => {
     await expect(element(by.text('RedMi Note 12'))).toBeVisible();
 
     await element(by.id('products_flatlist')).scrollTo('bottom');
+
     await expect(element(by.text('Xperia 10 IV'))).toBeVisible();
     await expect(element(by.text('Razr 40 Ultra'))).toBeVisible();
     await expect(element(by.text('Magic4 PRO'))).toBeVisible();
+  });
+
+  it('should search products', async () => {
+    await element(by.id('products_searchbar_searchbar_input')).typeText(
+      'iphone',
+    );
+
+    await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
+    await expect(element(by.text('iPhone 12'))).toBeVisible();
+    await expect(element(by.text('ThinkPhone'))).not.toBeVisible();
+    await expect(element(by.text('RedMi Note 12'))).not.toBeVisible();
+    await expect(element(by.text('Galaxy S23 Ultra'))).not.toBeVisible();
+    await expect(element(by.text('Pixel 7'))).not.toBeVisible();
+    await expect(element(by.text('Xperia 10 IV'))).not.toBeVisible();
+    await expect(element(by.text('Razr 40 Ultra'))).not.toBeVisible();
+    await expect(element(by.text('Magic4 PRO'))).not.toBeVisible();
   });
 });

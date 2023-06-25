@@ -6,8 +6,8 @@ export interface LoginFormValuesType {
 }
 
 export const initialLoginFormValues: LoginFormValuesType = {
-  email: '',
-  password: '',
+  email: 'ezran@mail.com',
+  password: 'ezran123456',
 };
 
 export const loginValidationSchema = Yup.object().shape({

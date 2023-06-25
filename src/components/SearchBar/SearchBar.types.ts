@@ -1,6 +1,7 @@
-export interface SearchBarProps {
+export interface SearchBarProps<T> {
   testID: string;
-  onSearch: (value: string) => void;
+  data: T[];
+  onSearch: (result: T[]) => void;
   placeholder?: string;
   debounceTime?: number;
 }

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchBar unit tests should render correctly 1`] = `
-<View
-  style={{}}
->
+<View>
   <View>
     <View
       style={
@@ -16,6 +14,7 @@ exports[`SearchBar unit tests should render correctly 1`] = `
       }
     >
       <TextInput
+        autoCapitalize="none"
         onChangeText={[Function]}
         placeholder="Ara..."
         style={

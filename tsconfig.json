@@ -6,6 +6,7 @@
       "@style": ["src/style"],
       "@components": ["src/components"],
       "@types": ["src/types"],
+      "@hooks": ["src/hooks"],
       "@mocks/*": ["__mocks__/*"],
       "@route": ["src/router/routes.ts"]
     }

@@ -9,6 +9,7 @@ module.exports = {
           '@components': './src/components',
           '@types': './src/types',
           '@mocks': './__mocks__',
+          '@hooks': './src/hooks',
           '@route': './src/router/routes.ts',
         },
       },
