@@ -2,11 +2,14 @@ import React from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import {usePostProductDetailMutation} from '../../redux/api';
+import {addToCart} from '../../redux/features/cart/slice';
 import styles from './ProductDetail.style';
 import {Button} from '@components';
+import {useDispatch} from 'react-redux';
 
 const ProductDetailPage = () => {
   const route = useRoute<any>();
+  const dispatch = useDispatch();
   const [getProductDetail, {data: productDetailData, isLoading}] =
     usePostProductDetailMutation();
 
@@ -15,7 +18,7 @@ const ProductDetailPage = () => {
   }, [getProductDetail, route.params.product_id]);
 
   const handleAddToCart = () => {
-    console.log('add to cart');
+    dispatch(addToCart(productDetailData!));
   };
 
   if (isLoading || !productDetailData) {

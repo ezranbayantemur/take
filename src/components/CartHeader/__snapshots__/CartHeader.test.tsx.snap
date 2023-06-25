@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryCard unit tests should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "opacity": 1,
+    }
+  }
+  testID="cartheader_touchable"
+>
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": undefined,
+          "fontSize": 12,
+        },
+        {
+          "color": "#BDBDBD",
+          "fontSize": 20,
+          "marginRight": 16,
+        },
+        {
+          "fontFamily": "icomoon",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+    suppressHighlighting={true}
+  >
+    
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#DB040E",
+        "borderRadius": 50,
+        "height": 20,
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": -3,
+        "top": -8,
+        "width": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#FBFBFB",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 13,
+        }
+      }
+    >
+      2
+    </Text>
+  </View>
+</View>
+`;

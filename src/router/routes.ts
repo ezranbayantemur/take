@@ -4,6 +4,7 @@ export enum routes {
   DISCOVER = 'DiscoverScreen',
   PRODUCTS = 'ProductsScreen',
   PRODUCT_DETAIL = 'ProductDetailScreen',
+  CART = 'CartScreen',
 }
 
 export default routes;

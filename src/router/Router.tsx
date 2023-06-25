@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import routes from '@route';
 import {Login, Register, Discover, Products, ProductDetail} from '../pages';
 import {styles} from './Router.style';
+import {CartHeader} from '@components';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function Router() {
           headerTitleStyle: styles.headerTitle,
           headerBackVisible: false,
           contentStyle: styles.content,
+          headerRight: CartHeader,
         }}>
         <Stack.Screen
           name={routes.LOGIN}
