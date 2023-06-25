@@ -40,6 +40,10 @@
     {
       "path": "assets/fonts/Lato-ThinItalic.ttf",
       "sha1": "ff4a1a9fe2dcc41d993f4c5067a3baa1c456ff97"
+    },
+    {
+      "path": "assets/fonts/icomoon.ttf",
+      "sha1": "c0785d91db28133d6fcb11c7c3d3ae93f0779478"
     }
   ]
 }

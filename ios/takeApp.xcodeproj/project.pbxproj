@@ -24,6 +24,7 @@
 		BF0C415D91484C65B97EF843 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CB7574DACF44EE48B4400E8 /* Lato-LightItalic.ttf */; };
 		D1B9034CEE9A4235A4610905 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5162C5F5DDA64E9AB56A024F /* Lato-Bold.ttf */; };
 		FDDD493D29144DE4B6EA634C /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B96D4073DBA468B80ECBE72 /* Lato-ThinItalic.ttf */; };
+		FFD78BE759E341EDAF455DE2 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A617991075461E95D5101E /* icomoon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		D79771399B5245D78EF64375 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F7CBB7FB9C5D4AFBA7802C62 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		93A617991075461E95D5101E /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				52C91B1A7D2C4B7A8E168BC0 /* Lato-Regular.ttf */,
 				F7CBB7FB9C5D4AFBA7802C62 /* Lato-Thin.ttf */,
 				8B96D4073DBA468B80ECBE72 /* Lato-ThinItalic.ttf */,
+				93A617991075461E95D5101E /* icomoon.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -293,6 +296,7 @@
 				5C463A9D11F3498181B3C6A0 /* Lato-Regular.ttf in Resources */,
 				13751D1C5E2C432492D4297D /* Lato-Thin.ttf in Resources */,
 				FDDD493D29144DE4B6EA634C /* Lato-ThinItalic.ttf in Resources */,
+				FFD78BE759E341EDAF455DE2 /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
