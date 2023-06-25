@@ -10,6 +10,7 @@ module.exports = {
           '@types': './src/types',
           '@mocks': './__mocks__',
           '@hooks': './src/hooks',
+          '@utils': './src/utils',
           '@route': './src/router/routes.ts',
         },
       },
