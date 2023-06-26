@@ -7,6 +7,7 @@ import SearchBar from './SearchBar';
 
 import CartCard from './card/CartCard';
 import ProductCard from './card/ProductCard';
+import DiscountCard from './card/DiscountCard';
 import CategoryCard from './card/CategoryCard';
 import ShowCaseProductCard from './card/ShowCaseProductCard';
 
@@ -22,6 +23,7 @@ export {
   SearchBar,
   InputCounter,
   ProductCard,
+  DiscountCard,
   ShowCaseProductCard,
   CartHeader,
   DiscoverPlaceholder,

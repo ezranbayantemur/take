@@ -50,6 +50,7 @@ const getStories = () => {
     "./src/components/Button/Button.stories.tsx": require("../src/components/Button/Button.stories.tsx"),
     "./src/components/card/CartCard/CartCard.stories.tsx": require("../src/components/card/CartCard/CartCard.stories.tsx"),
     "./src/components/card/CategoryCard/CategoryCard.stories.tsx": require("../src/components/card/CategoryCard/CategoryCard.stories.tsx"),
+    "./src/components/card/DiscountCard/DiscountCard.stories.tsx": require("../src/components/card/DiscountCard/DiscountCard.stories.tsx"),
     "./src/components/card/ProductCard/ProductCard.stories.tsx": require("../src/components/card/ProductCard/ProductCard.stories.tsx"),
     "./src/components/card/ShowCaseProductCard/ShowCaseProductCard.stories.tsx": require("../src/components/card/ShowCaseProductCard/ShowCaseProductCard.stories.tsx"),
     "./src/components/Icon/Icon.stories.js": require("../src/components/Icon/Icon.stories.js"),
