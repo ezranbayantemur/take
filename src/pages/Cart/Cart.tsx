@@ -4,7 +4,12 @@ import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {RootState} from '../../redux/store';
 import {CartProduct} from '../../redux/types';
 import {useDispatch, useSelector} from 'react-redux';
-import {Button, CartCard, DiscountCard} from '@components';
+import {
+  Button,
+  CartCard,
+  DiscountCard,
+  CartEmptyPlaceholder,
+} from '@components';
 import {
   addToCart,
   decreaseProductOnCart,
@@ -52,6 +57,10 @@ const CartPage = () => {
       data={discount}
     />
   );
+
+  if (productOrders.length === 0) {
+    return <CartEmptyPlaceholder />;
+  }
 
   return (
     <SafeAreaView style={styles.container} testID="cart_page">
