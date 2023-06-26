@@ -110,6 +110,7 @@ export const cartSlice = createSlice({
         (orderAcc, currentProduct) => orderAcc + currentProduct.product_price,
         0,
       );
+      console.log('totalPriceWithoutDiscount: ' + totalPriceWithoutDiscount);
 
       /**
        * Calculating total discounted
@@ -117,11 +118,20 @@ export const cartSlice = createSlice({
       const totalDiscountedPrice = calculatedDiscounts.reduce(
         (discountAcc, currentDiscount) => {
           const {totalPrice, discountedPrice} = currentDiscount;
+
+          if (discountedPrice === 0) {
+            /**
+             * No calculation discount if there is no applied discount
+             */
+            return discountAcc + 0;
+          }
+
           return discountAcc + (totalPrice - discountedPrice);
         },
         0,
       );
 
+      console.log('totalDiscountedPrice: ' + totalDiscountedPrice);
       /**
        * Subtracting total discounted price from total price
        */
