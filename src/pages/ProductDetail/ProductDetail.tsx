@@ -1,13 +1,15 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
-import {useRoute} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import {usePostProductDetailMutation} from '../../redux/api';
 import {addToCart} from '../../redux/features/cart/slice';
 import styles from './ProductDetail.style';
-import {Button} from '@components';
+import {Button, ProductDetailPlaceholder} from '@components';
 import {useDispatch} from 'react-redux';
+import routes from '@route';
 
 const ProductDetailPage = () => {
+  const navigation = useNavigation<any>();
   const route = useRoute<any>();
   const dispatch = useDispatch();
   const [getProductDetail, {data: productDetailData, isLoading}] =
@@ -19,9 +21,14 @@ const ProductDetailPage = () => {
 
   const handleAddToCart = () => {
     dispatch(addToCart(productDetailData!));
+    navigation.navigate(routes.CART);
   };
 
-  if (isLoading || !productDetailData) {
+  if (isLoading) {
+    return <ProductDetailPlaceholder />;
+  }
+
+  if (!productDetailData) {
     return null;
   }
 
