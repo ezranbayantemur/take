@@ -4,7 +4,7 @@ exports[`DiscountCard unit tests should render correctly 1`] = `
 <View
   style={
     {
-      "marginVertical": 16,
+      "margin": 16,
     }
   }
   testID="test_discount_discountcard"
@@ -27,7 +27,6 @@ exports[`DiscountCard unit tests should render correctly 1`] = `
         }
       }
     >
-      Elektronik
        kategorisindeki ürünlere %
       5
        

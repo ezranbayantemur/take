@@ -51,7 +51,7 @@ describe('DiscountCard unit tests', () => {
       <DiscountCard
         testID="test"
         data={{
-          categoryTitle: 'electronics',
+          categoryTitle: 'electronic',
           totalPrice: 1000,
           discountPercentage: 5,
           discountedPrice: 950,
@@ -61,10 +61,18 @@ describe('DiscountCard unit tests', () => {
         }}
       />,
     );
-    const text = wrapper.queryByText(
-      'Elektronik kategorisindeki ürünlere %5 indirim uygulandı. Yeni toplu fiyat 1000 TL yerine 950 TL',
-    );
-    expect(text).not.toBeNull();
+
+    expect(
+      wrapper.queryByText(
+        'Elektronik kategorisindeki ürünlere %5 indirim uygulandı. Yeni toplu fiyat 1000 TL yerine 950 TL',
+      ),
+    ).not.toBeNull();
+
+    expect(
+      wrapper.queryByText(
+        `Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 0 TL'lik daha ürün sepete ekleyin`,
+      ),
+    ).toBeNull();
   });
 
   it('should render correct discount text if there not enough total sub to apply discount', () => {
@@ -83,9 +91,16 @@ describe('DiscountCard unit tests', () => {
       />,
     );
 
-    const text = wrapper.queryByText(
-      "Takı kategorisinde %10 indirim fırsatını yakalamak için bu kategoriden 1500 TL'lik daha ürün sepete ekleyin",
-    );
-    expect(text).not.toBeNull();
+    expect(
+      wrapper.queryByText(
+        "Takı kategorisinde %10 indirim fırsatını yakalamak için bu kategoriden 1500 TL'lik daha ürün sepete ekleyin",
+      ),
+    ).not.toBeNull();
+
+    expect(
+      wrapper.queryByText(
+        'Takı kategorisindeki ürünlere %10 indirim uygulandı. Yeni toplu fiyat 1000 TL yerine 0 TL',
+      ),
+    ).toBeNull();
   });
 });
