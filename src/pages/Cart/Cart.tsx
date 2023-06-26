@@ -1,4 +1,4 @@
-import {SafeAreaView, ScrollView, Text, View} from 'react-native';
+import {FlatList, ListRenderItem, SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {RootState} from '../../redux/store';
@@ -39,7 +39,7 @@ const CartPage = () => {
     }, [navigation]),
   );
 
-  const renderOrder = (item: CartProduct, index: number) => (
+  const renderOrder: ListRenderItem<CartProduct> = ({item, index}) => (
     <CartCard
       key={`${item.product.id}_${index}`}
       testID={`cart_card_${index}`}
@@ -64,17 +64,22 @@ const CartPage = () => {
 
   return (
     <SafeAreaView style={styles.container} testID="cart_page">
-      <ScrollView>
-        {productOrders.map(renderOrder)}
-
-        {discounts.map(renderDiscount)}
-
-        <View style={styles.sub_total_container}>
-          <Text style={styles.sub_total_text}>Toplam: {subTotal} TL</Text>
-        </View>
-
-        <Button text="Siparişi Onayla" onPress={() => null} />
-      </ScrollView>
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={productOrders}
+        contentContainerStyle={styles.order_list_content_container}
+        renderItem={renderOrder}
+        ListFooterComponentStyle={styles.order_list_footer}
+        ListFooterComponent={() => (
+          <>
+            <View style={styles.sub_total_container}>
+              <Text style={styles.sub_total_text}>Toplam: {subTotal} TL</Text>
+            </View>
+            {discounts.map(renderDiscount)}
+            <Button text="Siparişi Onayla" onPress={() => null} />
+          </>
+        )}
+      />
     </SafeAreaView>
   );
 };

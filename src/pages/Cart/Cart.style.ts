@@ -13,4 +13,11 @@ export default StyleSheet.create({
     fontSize: typography.BIG,
     fontFamily: font.BOLD,
   },
+  order_list_content_container: {
+    flexGrow: 1,
+  },
+  order_list_footer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
 });
