@@ -1,15 +1,16 @@
-import {FlatList, ListRenderItem, SafeAreaView, Text} from 'react-native';
+import {SafeAreaView, ScrollView, Text, View} from 'react-native';
 import React from 'react';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {RootState} from '../../redux/store';
 import {CartProduct} from '../../redux/types';
 import {useDispatch, useSelector} from 'react-redux';
-import {CartCard} from '@components';
+import {Button, CartCard, DiscountCard} from '@components';
 import {
   addToCart,
   decreaseProductOnCart,
 } from '../../redux/features/cart/slice';
 import {Discount} from '@types';
+import styles from './Cart.style';
 
 const CartPage = () => {
   const navigation = useNavigation<any>();
@@ -20,6 +21,7 @@ const CartPage = () => {
   const discounts = useSelector<RootState, Discount[]>(
     state => state.cart.discounts,
   );
+  const subTotal = useSelector<RootState, number>(state => state.cart.subTotal);
 
   /**
    * Removing cart icon from header for prevent recursive navigation flow
@@ -32,7 +34,7 @@ const CartPage = () => {
     }, [navigation]),
   );
 
-  const renderOrder: ListRenderItem<CartProduct> = ({item, index}) => (
+  const renderOrder = (item: CartProduct, index: number) => (
     <CartCard
       key={`${item.product.id}_${index}`}
       testID={`cart_card_${index}`}
@@ -43,39 +45,27 @@ const CartPage = () => {
     />
   );
 
+  const renderDiscount = (discount: Discount, index: number) => (
+    <DiscountCard
+      key={`${index}_${discount.categoryTitle}`}
+      testID={`discount_${index}_${discount.categoryTitle}`}
+      data={discount}
+    />
+  );
+
   return (
-    <SafeAreaView testID="cart_page">
-      <FlatList
-        data={productOrders}
-        renderItem={renderOrder}
-        bounces={false}
-        showsVerticalScrollIndicator={false}
-      />
-      {discounts.map((discount, index) => {
-        if (!discount.hasProduct) {
-          return null;
-        }
+    <SafeAreaView style={styles.container} testID="cart_page">
+      <ScrollView>
+        {productOrders.map(renderOrder)}
 
-        if (discount.hasDiscount) {
-          return (
-            <Text key={index}>
-              "{discount.categoryTitle}" kategorisindeki ürünlere "%
-              {discount.discountPercentage}" indirim uygulandı. Yeni fiyat "
-              {discount.totalPrice}TL" yerine "{discount.discountedPrice}
-              TL"
-            </Text>
-          );
-        }
+        {discounts.map(renderDiscount)}
 
-        return (
-          <Text key={index}>
-            "{discount.categoryTitle}" kategorisindeki ürünlere "%
-            {discount.discountPercentage}lik" indirim uygulanması için Bu
-            kategoriden "{discount.remainingPricetoApplyDiscount}" TL lik daha
-            ürün ekleyin
-          </Text>
-        );
-      })}
+        <View style={styles.sub_total_container}>
+          <Text style={styles.sub_total_text}>Toplam: {subTotal} TL</Text>
+        </View>
+
+        <Button text="Siparişi Onayla" onPress={() => null} />
+      </ScrollView>
     </SafeAreaView>
   );
 };

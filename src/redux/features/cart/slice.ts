@@ -3,7 +3,7 @@ import type {PayloadAction} from '@reduxjs/toolkit';
 import {state} from './state';
 import {Product} from '@types';
 import {discountApplier} from '@utils';
-import discountPlans from './discountPlans';
+import categoryDiscountPlans from './categoryDiscountPlans';
 
 export const cartSlice = createSlice({
   name: 'cart',
@@ -11,13 +11,12 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (cartState, action: PayloadAction<Product>) => {
       const selectedProduct = action.payload;
-
       /**
        * Push the product to the allProductsInCart array for
        * calculating discounts
        */
       cartState.allProductsInCart.push(selectedProduct);
-      cartSlice.caseReducers.updateDiscounts(cartState);
+      cartSlice.caseReducers.updateSubTotal(cartState);
 
       /**
        * Get the index of the product in the cart orders
@@ -61,7 +60,7 @@ export const cartSlice = createSlice({
         product => product.id === selectedProduct.id,
       );
       cartState.allProductsInCart.splice(productIndex, 1);
-      cartSlice.caseReducers.updateDiscounts(cartState);
+      cartSlice.caseReducers.updateSubTotal(cartState);
 
       /**
        * Get the index of the product in the cart orders
@@ -89,8 +88,11 @@ export const cartSlice = createSlice({
       product.quantity -= 1;
       product.totalPrice -= product.quantity;
     },
-    updateDiscounts: cartState => {
-      const calculatedDiscounts = discountPlans.map(plan =>
+    updateSubTotal: cartState => {
+      /**
+       * Calculating discount for every product in/out
+       */
+      const calculatedDiscounts = categoryDiscountPlans.map(plan =>
         discountApplier({
           productsInCart: cartState.allProductsInCart,
           categoryName: plan.categoryName,
@@ -100,6 +102,30 @@ export const cartSlice = createSlice({
       );
 
       cartState.discounts = calculatedDiscounts;
+
+      /**
+       * Calculating total price without discount
+       */
+      const totalPriceWithoutDiscount = cartState.allProductsInCart.reduce(
+        (orderAcc, currentProduct) => orderAcc + currentProduct.product_price,
+        0,
+      );
+
+      /**
+       * Calculating total discounted
+       */
+      const totalDiscountedPrice = calculatedDiscounts.reduce(
+        (discountAcc, currentDiscount) => {
+          const {totalPrice, discountedPrice} = currentDiscount;
+          return discountAcc + (totalPrice - discountedPrice);
+        },
+        0,
+      );
+
+      /**
+       * Subtracting total discounted price from total price
+       */
+      cartState.subTotal = totalPriceWithoutDiscount - totalDiscountedPrice;
     },
   },
 });

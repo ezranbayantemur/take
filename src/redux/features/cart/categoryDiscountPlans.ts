@@ -1,4 +1,4 @@
-const discountPlans = [
+const categoryDiscountPlans = [
   {
     categoryName: 'electronic',
     discountPercentage: 5,
@@ -11,4 +11,4 @@ const discountPlans = [
   },
 ];
 
-export default discountPlans;
+export default categoryDiscountPlans;

@@ -2,11 +2,10 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import {DiscountCardProps} from './DiscountCard.types';
 import styles from './DiscountCard.style';
-import {Icon} from '@components';
 
 const categoryTitleParser: Record<string, string> = {
   jewelry: 'Takı',
-  electronics: 'Elektronik',
+  electronic: 'Elektronik',
   men_clothing: 'Erkek Giyim',
   women_clothing: 'Kadın Giyim',
 };

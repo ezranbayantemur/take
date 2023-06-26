@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    marginVertical: padding.MEDIUM,
+    margin: padding.MEDIUM,
   },
   discount_container: {
     paddingVertical: padding.MEDIUM,
