@@ -8,6 +8,7 @@ const IMAGE_HEIGHT = deviceSize.height * 0.45;
 
 export default StyleSheet.create({
   image: {
+    marginTop: padding.SMALL,
     width: IMAGE_WIDTH,
     height: IMAGE_HEIGHT,
   },
