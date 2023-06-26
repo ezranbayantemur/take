@@ -36,7 +36,7 @@ describe('DiscountCard unit tests', () => {
           discountPercentage: 5,
           discountedPrice: 0,
           hasDiscount: true,
-          hasProduct: true,
+          hasProduct: false,
           remainingPricetoApplyDiscount: 0,
         }}
       />,
@@ -62,7 +62,7 @@ describe('DiscountCard unit tests', () => {
       />,
     );
     const text = wrapper.queryByText(
-      'electronics kategorisindeki ürünlere %5 indirim uygulandı. Yeni fiyat 1000 TL yerine 950 TL',
+      'Elektronik kategorisindeki ürünlere %5 indirim uygulandı. Yeni toplu fiyat 1000 TL yerine 950 TL',
     );
     expect(text).not.toBeNull();
   });
@@ -82,10 +82,9 @@ describe('DiscountCard unit tests', () => {
         }}
       />,
     );
-    wrapper.debug();
 
     const text = wrapper.queryByText(
-      "jewelry kategorisinde %10 indirim fırsatını yakalamak için bu kategoriden 1500 TL'lik daha ürün sepete ekleyin",
+      "Takı kategorisinde %10 indirim fırsatını yakalamak için bu kategoriden 1500 TL'lik daha ürün sepete ekleyin",
     );
     expect(text).not.toBeNull();
   });

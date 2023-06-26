@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DiscountCard unit tests should render correctly 1`] = `
+<View
+  style={
+    {
+      "marginVertical": 16,
+    }
+  }
+  testID="test_discount_discountcard"
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#DB040E",
+        "borderRadius": 5,
+        "padding": 8,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#FBFBFB",
+          "fontFamily": "Lato-Regular",
+        }
+      }
+    >
+      Elektronik
+       kategorisindeki ürünlere %
+      5
+       
+      indirim uygulandı. Yeni toplu fiyat 
+      1000
+       TL yerine
+       
+      <Text
+        style={
+          {
+            "fontFamily": "Lato-Black",
+          }
+        }
+      >
+        950
+         TL
+      </Text>
+       
+    </Text>
+  </View>
+</View>
+`;
