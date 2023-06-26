@@ -27,4 +27,7 @@ export default StyleSheet.create({
   not_enough_discount_text: {
     fontFamily: font.REGULAR,
   },
+  not_enough_discount_remain_price_text: {
+    fontFamily: font.BLACK,
+  },
 });

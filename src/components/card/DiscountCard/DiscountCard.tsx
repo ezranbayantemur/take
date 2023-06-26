@@ -51,7 +51,10 @@ const DiscountCard = ({
         <Text style={styles.not_enough_discount_text}>
           {parsedCategoryTitle} kategorisinde %{discountPercentage} indirim
           fırsatını yakalamak için bu kategoriden{' '}
-          {remainingPricetoApplyDiscount} TL'lik daha ürün sepete ekleyin
+          <Text style={styles.not_enough_discount_remain_price_text}>
+            {remainingPricetoApplyDiscount} TL
+          </Text>
+          'lik daha ürün sepete ekleyin
         </Text>
       </View>
     </View>
