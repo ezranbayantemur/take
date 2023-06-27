@@ -39,7 +39,7 @@ const ProductsPage = () => {
   }
 
   return (
-    <SafeAreaView testID="products_page">
+    <SafeAreaView testID={`products_page_${route.params.category_name}`}>
       <FlatList
         testID="products_flatlist"
         data={productList}

@@ -48,6 +48,7 @@ const DiscoverPage = () => {
         <DiscoverPlaceholder />
       ) : (
         <FlatList
+          testID="discover_flatlist"
           data={discoverData}
           renderItem={renderCategory}
           ListHeaderComponent={() => (

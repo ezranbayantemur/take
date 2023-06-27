@@ -27,9 +27,8 @@ const Login = () => {
         JSON.stringify(loginResponse.data),
       );
       dispatch(setUserSession(loginResponse.data));
-      navigation.navigate(routes.DISCOVER);
     }
-  }, [loginResponse, dispatch, navigation]);
+  }, [loginResponse, dispatch]);
 
   React.useEffect(() => {
     handleSetCredentials();

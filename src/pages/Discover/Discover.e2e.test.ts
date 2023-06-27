@@ -7,27 +7,35 @@ describe('Discover e2e tests', () => {
 
   beforeEach(async () => {
     await device.reloadReactNative();
+  });
+
+  it('should have discover page', async () => {
     await element(by.id('login_email_input')).typeText('test@mail.com');
     await element(by.id('login_password_input')).typeText('123456');
-    await element(by.id('login_sign_button_touchable')).tap();
+    await element(by.text('Giriş Yap')).tap();
+    await expect(element(by.id('discover_page'))).toExist();
   });
 
   it('should show loading', async () => {
     waitFor(element(by.id('discover_placeholder'))).toExist();
   });
 
-  it('should have discover page', async () => {
-    await expect(element(by.id('discover_page'))).toExist();
+  it('should show greeting text', async () => {
+    waitFor(
+      element(by.text('Selam, Test! Bugün ne almak istersin?')),
+    ).toBeVisible();
   });
 
   it('should have categories', async () => {
     await expect(element(by.text('Cep Telefonu'))).toBeVisible();
     await expect(element(by.text('Kadın Giyim'))).toBeVisible();
     await expect(element(by.text('Erkek Giyim'))).toBeVisible();
+    await element(by.id('discover_flatlist')).scrollTo('bottom');
+    await expect(element(by.text('Takı'))).toBeVisible();
   });
 
   it('should navigate to category', async () => {
-    await element(by.id('discover_0_categorycard_title_touchable')).tap();
+    await element(by.text('Cep Telefonu')).tap();
 
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('iPhone 12'))).toBeVisible();
@@ -36,9 +44,7 @@ describe('Discover e2e tests', () => {
   });
 
   it('should navigate to product detail', async () => {
-    await element(
-      by.id('discover_0_categorycard_0_showcasecard_touchable'),
-    ).tap();
+    await element(by.text('iPhone 14 Pro')).tap();
 
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('Apple'))).toBeVisible();

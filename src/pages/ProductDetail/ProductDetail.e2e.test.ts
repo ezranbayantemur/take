@@ -7,22 +7,28 @@ describe('Product detail e2e tests', () => {
 
   beforeEach(async () => {
     await device.reloadReactNative();
-    await element(by.id('login_email_input')).typeText('test@mail.com');
-    await element(by.id('login_password_input')).typeText('123456');
-    await element(by.id('login_sign_button_touchable')).tap();
-    await element(by.id('discover_0_categorycard_title_touchable')).tap();
-    await element(by.id('product_0_productcard_touchable')).tap();
   });
 
   it('should have products page', async () => {
+    await element(by.id('login_email_input')).typeText('test@mail.com');
+    await element(by.id('login_password_input')).typeText('123456');
+    await element(by.id('login_sign_button_touchable')).tap();
+    await element(by.text('Cep Telefonu')).tap();
+    await element(by.text('iPhone 14 Pro')).tap();
     await expect(element(by.id('productdetail_page'))).toExist();
   });
 
   it('should show loading', async () => {
+    await element(by.text('Cep Telefonu')).tap();
+    await element(by.text('iPhone 14 Pro')).tap();
+
     waitFor(element(by.id('productdetail_placeholder'))).toExist();
   });
 
   it('should show product detail', async () => {
+    await element(by.text('Cep Telefonu')).tap();
+    await element(by.text('iPhone 14 Pro')).tap();
+
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('Apple'))).toBeVisible();
     await expect(element(by.text('400 TL'))).toBeVisible();
@@ -36,7 +42,10 @@ describe('Product detail e2e tests', () => {
   });
 
   it('should add product to cart', async () => {
-    await element(by.id('productdetail_add_to_cart_button_touchable')).tap();
+    await element(by.text('Cep Telefonu')).tap();
+    await element(by.text('iPhone 14 Pro')).tap();
+
+    await element(by.text('Sepete Ekle')).tap();
     await expect(element(by.id('cart_page'))).toExist();
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('Adet: 1'))).toBeVisible();

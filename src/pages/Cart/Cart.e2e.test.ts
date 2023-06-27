@@ -35,12 +35,12 @@ describe('Cart e2e tests', () => {
 
   beforeEach(async () => {
     await device.reloadReactNative();
-    await element(by.id('login_email_input')).typeText('test@mail.com');
-    await element(by.id('login_password_input')).typeText('123456');
-    await element(by.id('login_sign_button_touchable')).tap();
   });
 
   it('should have cart page', async () => {
+    await element(by.id('login_email_input')).typeText('test@mail.com');
+    await element(by.id('login_password_input')).typeText('123456');
+    await element(by.id('login_sign_button_touchable')).tap();
     await element(by.id('discover_0_categorycard_title_touchable')).tap();
     await element(by.id('product_0_productcard_touchable')).tap();
     await element(by.id('productdetail_add_to_cart_button_touchable')).tap();

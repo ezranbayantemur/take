@@ -7,21 +7,30 @@ describe('Products e2e tests', () => {
 
   beforeEach(async () => {
     await device.reloadReactNative();
+  });
+
+  it('should have products page for top of the page', async () => {
     await element(by.id('login_email_input')).typeText('test@mail.com');
     await element(by.id('login_password_input')).typeText('123456');
-    await element(by.id('login_sign_button_touchable')).tap();
-    await element(by.id('discover_0_categorycard_title_touchable')).tap();
+    await element(by.text('Giriş Yap')).tap();
+    await element(by.text('Cep Telefonu')).tap();
+    await expect(element(by.id('products_page_electronic'))).toExist();
+  });
+
+  it('should have products page for bottom of the page', async () => {
+    await element(by.id('discover_flatlist')).scrollTo('bottom');
+    await element(by.text('Takı')).tap();
+    await expect(element(by.id('products_page_jewelry'))).toExist();
   });
 
   it('should show loading', async () => {
+    await element(by.text('Cep Telefonu')).tap();
     waitFor(element(by.id('products_placeholder'))).toExist();
   });
 
-  it('should have products page', async () => {
-    await expect(element(by.id('products_page'))).toExist();
-  });
-
   it('should show products', async () => {
+    await element(by.text('Cep Telefonu')).tap();
+
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('iPhone 12'))).toBeVisible();
     await expect(element(by.text('ThinkPhone'))).toBeVisible();
@@ -35,12 +44,15 @@ describe('Products e2e tests', () => {
   });
 
   it('should search products', async () => {
+    await element(by.text('Cep Telefonu')).tap();
+
     await element(by.id('products_searchbar_searchbar_input')).typeText(
       'iphone',
     );
 
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('iPhone 12'))).toBeVisible();
+
     await expect(element(by.text('ThinkPhone'))).not.toBeVisible();
     await expect(element(by.text('RedMi Note 12'))).not.toBeVisible();
     await expect(element(by.text('Galaxy S23 Ultra'))).not.toBeVisible();
