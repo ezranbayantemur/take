@@ -11,6 +11,9 @@ import type {
   ProductDetailResponseType,
 } from './types';
 
+type LoginResponseType = AuthResponseType;
+type RegisterResponseType = Omit<AuthResponseType, 'data'>;
+
 const URL = Platform.select({
   ios: 'http://localhost:3000',
   android: 'http://10.0.2.2:3000',
@@ -28,7 +31,7 @@ export const api = createApi({
         return response.data;
       },
     }),
-    postLogin: builder.mutation<AuthResponseType, AuthRequestType>({
+    postLogin: builder.mutation<LoginResponseType, AuthRequestType>({
       query: ({email, password}) => ({
         url: '/login',
         method: 'POST',
@@ -38,7 +41,7 @@ export const api = createApi({
         },
       }),
     }),
-    postRegister: builder.mutation<boolean, AuthRequestType>({
+    postRegister: builder.mutation<RegisterResponseType, AuthRequestType>({
       query: ({email, password}) => ({
         url: '/register',
         method: 'POST',

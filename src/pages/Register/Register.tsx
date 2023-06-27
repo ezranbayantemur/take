@@ -11,6 +11,7 @@ import {
 } from './formHelpers';
 import styles from './Register.style';
 import {usePostRegisterMutation} from '../../redux/api';
+import {Status} from '@enums';
 
 const Register = () => {
   const navigation = useNavigation<any>();
@@ -18,7 +19,7 @@ const Register = () => {
     usePostRegisterMutation();
 
   React.useEffect(() => {
-    if (registerResponse) {
+    if (registerResponse && registerResponse.message === Status.SUCCESS) {
       navigation.navigate(routes.LOGIN);
     }
   }, [registerResponse, navigation]);
