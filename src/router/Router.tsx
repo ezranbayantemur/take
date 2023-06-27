@@ -13,12 +13,13 @@ import {
 import {styles} from './Router.style';
 import {CartHeader} from '@components';
 import {color} from '@style';
+import deeplinks from './deeplinks';
 
 const Stack = createNativeStackNavigator();
 
 export default function Router() {
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={deeplinks}>
       <Stack.Navigator
         screenOptions={{
           headerTitle: 'take',

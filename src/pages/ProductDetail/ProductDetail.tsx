@@ -12,10 +12,13 @@ const ProductDetailPage = () => {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
   const dispatch = useDispatch();
-  const [getProductDetail, {data: productDetailData, isLoading}] =
+  const [getProductDetail, {data: productDetailData, isLoading, isError}] =
     usePostProductDetailMutation();
 
+  console.log(isError);
+
   React.useEffect(() => {
+    console.log(route.params.product_id);
     getProductDetail({product_id: route.params.product_id});
   }, [getProductDetail, route.params.product_id]);
 

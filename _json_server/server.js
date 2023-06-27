@@ -79,7 +79,9 @@ server.get('/cart', async (_, res) => {
 server.post('/product', async (req, res) => {
   const {product_id} = req.body;
 
-  const product = data.products.find(_product => _product.id === product_id);
+  const product = data.products.find(
+    _product => _product.id === Number(product_id),
+  );
 
   await delay();
 
