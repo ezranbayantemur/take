@@ -16,6 +16,7 @@
     "e2e-android-build": "detox build --configuration android.emu.debug"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.18.2",
     "@react-native-masked-view/masked-view": "^0.2.9",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
@@ -35,7 +36,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
-    "@react-native-async-storage/async-storage": "^1.18.2",
     "@react-native-community/datetimepicker": "^7.2.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@react-native-community/slider": "^4.4.2",

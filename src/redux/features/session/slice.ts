@@ -1,18 +1,32 @@
 import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 import {state} from './state';
+import controlSession from './thunk/controlSession';
 import {User} from '@types';
 
 export const authSlice = createSlice({
   name: 'auth',
   initialState: state,
   reducers: {
-    setUser: (authState, action: PayloadAction<User>) => {
-      authState.user = action.payload;
+    setUserSession: (authState, action: PayloadAction<User>) => {
+      authState.userSession = action.payload;
     },
+  },
+  extraReducers: builder => {
+    builder.addCase(controlSession.pending, _state => {
+      state.sessionPending = true;
+    });
+    builder.addCase(controlSession.fulfilled, (_state, action) => {
+      state.sessionPending = false;
+      state.userSession = action.payload;
+    });
+    builder.addCase(controlSession.rejected, _state => {
+      state.sessionPending = false;
+      state.userSession = null;
+    });
   },
 });
 
-export const {setUser} = authSlice.actions;
+export const {setUserSession} = authSlice.actions;
 
 export default authSlice.reducer;

@@ -9,23 +9,31 @@ import {usePostLoginMutation} from '../../redux/api';
 import {initialLoginFormValues, loginValidationSchema} from './formHelpers';
 import styles from './Login.style';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Status} from '@enums';
+import {Status, StorageKeys} from '@enums';
 import {useDispatch} from 'react-redux';
-import {setUser} from '@features';
+import {setUserSession} from '@features';
+import {AppDispatch} from 'src/redux/store';
 
 const Login = () => {
   const [login, {data: loginResponse, isLoading, isError}] =
     usePostLoginMutation();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigation = useNavigation<any>();
 
-  React.useEffect(() => {
+  const handleSetCredentials = React.useCallback(async () => {
     if (loginResponse && loginResponse.message === Status.SUCCESS) {
-      AsyncStorage.setItem('session', JSON.stringify(loginResponse.data));
-      dispatch(setUser(loginResponse.data));
+      await AsyncStorage.setItem(
+        StorageKeys.SESSION,
+        JSON.stringify(loginResponse.data),
+      );
+      dispatch(setUserSession(loginResponse.data));
       navigation.navigate(routes.DISCOVER);
     }
   }, [loginResponse, dispatch, navigation]);
+
+  React.useEffect(() => {
+    handleSetCredentials();
+  }, [handleSetCredentials]);
 
   const handleNavigateRegister = React.useCallback(() => {
     navigation.navigate(routes.REGISTER);

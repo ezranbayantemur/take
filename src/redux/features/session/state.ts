@@ -1,9 +1,11 @@
 import {User} from '@types';
 
 export interface AuthState {
-  user: User | null;
+  userSession: User | null;
+  sessionPending: boolean;
 }
 
 export const state: AuthState = {
-  user: null,
+  userSession: null,
+  sessionPending: true,
 };

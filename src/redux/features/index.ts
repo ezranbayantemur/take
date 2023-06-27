@@ -1,2 +1,5 @@
+import controlSessionThunk from './session/thunk/controlSession';
+
+export {setUserSession} from './session/slice';
 export {addToCart, cartSlice, decreaseProductOnCart} from './cart/slice';
-export {setUser} from './session/slice';
+export {controlSessionThunk};
