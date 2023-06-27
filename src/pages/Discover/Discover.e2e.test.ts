@@ -42,7 +42,7 @@ describe('Discover e2e tests', () => {
 
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('Apple'))).toBeVisible();
-    await expect(element(by.text('42.000 TL'))).toBeVisible();
+    await expect(element(by.text('400 TL'))).toBeVisible();
     await expect(
       element(
         by.text(

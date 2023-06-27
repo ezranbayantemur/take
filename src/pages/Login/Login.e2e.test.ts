@@ -1,6 +1,6 @@
 import {by, device, expect, element, waitFor} from 'detox';
 
-describe('Discover e2e tests', () => {
+describe('Login e2e tests', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
