@@ -1,8 +1,14 @@
-import {Product} from '@types';
+import {AuthStatus} from '@enums';
+import {Product, User} from '@types';
 
 export interface AuthRequestType {
   email: string;
   password: string;
+}
+
+export interface AuthResponseType {
+  data: User;
+  message: AuthStatus;
 }
 
 export interface ProductRequestType {

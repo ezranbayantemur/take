@@ -5,6 +5,7 @@ import type {
   AuthRequestType,
   ProductRequestType,
   ProductDetailRequestType,
+  AuthResponseType,
 } from './types';
 
 const URL = Platform.select({
@@ -21,7 +22,7 @@ export const api = createApi({
     getDiscoverFeed: builder.query<DiscoverResponseType[], void>({
       query: () => '/discover',
     }),
-    postLogin: builder.mutation<boolean, AuthRequestType>({
+    postLogin: builder.mutation<AuthResponseType, AuthRequestType>({
       query: ({email, password}) => ({
         url: '/login',
         method: 'POST',
