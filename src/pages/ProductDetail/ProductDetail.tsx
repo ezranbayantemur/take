@@ -7,11 +7,12 @@ import styles from './ProductDetail.style';
 import {Button, ProductDetailPlaceholder} from '@components';
 import {useDispatch} from 'react-redux';
 import routes from '@route';
+import {AppDispatch} from 'src/redux/store';
 
 const ProductDetailPage = () => {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const [getProductDetail, {data: productDetailData, isLoading}] =
     usePostProductDetailMutation();
 

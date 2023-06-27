@@ -1,7 +1,7 @@
 import {FlatList, ListRenderItem, SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
-import {RootState} from '../../redux/store';
+import {AppDispatch, RootState} from '../../redux/store';
 import {CartProduct} from '../../redux/types';
 import {useDispatch, useSelector} from 'react-redux';
 import {
@@ -16,7 +16,7 @@ import styles from './Cart.style';
 
 const CartPage = () => {
   const navigation = useNavigation<any>();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const productOrders = useSelector<RootState, CartProduct[]>(
     state => state.cart.productOrders,
   );

@@ -13,7 +13,7 @@ const DiscoverPage = () => {
   const navigation = useNavigation<any>();
   const {data: discoverData, isLoading} = useGetDiscoverFeedQuery();
   const userFirstName = useSelector<RootState, string | undefined>(
-    state => state.auth.user?.first_name,
+    state => state.auth.userSession?.first_name,
   );
   const handleOnProductSelect = React.useCallback(
     (product: ShowCaseProduct) => {
