@@ -1,11 +1,11 @@
 import type {Meta, StoryObj} from '@storybook/react-native';
 import {CategoryCard} from '@components';
-import {DiscoverResponseType} from '@types';
+import {DiscoverCategory} from '@types';
 import type {CategoryCardProps} from './CategoryCard.types';
 
 import discoverData from '@mocks/discover_feed/discover.json';
 
-const mockData: DiscoverResponseType = discoverData[0];
+const mockData: DiscoverCategory = discoverData[0];
 
 const CategoryCardMeta: Meta<CategoryCardProps> = {
   args: {

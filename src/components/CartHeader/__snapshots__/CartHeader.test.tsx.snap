@@ -68,6 +68,7 @@ exports[`CartCard unit tests should render correctly 1`] = `
           "fontSize": 13,
         }
       }
+      testID="cartheader_touchable_text"
     >
       2
     </Text>
