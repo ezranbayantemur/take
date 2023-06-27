@@ -20,4 +20,9 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
   },
+  header_text: {
+    fontSize: typography.MEDIUM,
+    fontFamily: font.BOLD,
+    margin: padding.MEDIUM,
+  },
 });

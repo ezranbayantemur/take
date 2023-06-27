@@ -10,10 +10,7 @@ import {
   DiscountCard,
   CartEmptyPlaceholder,
 } from '@components';
-import {
-  addToCart,
-  decreaseProductOnCart,
-} from '../../redux/features/cart/slice';
+import {addToCart, decreaseProductOnCart} from '@features';
 import {Discount} from '@types';
 import styles from './Cart.style';
 
