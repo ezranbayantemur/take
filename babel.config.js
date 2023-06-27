@@ -11,6 +11,8 @@ module.exports = {
           '@mocks': './__mocks__',
           '@hooks': './src/hooks',
           '@utils': './src/utils',
+          '@enums': './src/enums',
+          '@features': './src/redux/features',
           '@route': './src/router/routes.ts',
         },
       },
