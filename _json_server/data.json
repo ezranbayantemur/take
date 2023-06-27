@@ -3,17 +3,23 @@
     {
       "id": 900,
       "email": "test@mail.com",
-      "password": "123456"
+      "password": "123456",
+      "first_name": "Test",
+      "last_name": "Test"
     },
     {
       "id": 900,
       "email": "ezran@mail.com",
-      "password": "ezran123456"
+      "password": "ezran123456",
+      "first_name": "Ezran",
+      "last_name": "Bayantemur"
     },
     {
       "id": 901,
       "email": "onur@mail.com",
-      "password": "onur654321"
+      "password": "onur654321",
+      "first_name": "Onur",
+      "last_name": "Bayantemur"
     }
   ],
   "discover": [
@@ -98,6 +104,37 @@
           "product_image": "https://isteam.wsimg.com/ip/a8efe83b-6857-477d-9d0f-f13ca0229a20/ols/4055_original/:/rs=w:600,h:600",
           "seller_name": "f-LEX",
           "product_price": 600
+        }
+      ]
+    },
+    {
+      "category_id": "13",
+      "category_name": "jewelry",
+      "category_title": "Takı",
+      "showcase_products": [
+        {
+          "id": 4004,
+          "product_name": "Altınlı İnci 28",
+          "product_image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1677752066-Alighieri_Jewellery_TheBeacon_1.png?crop=1xw:1xh;center,top&resize=980:*",
+          "seller_name": "Pearly",
+          "product_price": 500,
+          "category": "jewelry"
+        },
+        {
+          "id": 4001,
+          "product_name": "Mountlion Erkek Kolye",
+          "product_image": "https://cdn.shopify.com/s/files/1/1575/5131/products/IlLeoneMedallionBoxChain.png?crop=center&height=500&v=1681317209&width=400",
+          "seller_name": "Farah Gold",
+          "product_price": 175,
+          "category": "jewelry"
+        },
+        {
+          "id": 4004,
+          "product_name": "babylon",
+          "product_image": "https://d1bpnn2a5id540.cloudfront.net/1653277918007/cfbd77d0-a2e3-11ed-9a20-83f9d8864d91.png",
+          "seller_name": "Persian Pearl",
+          "product_price": 500,
+          "category": "jewelry"
         }
       ]
     }
@@ -258,8 +295,8 @@
     },
     {
       "id": 3003,
-      "product_name": "RGX Casual Shirt",
-      "product_image": "https://cdn11.bigcommerce.com/s-sdpah020b3/images/stencil/500x659/products/14355/24095/f91c32a1Charlotte_Jumpsuit_in_Abstract_Floral-removebg__90477.1686586202.png?c=2",
+      "product_name": "RGX Tuxedo",
+      "product_image": "https://eadn-wc05-4045359.nxedge.io/cdn/pub/media/wysiwyg/home_sliders/made-in-italy_01-new.png",
       "seller_name": "Fodrox",
       "product_price": 1350,
       "category": "men_clothing",
@@ -273,6 +310,51 @@
       "product_price": 600,
       "category": "men_clothing",
       "description": "Nostrud enim tempor sit deserunt voluptate cillum est deserunt ex est. Mollit elit et nostrud sunt id qui sit. Consectetur est veniam pariatur magna. Consequat quis irure adipisicing officia dolor commodo deserunt mollit ut magna nisi eiusmod. Consequat aute excepteur ut officia minim laborum magna nostrud incididunt ullamco magna. Lorem anim laboris cillum occaecat enim sunt aute est occaecat Lorem."
+    },
+    {
+      "id": 4000,
+      "product_name": "Harhem Alig 24",
+      "product_image": "https://cdn.shopify.com/s/files/1/1575/5131/products/CHUNKYDIAMONDRING_1.png?crop=center&height=500&v=1681402661&width=400",
+      "seller_name": "Goldex",
+      "product_price": 200,
+      "category": "jewelry",
+      "description": "Ut consequat cillum tempor laboris ipsum voluptate est elit irure aliqua ipsum eu laborum sint. Occaecat ea commodo est excepteur est id reprehenderit laborum magna excepteur eu. Sint sunt amet eiusmod eu esse exercitation aliqua Lorem anim consectetur. Sunt quis commodo nulla est eiusmod officia nisi amet proident est culpa sit. Culpa ex et deserunt ipsum ut amet eiusmod culpa ea qui labore do duis. Sunt irure esse eiusmod minim tempor qui non culpa fugiat aute ea ut. Mollit occaecat ad dolore ad labore nostrud enim."
+    },
+    {
+      "id": 4001,
+      "product_name": "Mountlion Erkek Kolye",
+      "product_image": "https://cdn.shopify.com/s/files/1/1575/5131/products/IlLeoneMedallionBoxChain.png?crop=center&height=500&v=1681317209&width=400",
+      "seller_name": "Farah Gold",
+      "product_price": 175,
+      "category": "jewelry",
+      "description": "Qui ut Lorem et qui adipisicing pariatur ipsum eu amet consequat laborum enim. Irure et cupidatat aute commodo fugiat consequat nostrud irure velit. Dolor labore irure dolore quis. Ad irure officia pariatur occaecat sint ex ex id tempor velit proident. Ex do aliqua aliqua amet nisi velit quis amet elit nisi non."
+    },
+    {
+      "id": 4002,
+      "product_name": "Altın Kanat Kolye",
+      "product_image": "https://tryb4ubuy.in/Vendor_Try/Prod/images/Chains/chain_7.png",
+      "seller_name": "Farah Gold",
+      "product_price": 300,
+      "category": "jewelry",
+      "description": "Do consequat consectetur sit ipsum aute occaecat consequat sunt magna ut. Ipsum est Lorem reprehenderit dolor dolore minim culpa enim. Aliquip do et ea esse laboris aliquip excepteur deserunt proident sunt laborum laboris et officia."
+    },
+    {
+      "id": 4003,
+      "product_name": "Altınlı İnci 28",
+      "product_image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1677752066-Alighieri_Jewellery_TheBeacon_1.png?crop=1xw:1xh;center,top&resize=980:*",
+      "seller_name": "Pearly",
+      "product_price": 500,
+      "category": "jewelry",
+      "description": "Voluptate consequat deserunt cupidatat anim minim aliqua adipisicing id deserunt id. Laboris adipisicing deserunt veniam qui cillum ad. Laboris dolor ipsum voluptate ad. Dolor dolor velit eiusmod in. Culpa Lorem ex sunt cupidatat incididunt. Labore anim laborum labore duis duis qui laborum ullamco. Aliqua aliqua nostrud deserunt tempor Lorem ea cillum elit irure fugiat irure eu cillum."
+    },
+    {
+      "id": 4004,
+      "product_name": "babylon",
+      "product_image": "https://d1bpnn2a5id540.cloudfront.net/1653277918007/cfbd77d0-a2e3-11ed-9a20-83f9d8864d91.png",
+      "seller_name": "Persian Pearl",
+      "product_price": 500,
+      "category": "jewelry",
+      "description": "Exercitation Lorem nulla culpa duis commodo enim exercitation aute. Nulla mollit sunt laborum aute et laboris eu commodo quis et nulla et. Enim laborum est aliqua aute sunt eiusmod."
     }
   ]
 }

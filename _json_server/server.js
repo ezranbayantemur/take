@@ -8,25 +8,42 @@ const middlewares = jsonServer.defaults();
 
 const DELAY = 1200;
 
-let authDB = data.users;
-let cartDB = [];
+const authDB = data.users;
+const cartDB = [];
 
 const delay = () =>
-  new Promise((resolve, reject) => {
+  new Promise(resolve => {
     setTimeout(resolve, DELAY);
   });
 
 server.use(bodyParser.json());
 
+server.use((req, res, next) => {
+  console.log('Received request:', req.method, req.url);
+  console.log('Request body:', req.body);
+  next();
+});
+
 server.post('/login', async (req, res) => {
   const {email, password} = req.body;
 
   const user = authDB.find(
-    user => user.email === email && user.password === password,
+    _user => _user.email === email && _user.password === password,
   );
 
   await delay();
-  return res.json(!!user);
+
+  if (user) {
+    return res.status(200).jsonp({
+      message: 'SUCCESS',
+      data: {
+        id: user.id,
+        email: user.email,
+      },
+    });
+  } else {
+    return res.status(401).jsonp({message: 'UNAUTHORIZED'});
+  }
 });
 
 server.post('/register', async (req, res) => {
