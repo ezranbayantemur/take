@@ -22,10 +22,10 @@ describe('Product detail e2e tests', () => {
     waitFor(element(by.id('productdetail_placeholder'))).toExist();
   });
 
-  it('should show products', async () => {
+  it('should show product detail', async () => {
     await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
     await expect(element(by.text('Apple'))).toBeVisible();
-    await expect(element(by.text('42.000 TL'))).toBeVisible();
+    await expect(element(by.text('400 TL'))).toBeVisible();
     await expect(
       element(
         by.text(
@@ -37,5 +37,11 @@ describe('Product detail e2e tests', () => {
 
   it('should add product to cart', async () => {
     await element(by.id('productdetail_add_to_cart_button_touchable')).tap();
+    await expect(element(by.id('cart_page'))).toExist();
+    await expect(element(by.text('iPhone 14 Pro'))).toBeVisible();
+    await expect(element(by.text('Adet: 1'))).toBeVisible();
+    await expect(element(by.text('400 TL'))).toBeVisible();
+    await expect(element(by.text('Toplam Tutar: 400 TL'))).toBeVisible();
+    await expect(element(by.text('Siparişi Onayla'))).toBeVisible();
   });
 });

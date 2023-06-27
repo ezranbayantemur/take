@@ -12,6 +12,7 @@ import {
 } from '../pages';
 import {styles} from './Router.style';
 import {CartHeader} from '@components';
+import {color} from '@style';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,9 +23,10 @@ export default function Router() {
         screenOptions={{
           headerTitle: 'take',
           headerTitleStyle: styles.headerTitle,
-          headerBackVisible: false,
           contentStyle: styles.content,
           headerRight: CartHeader,
+          headerTintColor: color.MONZA,
+          headerBackTitleVisible: false,
         }}>
         <Stack.Screen
           name={routes.LOGIN}

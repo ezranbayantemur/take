@@ -1,3 +1,3 @@
-import discountApplier from './discountApplier/discountApplier';
+import discountApplier from './discountApplier';
 
 export {discountApplier};

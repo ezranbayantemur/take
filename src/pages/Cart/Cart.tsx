@@ -73,7 +73,9 @@ const CartPage = () => {
         ListFooterComponent={() => (
           <>
             <View style={styles.sub_total_container}>
-              <Text style={styles.sub_total_text}>Toplam: {subTotal} TL</Text>
+              <Text style={styles.sub_total_text}>
+                Toplam Tutar: {subTotal} TL
+              </Text>
             </View>
             {discounts.map(renderDiscount)}
             <Button text="Siparişi Onayla" onPress={() => null} />
