@@ -9,8 +9,7 @@ const mockData: DiscoverCategory = discoverData[0];
 
 const CategoryCardMeta: Meta<CategoryCardProps> = {
   args: {
-    title: mockData.category_title,
-    showcaseData: mockData.showcase_products,
+    data: mockData,
   },
   title: 'CategoryCard',
   component: CategoryCard,

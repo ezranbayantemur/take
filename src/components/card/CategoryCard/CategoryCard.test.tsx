@@ -2,9 +2,9 @@ import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
 import CategoryCard from './CategoryCard';
 import discoverData from '@mocks/discover_feed/discover.json';
-import type {DiscoverResponseType} from '@types';
+import type {DiscoverCategory} from '@types';
 
-const mockData: DiscoverResponseType = discoverData[0];
+const mockData: DiscoverCategory = discoverData[0];
 const mockOnProductSelect = jest.fn();
 const mockOnCategorySelect = jest.fn();
 
