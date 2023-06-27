@@ -12,6 +12,7 @@ import DiscountCard from './card/DiscountCard';
 import CategoryCard from './card/CategoryCard';
 import ShowCaseProductCard from './card/ShowCaseProductCard';
 
+import ErrorPage from './placeholders/ErrorPage';
 import ProductsPlaceholder from './placeholders/ProductsPlaceholder';
 import DiscoverPlaceholder from './placeholders/DiscoverPlaceholder';
 import CartEmptyPlaceholder from './placeholders/CartEmptyPlaceholder';
@@ -30,6 +31,7 @@ export {
   DiscountCard,
   ShowCaseProductCard,
   CartHeader,
+  ErrorPage,
   DiscoverPlaceholder,
   ProductsPlaceholder,
   CartEmptyPlaceholder,
