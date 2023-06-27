@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Splash tests should render correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#DB040E",
+        "fontFamily": "Lato-BoldItalic",
+        "fontSize": 90,
+      }
+    }
+  >
+    take
+  </Text>
+</RCTSafeAreaView>
+`;

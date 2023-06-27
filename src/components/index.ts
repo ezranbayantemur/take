@@ -4,6 +4,7 @@ import Icon from './Icon';
 import Input from './Input';
 import InputCounter from './InputCounter';
 import SearchBar from './SearchBar';
+import Splash from './Splash';
 
 import CartCard from './card/CartCard';
 import ProductCard from './card/ProductCard';
@@ -25,6 +26,7 @@ export {
   SearchBar,
   InputCounter,
   ProductCard,
+  Splash,
   DiscountCard,
   ShowCaseProductCard,
   CartHeader,
