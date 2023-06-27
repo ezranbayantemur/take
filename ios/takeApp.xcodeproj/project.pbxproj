@@ -14,6 +14,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1DA24075AFF841B88D1AAE4A /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A7C157F8749473BB38DC711 /* Lato-Light.ttf */; };
+		3274442F2A4B714700324D39 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3274442E2A4B714700324D39 /* splash.png */; };
 		5C463A9D11F3498181B3C6A0 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52C91B1A7D2C4B7A8E168BC0 /* Lato-Regular.ttf */; };
 		5FF2ED492967464DB518E465 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2A0DE659838408495075D66 /* Lato-Italic.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-takeApp-takeAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-takeApp-takeAppTests.a */; };
@@ -50,6 +51,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = takeApp/main.m; sourceTree = "<group>"; };
 		17EBAB83C47D4BE79D248F01 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BlackItalic.ttf"; path = "../assets/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-takeApp-takeAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-takeApp-takeAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3274442E2A4B714700324D39 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../../splash.png; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-takeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-takeApp.debug.xcconfig"; path = "Target Support Files/Pods-takeApp/Pods-takeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5162C5F5DDA64E9AB56A024F /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		52C91B1A7D2C4B7A8E168BC0 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		13B07FAE1A68108700A75B9A /* takeApp */ = {
 			isa = PBXGroup;
 			children = (
+				3274442E2A4B714700324D39 /* splash.png */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -291,6 +294,7 @@
 				B3FFA61310614A38A15EF043 /* Lato-BoldItalic.ttf in Resources */,
 				5FF2ED492967464DB518E465 /* Lato-Italic.ttf in Resources */,
 				1DA24075AFF841B88D1AAE4A /* Lato-Light.ttf in Resources */,
+				3274442F2A4B714700324D39 /* splash.png in Resources */,
 				BF0C415D91484C65B97EF843 /* Lato-LightItalic.ttf in Resources */,
 				5C463A9D11F3498181B3C6A0 /* Lato-Regular.ttf in Resources */,
 				13751D1C5E2C432492D4297D /* Lato-Thin.ttf in Resources */,

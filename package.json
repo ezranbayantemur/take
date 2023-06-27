@@ -28,6 +28,7 @@
     "react-native-linear-gradient": "^2.7.3",
     "react-native-screens": "^3.22.0",
     "react-native-skeleton-placeholder": "^5.2.4",
+    "react-native-splash-screen": "^3.3.0",
     "react-native-vector-icons": "^9.2.0",
     "react-redux": "^8.1.1",
     "use-debounce": "9.0.4",
