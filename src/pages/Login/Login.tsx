@@ -9,7 +9,7 @@ import {usePostLoginMutation} from '../../redux/api';
 import {initialLoginFormValues, loginValidationSchema} from './formHelpers';
 import styles from './Login.style';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {AuthStatus} from '@enums';
+import {Status} from '@enums';
 import {useDispatch} from 'react-redux';
 import {setUser} from '@features';
 
@@ -20,7 +20,7 @@ const Login = () => {
   const navigation = useNavigation<any>();
 
   React.useEffect(() => {
-    if (loginResponse && loginResponse.message === AuthStatus.SUCCESS) {
+    if (loginResponse && loginResponse.message === Status.SUCCESS) {
       AsyncStorage.setItem('session', JSON.stringify(loginResponse.data));
       dispatch(setUser(loginResponse.data));
       navigation.navigate(routes.DISCOVER);

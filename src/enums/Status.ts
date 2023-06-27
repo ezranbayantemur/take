@@ -1,4 +1,4 @@
-export enum AuthStatus {
+export enum Status {
   SUCCESS = 'SUCCESS',
   UNAUTHORIZED = 'UNAUTHORIZED',
 }

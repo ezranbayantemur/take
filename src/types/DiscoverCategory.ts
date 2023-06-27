@@ -1,6 +1,6 @@
-import {ShowCaseProduct} from '../Product';
+import {ShowCaseProduct} from './Product';
 
-export interface DiscoverResponseType {
+export interface DiscoverCategory {
   category_id: string;
   category_name: string;
   category_title: string;

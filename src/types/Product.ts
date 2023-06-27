@@ -8,4 +8,5 @@ export interface Product {
   category: string;
 }
 
-export interface ShowCaseProduct extends Omit<Product, 'description'> {}
+export interface ShowCaseProduct
+  extends Omit<Product, 'description' | 'category'> {}

@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {usePostProductDetailMutation} from '../../redux/api';
-import {addToCart} from '../../redux/features/cart/slice';
+import {addToCart} from '@features';
 import styles from './ProductDetail.style';
 import {Button, ProductDetailPlaceholder} from '@components';
 import {useDispatch} from 'react-redux';
@@ -12,13 +12,10 @@ const ProductDetailPage = () => {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
   const dispatch = useDispatch();
-  const [getProductDetail, {data: productDetailData, isLoading, isError}] =
+  const [getProductDetail, {data: productDetailData, isLoading}] =
     usePostProductDetailMutation();
 
-  console.log(isError);
-
   React.useEffect(() => {
-    console.log(route.params.product_id);
     getProductDetail({product_id: route.params.product_id});
   }, [getProductDetail, route.params.product_id]);
 

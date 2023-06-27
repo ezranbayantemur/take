@@ -1,11 +1,14 @@
 import {Platform} from 'react-native';
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import type {DiscoverResponseType, Product} from '@types';
+import type {DiscoverCategory, Product} from '@types';
 import type {
   AuthRequestType,
   ProductRequestType,
   ProductDetailRequestType,
   AuthResponseType,
+  DiscoverResponseType,
+  ProductResponseType,
+  ProductDetailResponseType,
 } from './types';
 
 const URL = Platform.select({
@@ -19,8 +22,11 @@ export const api = createApi({
     baseUrl: URL,
   }),
   endpoints: builder => ({
-    getDiscoverFeed: builder.query<DiscoverResponseType[], void>({
+    getDiscoverFeed: builder.query<DiscoverCategory[], void>({
       query: () => '/discover',
+      transformResponse: (response: DiscoverResponseType) => {
+        return response.data;
+      },
     }),
     postLogin: builder.mutation<AuthResponseType, AuthRequestType>({
       query: ({email, password}) => ({
@@ -34,7 +40,7 @@ export const api = createApi({
     }),
     postRegister: builder.mutation<boolean, AuthRequestType>({
       query: ({email, password}) => ({
-        url: '/login',
+        url: '/register',
         method: 'POST',
         body: {
           email,
@@ -50,6 +56,9 @@ export const api = createApi({
           category_name,
         },
       }),
+      transformResponse: (response: ProductResponseType) => {
+        return response.data;
+      },
     }),
     postProductDetail: builder.mutation<Product, ProductDetailRequestType>({
       query: ({product_id}) => ({
@@ -59,6 +68,9 @@ export const api = createApi({
           product_id,
         },
       }),
+      transformResponse: (response: ProductDetailResponseType) => {
+        return response.data;
+      },
     }),
   }),
 });

@@ -1,3 +1,3 @@
-import {AuthStatus} from './AuthStatus';
+import {Status} from './Status';
 
-export {AuthStatus};
+export {Status};
