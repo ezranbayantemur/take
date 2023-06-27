@@ -2,7 +2,7 @@ import {FlatList, ListRenderItem, SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {AppDispatch, RootState} from '../../redux/store';
-import {CartProduct} from '../../redux/types';
+import {ProductOrder} from '@types';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   Button,
@@ -17,7 +17,7 @@ import styles from './Cart.style';
 const CartPage = () => {
   const navigation = useNavigation<any>();
   const dispatch = useDispatch<AppDispatch>();
-  const productOrders = useSelector<RootState, CartProduct[]>(
+  const productOrders = useSelector<RootState, ProductOrder[]>(
     state => state.cart.productOrders,
   );
   const discounts = useSelector<RootState, Discount[]>(
@@ -36,7 +36,7 @@ const CartPage = () => {
     }, [navigation]),
   );
 
-  const renderOrder: ListRenderItem<CartProduct> = ({item, index}) => (
+  const renderOrder: ListRenderItem<ProductOrder> = ({item, index}) => (
     <CartCard
       key={`${item.product.id}_${index}`}
       testID={`cart_card_${index}`}

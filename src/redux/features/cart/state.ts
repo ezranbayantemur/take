@@ -1,7 +1,6 @@
-import {Product, Discount} from '@types';
-import {CartProduct} from '../../types';
+import {Product, Discount, ProductOrder} from '@types';
 export interface CartState {
-  productOrders: CartProduct[];
+  productOrders: ProductOrder[];
   allProductsInCart: Product[];
   discounts: Discount[];
   subTotal: number;

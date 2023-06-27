@@ -31,9 +31,3 @@ export interface ProductDetailResponseType {
   data: Product;
   message: Status;
 }
-
-export interface CartProduct {
-  product: Product;
-  quantity: number;
-  totalPrice: number;
-}
