@@ -15,6 +15,8 @@ export default StyleSheet.create({
   name: {
     fontFamily: font.BOLD,
     fontSize: typography.NORMAL,
+    textAlign: 'center',
+    paddingBottom: padding.SMALL,
   },
   quantity: {
     fontFamily: font.REGULAR,
@@ -24,9 +26,10 @@ export default StyleSheet.create({
     fontFamily: font.BOLD_ITALIC,
   },
   product_info_container: {
+    flex: 1,
     paddingLeft: padding.SMALL,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   price_container: {
     flex: 1,
@@ -43,5 +46,9 @@ export default StyleSheet.create({
   },
   total_title: {
     fontFamily: font.REGULAR,
+  },
+  close_button_icon: {
+    marginTop: padding.SMALL,
+    alignSelf: 'flex-start',
   },
 });

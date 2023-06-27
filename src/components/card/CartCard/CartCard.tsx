@@ -3,11 +3,13 @@ import React from 'react';
 import InputCounter from '../../InputCounter';
 import styles from './CartCard.style';
 import type {CartCardProps} from './CartCard.types';
+import Icon from '../../Icon';
 
 const CartCard = ({
   testID,
   product,
   quantity,
+  onRemove,
   onIncreaseQuantity,
   onDecreaseQuantity,
 }: CartCardProps) => {
@@ -40,6 +42,12 @@ const CartCard = ({
           <Text style={styles.total_title}>Toplam:</Text> {totalPrice} TL
         </Text>
       </View>
+      <Icon
+        testID={`${testID}_cartcard_remove`}
+        style={styles.close_button_icon}
+        name="cross"
+        onPress={onRemove}
+      />
     </View>
   );
 };
