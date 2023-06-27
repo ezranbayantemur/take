@@ -9,6 +9,7 @@ const base = StyleSheet.create({
     margin: padding.SMALL,
   },
   input: {
+    padding: 0,
     fontFamily: font.REGULAR,
     fontSize: typography.NORMAL,
   },
