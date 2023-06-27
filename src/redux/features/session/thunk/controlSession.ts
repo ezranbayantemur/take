@@ -13,7 +13,7 @@ export default createAsyncThunk('session/controlSession', async _ => {
 
   if (storedSessionValue) {
     const user = JSON.parse(storedSessionValue);
-    console.log(user);
+
     const userTokenControlResponse = await (
       await fetch(URL!, {
         method: 'POST',

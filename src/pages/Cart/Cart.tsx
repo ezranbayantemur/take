@@ -10,7 +10,7 @@ import {
   DiscountCard,
   CartEmptyPlaceholder,
 } from '@components';
-import {addToCart, decreaseProductOnCart} from '@features';
+import {addToCart, decreaseProductOnCart, removeProductOrder} from '@features';
 import {Discount} from '@types';
 import styles from './Cart.style';
 
@@ -42,6 +42,7 @@ const CartPage = () => {
       testID={`cart_card_${index}`}
       product={item.product}
       quantity={item.quantity}
+      onRemove={() => dispatch(removeProductOrder(item))}
       onIncreaseQuantity={() => dispatch(addToCart(item.product))}
       onDecreaseQuantity={() => dispatch(decreaseProductOnCart(item.product))}
     />
