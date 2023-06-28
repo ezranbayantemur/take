@@ -1,6 +1,10 @@
-# take!
+# take
 
 🛒 Simple e-commerce app built with React Native.
+
+|                             |                             |                             |                             |                              |
+| :-------------------------: | :-------------------------: | :-------------------------: | :-------------------------: | :--------------------------: |
+| ![img-1](doc/ss_1.PNG '1') | ![img-2](doc/ss_2.PNG '2') | ![img-3](doc/ss_3.PNG '3') | ![img-4](doc/ss_4.PNG '4') | ![img-5](doc/ss_5.PNG '5') |
 
 **For run the project**
 ```bash
