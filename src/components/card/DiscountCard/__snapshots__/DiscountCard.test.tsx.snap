@@ -5,6 +5,7 @@ exports[`DiscountCard unit tests should render correctly 1`] = `
   style={
     {
       "margin": 16,
+      "marginVertical": 8,
     }
   }
   testID="test_discount_discountcard"

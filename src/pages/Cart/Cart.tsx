@@ -69,15 +69,15 @@ const CartPage = () => {
         renderItem={renderOrder}
         ListFooterComponentStyle={styles.order_list_footer}
         ListFooterComponent={() => (
-          <>
+          <View style={styles.footer_container}>
+            {discounts.map(renderDiscount)}
             <View style={styles.sub_total_container}>
               <Text style={styles.sub_total_text}>
                 Toplam Tutar: {subTotal} TL
               </Text>
             </View>
-            {discounts.map(renderDiscount)}
             <Button text="Siparişi Onayla" onPress={() => null} />
-          </>
+          </View>
         )}
       />
     </SafeAreaView>

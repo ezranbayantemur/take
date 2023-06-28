@@ -4,6 +4,7 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   container: {
     margin: padding.MEDIUM,
+    marginVertical: padding.SMALL,
   },
   discount_container: {
     paddingVertical: padding.MEDIUM,

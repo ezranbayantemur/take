@@ -25,4 +25,7 @@ export default StyleSheet.create({
     fontFamily: font.BOLD,
     margin: padding.MEDIUM,
   },
+  footer_container: {
+    marginTop: padding.MEDIUM,
+  },
 });
