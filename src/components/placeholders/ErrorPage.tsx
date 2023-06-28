@@ -6,7 +6,7 @@ import {color, font, padding, typography} from '@style';
 const ErrorPage = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>take</Text>
+      <Text style={styles.logo}>take!</Text>
       <Icon name="cross" style={styles.icon} />
       <Text style={styles.text}>Bir problem ile oluştu</Text>
     </View>

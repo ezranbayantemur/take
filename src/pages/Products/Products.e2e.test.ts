@@ -61,4 +61,14 @@ describe('Products e2e tests', () => {
     await expect(element(by.text('Razr 40 Ultra'))).not.toBeVisible();
     await expect(element(by.text('Magic4 PRO'))).not.toBeVisible();
   });
+
+  it('should render empty result text', async () => {
+    await element(by.text('Cep Telefonu')).tap();
+
+    await element(by.id('products_searchbar_searchbar_input')).typeText('xyz');
+
+    await expect(
+      element(by.text('Aramayla eşleşen bir ürün bulunamadı')),
+    ).toBeVisible();
+  });
 });

@@ -1,4 +1,4 @@
-# take
+# take!
 
 🛒 Simple e-commerce app built with React Native.
 

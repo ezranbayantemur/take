@@ -12,7 +12,7 @@ export default function AppNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerTitle: 'take',
+        headerTitle: 'take!',
         headerTitleStyle: styles.headerTitle,
         contentStyle: styles.content,
         headerRight: CartHeader,

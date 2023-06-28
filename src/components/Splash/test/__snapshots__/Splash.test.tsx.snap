@@ -19,7 +19,7 @@ exports[`Splash tests should render correctly 1`] = `
       }
     }
   >
-    take
+    take!
   </Text>
 </RCTSafeAreaView>
 `;

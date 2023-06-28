@@ -42,7 +42,7 @@ const Login = () => {
     <SafeAreaView testID="login_page" style={styles.outer_container}>
       <View style={styles.container}>
         <View style={styles.logo_container}>
-          <Text style={styles.logo_text}>take</Text>
+          <Text style={styles.logo_text}>take!</Text>
         </View>
         <Formik
           validationSchema={loginValidationSchema}

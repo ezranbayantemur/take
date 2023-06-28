@@ -5,7 +5,7 @@ import styles from './Splash.style';
 const Splash = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.logo_text}>take</Text>
+      <Text style={styles.logo_text}>take!</Text>
     </SafeAreaView>
   );
 };

@@ -17,6 +17,7 @@ import ProductsPlaceholder from './placeholders/ProductsPlaceholder';
 import DiscoverPlaceholder from './placeholders/DiscoverPlaceholder';
 import CartEmptyPlaceholder from './placeholders/CartEmptyPlaceholder';
 import ProductDetailPlaceholder from './placeholders/ProductDetailPlaceholder';
+import ProductSearchEmptyPlaceholder from './placeholders/ProductSearchEmptyPlaceholder';
 
 export {
   CartCard,
@@ -36,4 +37,5 @@ export {
   ProductsPlaceholder,
   CartEmptyPlaceholder,
   ProductDetailPlaceholder,
+  ProductSearchEmptyPlaceholder,
 };

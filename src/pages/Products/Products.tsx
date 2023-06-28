@@ -3,7 +3,12 @@ import React, {useEffect} from 'react';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {usePostProductsForCategoryMutation} from '../../redux/api';
 import {Product} from '@types';
-import {ProductCard, ProductsPlaceholder, SearchBar} from '@components';
+import {
+  ProductCard,
+  ProductSearchEmptyPlaceholder,
+  ProductsPlaceholder,
+  SearchBar,
+} from '@components';
 import styles from './Products.style';
 import routes from '@route';
 
@@ -46,6 +51,7 @@ const ProductsPage = () => {
         renderItem={renderProduct}
         numColumns={2}
         columnWrapperStyle={styles.list_column_wrapper}
+        ListEmptyComponent={ProductSearchEmptyPlaceholder}
         ListHeaderComponent={
           <SearchBar
             testID="products_searchbar"
