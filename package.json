@@ -13,7 +13,9 @@
     "e2e-ios": "detox test --configuration ios.sim.debug",
     "e2e-android": "detox test --configuration android.emu.debug",
     "e2e-ios-build": "detox build --configuration ios.sim.debug",
-    "e2e-android-build": "detox build --configuration android.emu.debug"
+    "e2e-android-build": "detox build --configuration android.emu.debug",
+    "run-app": "sh task_run_app.sh",
+    "run-tests": "sh task_run_tests.sh"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.18.2",
