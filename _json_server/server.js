@@ -10,7 +10,6 @@ const PORT = 3000;
 const DELAY = 1200;
 
 let authDB = data.users;
-const cartDB = [];
 
 const delay = () =>
   new Promise(resolve => {
@@ -138,5 +137,5 @@ server.use(middlewares);
 server.use(router);
 
 server.listen(PORT, () => {
-  console.log(`takeApp fake server is running on port: ${PORT}`);
+  console.log(`🔥 takeApp fake server is running on port: ${PORT}`);
 });
