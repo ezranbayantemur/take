@@ -6,6 +6,9 @@ yarn install
 # Running unit tests
 osascript -e "tell app \"terminal\" to do script \"cd $(pwd) && yarn test\""
 
+# Installing bundle for CocoaPods
+bundle install
+
 # Installing Pod dependencies
 cd ios && pod install && cd ..
 
