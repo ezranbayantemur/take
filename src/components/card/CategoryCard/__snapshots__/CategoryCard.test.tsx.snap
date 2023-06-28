@@ -117,7 +117,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
             }
           }
         >
-          42.000
+          400
            TL
         </Text>
       </View>
@@ -203,7 +203,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
             }
           }
         >
-          17.500
+          150
            TL
         </Text>
       </View>
@@ -289,7 +289,7 @@ exports[`CategoryCard unit tests should render correctly 1`] = `
             }
           }
         >
-          18.000
+          100
            TL
         </Text>
       </View>

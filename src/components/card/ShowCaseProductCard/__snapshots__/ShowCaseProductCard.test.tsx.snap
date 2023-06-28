@@ -83,7 +83,7 @@ exports[`ShowCaseProductCard unit tests should render correctly 1`] = `
       }
     }
   >
-    42.000
+    400
      TL
   </Text>
 </View>
