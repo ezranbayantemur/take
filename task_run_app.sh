@@ -9,6 +9,9 @@ osascript -e "tell app \"terminal\" to do script \"cd $(pwd)/_json_server && nod
 # Installing Pod dependencies
 cd ios && pod install && cd ..
 
+# Installing bundle for CocoaPods
+bundle install
+
 # Starting Metro Bundler
 osascript -e "tell app \"terminal\" to do script \"cd $(pwd) && yarn start --reset-cache\""
 
