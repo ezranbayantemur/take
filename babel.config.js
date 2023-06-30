@@ -14,6 +14,7 @@ module.exports = {
           '@enums': './src/enums',
           '@features': './src/redux/features',
           '@route': './src/router',
+          '@helpers': './src/helpers',
         },
       },
     ],

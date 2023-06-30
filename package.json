@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "start-detox": "yarn start --sourceExts mock.ts,mock.js,js,json,ts,tsx",
+    "start-detox": "yarn start --reset-cache --sourceExts mock.ts,mock.js,js,json,ts,tsx",
     "test": "jest --config ./jest.config.js --coverage",
     "lint": "eslint .",
     "storybook-generate": "sb-rn-get-stories",

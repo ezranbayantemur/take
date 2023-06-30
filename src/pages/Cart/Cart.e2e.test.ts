@@ -1,32 +1,5 @@
 import {by, device, expect, element} from 'detox';
-import {Platform} from 'react-native';
-
-/**
- * It would be better to move this function to some helper object, like: "detoxHelper" and call it like "detoxHelper.pressBack()"
- *
- * But detox throws error when we try to import it outside test file.
- * Like " import {device, element} from 'detox' "
- *
- * It says:
- * error: Error: Unable to resolve module vm from <PROJECT_PATH>/node_modules/detox/src/ipc/SessionState.js: vm could not be found within the project or in these directories:
- *  node_modules/detox/node_modules
- *  node_modules
- *
- * So we have to define it here.
- */
-const pressBack = async () => {
-  const platform = Platform.OS;
-
-  if (platform === 'ios') {
-    await element(by.traits(['button']))
-      .atIndex(0)
-      .tap();
-  }
-
-  if (platform === 'android') {
-    await device.pressBack();
-  }
-};
+import pressBack from '@helpers/pressBack';
 
 describe('Cart e2e tests', () => {
   beforeAll(async () => {

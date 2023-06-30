@@ -11,7 +11,8 @@
       "@features": ["src/redux/features"],
       "@utils": ["src/utils"],
       "@route": ["src/router"],
-      "@mocks/*": ["__mocks__/*"]
+      "@mocks/*": ["__mocks__/*"],
+      "@helpers/*": ["src/helpers/*"]
     }
   }
 }

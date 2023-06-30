@@ -45,7 +45,6 @@ exports[`DiscountCard unit tests should render correctly 1`] = `
         950
          TL
       </Text>
-       
     </Text>
   </View>
 </View>
