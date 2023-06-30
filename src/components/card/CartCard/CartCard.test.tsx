@@ -11,7 +11,6 @@ const mockOnIncreaseQuantity = jest.fn();
 
 let wrapper: ReturnType<typeof render>;
 
-// TODO: Add tests
 describe('CartCard unit tests', () => {
   beforeEach(() => {
     wrapper = render(
@@ -37,47 +36,60 @@ describe('CartCard unit tests', () => {
     expect(wrapper.queryByText('Toplam: 450 TL')).not.toBeNull();
   });
 
-  // Gives error: Unable to find node on an unmounted component.
-  it.skip('should update total price and quantity title correctly if quantity increase', async () => {
-    const _wrapper = render(
+  it('should update total price and quantity title correctly if quantity increase', () => {
+    expect(wrapper.queryByText('Adet: 3')).not.toBeNull();
+    expect(wrapper.queryByText('Toplam: 450 TL')).not.toBeNull();
+
+    wrapper.rerender(
       <CartCard
         testID="test"
         product={mockData}
-        quantity={3}
+        quantity={4}
         onRemove={mockOnRemove}
         onDecreaseQuantity={mockOnDecreaseQuantity}
         onIncreaseQuantity={mockOnIncreaseQuantity}
       />,
     );
 
-    const increaseButton = _wrapper.getByTestId(
-      'test_cartcard_inputcounter_increase_touchable',
-    );
-    expect(_wrapper.queryByText('Adet: 3')).not.toBeNull();
-    expect(_wrapper.queryByText('Toplam: 450 TL')).not.toBeNull();
-
-    fireEvent.press(increaseButton);
-
-    waitFor(() => {
-      expect(wrapper.queryByText('Adet: 4')).not.toBeNull();
-      expect(wrapper.queryByText('Toplam: 600 TL')).not.toBeNull();
-    });
+    expect(wrapper.queryByText('Adet: 4')).not.toBeNull();
+    expect(wrapper.queryByText('Toplam: 600 TL')).not.toBeNull();
   });
 
-  // Gives error: Unable to find node on an unmounted component.
-  it.skip('should update total price and quantity title correctly if quantity decrease', () => {
-    const decreaseButton = wrapper.getByTestId(
-      'test_cartcard_inputcounter_decrease_touchable',
-    );
+  it('should update total price and quantity title correctly if quantity decrease', () => {
     expect(wrapper.queryByText('Adet: 3')).not.toBeNull();
     expect(wrapper.queryByText('Toplam: 450 TL')).not.toBeNull();
 
-    fireEvent(decreaseButton, 'onPress');
+    wrapper.rerender(
+      <CartCard
+        testID="test"
+        product={mockData}
+        quantity={2}
+        onRemove={mockOnRemove}
+        onDecreaseQuantity={mockOnDecreaseQuantity}
+        onIncreaseQuantity={mockOnIncreaseQuantity}
+      />,
+    );
 
-    waitFor(() => {
-      expect(wrapper.queryByText('Adet: 2')).not.toBeNull();
-      expect(wrapper.queryByText('Toplam: 300 TL')).not.toBeNull();
-    });
+    expect(wrapper.queryByText('Adet: 2')).not.toBeNull();
+    expect(wrapper.queryByText('Toplam: 300 TL')).not.toBeNull();
+  });
+
+  it('should trigger increase quantity', () => {
+    const increase = wrapper.getByTestId(
+      'test_cartcard_inputcounter_increase_touchable',
+    );
+    fireEvent(increase, 'onPress');
+
+    expect(mockOnIncreaseQuantity).toBeCalled();
+  });
+
+  it('should trigger decrease quantity', () => {
+    const decrease = wrapper.getByTestId(
+      'test_cartcard_inputcounter_decrease_touchable',
+    );
+    fireEvent(decrease, 'onPress');
+
+    expect(mockOnDecreaseQuantity).toBeCalled();
   });
 
   it('should trigger remove', () => {
