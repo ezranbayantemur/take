@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage unit tests should render correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#BDBDBD",
+        "fontFamily": "Lato-Regular",
+        "fontSize": 20,
+        "marginVertical": 16,
+      }
+    }
+  >
+    test error message
+  </Text>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#DB040E",
+        "borderRadius": 20,
+        "margin": 8,
+        "opacity": 1,
+        "padding": 16,
+      }
+    }
+    testID="undefined_button_touchable"
+  >
+    <Text
+      style={
+        {
+          "color": "#FBFBFB",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 15,
+        }
+      }
+      testID="undefined_button_text"
+    >
+      Tekrar Dene
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;

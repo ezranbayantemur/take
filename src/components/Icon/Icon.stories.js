@@ -18,7 +18,7 @@ export default IconMeta;
 
 export const Basic = {
   args: {
-    name: 'close',
+    name: 'cart',
     style: {
       fontSize: 45,
       color: '#bdbdbd',

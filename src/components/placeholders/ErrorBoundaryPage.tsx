@@ -3,12 +3,12 @@ import React from 'react';
 import Icon from '../Icon';
 import {color, font, padding, typography} from '@style';
 
-const ErrorPage = () => {
+const ErrorBoundaryPage = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.logo}>take!</Text>
       <Icon name="cross" style={styles.icon} />
-      <Text style={styles.text}>Bir problem ile oluştu</Text>
+      <Text style={styles.text}>Bir problem oluştu</Text>
     </View>
   );
 };
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ErrorPage;
+export default ErrorBoundaryPage;

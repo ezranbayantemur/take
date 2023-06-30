@@ -4,7 +4,7 @@ import {useNavigation, useRoute} from '@react-navigation/native';
 import {usePostProductDetailMutation} from '../../redux/api';
 import {addToCart} from '@features';
 import styles from './ProductDetail.style';
-import {Button, ProductDetailPlaceholder} from '@components';
+import {Button, ErrorPage, ProductDetailPlaceholder} from '@components';
 import {useDispatch} from 'react-redux';
 import routes from '@route';
 import {AppDispatch} from 'src/redux/store';
@@ -13,12 +13,16 @@ const ProductDetailPage = () => {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
   const dispatch = useDispatch<AppDispatch>();
-  const [getProductDetail, {data: productDetailData, isLoading}] =
+  const [getProductDetail, {data: productDetailData, isLoading, isError}] =
     usePostProductDetailMutation();
 
-  React.useEffect(() => {
+  const fetchProductDetail = React.useCallback(() => {
     getProductDetail({product_id: route.params.product_id});
   }, [getProductDetail, route.params.product_id]);
+
+  React.useEffect(() => {
+    fetchProductDetail();
+  }, [fetchProductDetail]);
 
   const handleAddToCart = () => {
     dispatch(addToCart(productDetailData!));
@@ -31,6 +35,15 @@ const ProductDetailPage = () => {
 
   if (!productDetailData) {
     return null;
+  }
+
+  if (isError) {
+    return (
+      <ErrorPage
+        message="Ürün detayı getirilirken bir hata oluştu"
+        onRetry={fetchProductDetail}
+      />
+    );
   }
 
   return (

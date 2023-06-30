@@ -5,6 +5,7 @@ import type {SearchBarProps} from './SearchBar.types';
 const SearchBarMeta: Meta<SearchBarProps<any>> = {
   args: {
     placeholder: 'Ara...',
+    data: [],
   },
   title: 'SearchBar',
   component: SearchBar,

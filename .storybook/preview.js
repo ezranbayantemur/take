@@ -11,7 +11,7 @@ export const parameters = {
 
 export const decorators = [
   Story => (
-    <View style={{paddingVertical: 20, paddingHorizontal: 10}}>
+    <View style={{flex: 1, paddingVertical: 20, paddingHorizontal: 10}}>
       <Story />
     </View>
   ),

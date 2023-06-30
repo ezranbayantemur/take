@@ -1,9 +1,10 @@
-import {FlatList, ListRenderItem, SafeAreaView} from 'react-native';
 import React, {useEffect} from 'react';
+import {FlatList, ListRenderItem, SafeAreaView} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {usePostProductsForCategoryMutation} from '../../redux/api';
 import {Product} from '@types';
 import {
+  ErrorPage,
   ProductCard,
   ProductSearchEmptyPlaceholder,
   ProductsPlaceholder,
@@ -15,13 +16,17 @@ import routes from '@route';
 const ProductsPage = () => {
   const route = useRoute<any>();
   const navigation = useNavigation<any>();
-  const [getProducts, {data: productData = [], isLoading}] =
+  const [getProducts, {data: productData = [], isLoading, isError}] =
     usePostProductsForCategoryMutation();
   const [productList, setProductList] = React.useState<Product[]>([]);
 
-  useEffect(() => {
+  const fetchProducts = React.useCallback(() => {
     getProducts({category_name: route.params.category_name});
   }, [getProducts, route.params.category_name]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
 
   const handleOnProductSelect = (product: Product) => {
     navigation.navigate(routes.PRODUCT_DETAIL, {product_id: product.id});
@@ -41,6 +46,15 @@ const ProductsPage = () => {
 
   if (isLoading) {
     return <ProductsPlaceholder />;
+  }
+
+  if (isError) {
+    return (
+      <ErrorPage
+        message="Ürünler getirilirken bir hata oluştu"
+        onRetry={fetchProducts}
+      />
+    );
   }
 
   return (

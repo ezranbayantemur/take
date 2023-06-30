@@ -3,7 +3,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
 import routes from '@route';
-import {CategoryCard, DiscoverPlaceholder} from '@components';
+import {CategoryCard, DiscoverPlaceholder, ErrorPage} from '@components';
 import type {DiscoverCategory, ShowCaseProduct} from '@types';
 import {RootState} from '../../redux/store';
 import {useGetDiscoverFeedQuery} from '../../redux/api';
@@ -11,7 +11,12 @@ import styles from './Discover.style';
 
 const DiscoverPage = () => {
   const navigation = useNavigation<any>();
-  const {data: discoverData, isLoading} = useGetDiscoverFeedQuery();
+  const {
+    data: discoverData,
+    isLoading,
+    isError,
+    refetch,
+  } = useGetDiscoverFeedQuery();
   const userFirstName = useSelector<RootState, string | undefined>(
     state => state.auth.userSession?.first_name,
   );
@@ -41,6 +46,15 @@ const DiscoverPage = () => {
       onCategorySelect={handleOnCategorySelect}
     />
   );
+
+  if (isError) {
+    return (
+      <ErrorPage
+        message="Keşfet ürünleri getirilirken bir hata oluştu"
+        onRetry={refetch}
+      />
+    );
+  }
 
   return (
     <SafeAreaView testID="discover_page">
