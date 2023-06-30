@@ -73,6 +73,7 @@ const ProductsPage = (): React.ReactElement => {
             testID="products_searchbar"
             placeholder="Ürün ara..."
             data={productData}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore: TODO: Fix this
             onSearch={handleOnSearch}
           />

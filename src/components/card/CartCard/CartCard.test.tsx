@@ -1,5 +1,5 @@
 import React from 'react';
-import {fireEvent, render, waitFor} from '@testing-library/react-native';
+import {fireEvent, render} from '@testing-library/react-native';
 import productsData from '@mocks/products_for_category.json';
 import CartCard from './CartCard';
 import type {Product} from '@types';

@@ -2,7 +2,7 @@ import React from 'react';
 import {ErrorBoundaryPage} from '@components';
 
 type ErrorBoundaryProps = {
-  children: React.ReactNode;
+  children: React.ReactElement;
 };
 
 /**
@@ -18,7 +18,7 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps> {
     return {hasError: true};
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
+  componentDidCatch(error: any, errorInfo: any): void {
     /**
      * We can capture the error with any error tracking tool
      * Like:
@@ -30,7 +30,7 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps> {
      */
     console.log('error', error, errorInfo);
   }
-  render() {
+  render(): React.ReactElement {
     if (this.state.hasError) {
       return <ErrorBoundaryPage />;
     }

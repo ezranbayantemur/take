@@ -1,4 +1,4 @@
-import {by, device, expect, element, waitFor} from 'detox';
+import {by, device, expect, element} from 'detox';
 
 describe('Register e2e tests', () => {
   beforeAll(async () => {
