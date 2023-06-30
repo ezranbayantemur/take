@@ -18,10 +18,14 @@ describe('Login e2e tests', () => {
     await element(by.id('login_password_input')).typeText('123456');
   });
 
-  //TODO: Check this test
-  it.skip('should show error for sign action with empty input ', async () => {
+  it('should show error for sign action with empty input ', async () => {
     await element(by.id('login_sign_button_touchable')).tap();
-    await expect(element(by.text('Bu alan zorunludur'))).toBeVisible();
+    await expect(
+      element(by.text('Bu alan zorunludur')).atIndex(0),
+    ).toBeVisible();
+    await expect(
+      element(by.text('Bu alan zorunludur')).atIndex(1),
+    ).toBeVisible();
   });
 
   it('should show error for invalid email input ', async () => {
