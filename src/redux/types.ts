@@ -11,7 +11,7 @@ export interface ProductRequestType {
 }
 
 export interface ProductDetailRequestType {
-  product_id: string;
+  product_id: number;
 }
 
 export interface AuthResponseType {

@@ -6,12 +6,12 @@ import {addToCart} from '@features';
 import styles from './ProductDetail.style';
 import {Button, ErrorPage, ProductDetailPlaceholder} from '@components';
 import {useDispatch} from 'react-redux';
-import routes from '@route';
+import {routes, ProductDetailScreenProps} from '@route';
 import {AppDispatch} from 'src/redux/store';
 
 const ProductDetailPage = () => {
-  const navigation = useNavigation<any>();
-  const route = useRoute<any>();
+  const navigation = useNavigation<ProductDetailScreenProps['navigation']>();
+  const route = useRoute<ProductDetailScreenProps['route']>();
   const dispatch = useDispatch<AppDispatch>();
   const [getProductDetail, {data: productDetailData, isLoading, isError}] =
     usePostProductDetailMutation();

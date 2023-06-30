@@ -11,14 +11,14 @@ import {
   SearchBar,
 } from '@components';
 import styles from './Products.style';
-import routes from '@route';
+import {routes, ProductsScreenProps} from '@route';
 
 const ProductsPage = () => {
-  const route = useRoute<any>();
-  const navigation = useNavigation<any>();
+  const route = useRoute<ProductsScreenProps['route']>();
+  const navigation = useNavigation<ProductsScreenProps['navigation']>();
+  const [productList, setProductList] = React.useState<Product[]>([]);
   const [getProducts, {data: productData = [], isLoading, isError}] =
     usePostProductsForCategoryMutation();
-  const [productList, setProductList] = React.useState<Product[]>([]);
 
   const fetchProducts = React.useCallback(() => {
     getProducts({category_name: route.params.category_name});

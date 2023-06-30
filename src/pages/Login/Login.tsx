@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
-import routes from '@route';
+import {routes, LoginScreenProps} from '@route';
 import {Button, Input} from '@components';
 import {usePostLoginMutation} from '../../redux/api';
 
@@ -18,7 +18,7 @@ const Login = () => {
   const [login, {data: loginResponse, isLoading, isError}] =
     usePostLoginMutation();
   const dispatch = useDispatch<AppDispatch>();
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation<LoginScreenProps['navigation']>();
 
   const handleSetCredentials = React.useCallback(async () => {
     if (loginResponse && loginResponse.message === Status.SUCCESS) {

@@ -2,7 +2,7 @@ import {SafeAreaView, FlatList, ListRenderItem, Text} from 'react-native';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
-import routes from '@route';
+import {routes, DiscoverScreenProps} from '@route';
 import {CategoryCard, DiscoverPlaceholder, ErrorPage} from '@components';
 import type {DiscoverCategory, ShowCaseProduct} from '@types';
 import {RootState} from '../../redux/store';
@@ -10,7 +10,7 @@ import {useGetDiscoverFeedQuery} from '../../redux/api';
 import styles from './Discover.style';
 
 const DiscoverPage = () => {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation<DiscoverScreenProps['navigation']>();
   const {
     data: discoverData,
     isLoading,

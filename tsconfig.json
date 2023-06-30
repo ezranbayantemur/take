@@ -10,8 +10,8 @@
       "@hooks": ["src/hooks"],
       "@features": ["src/redux/features"],
       "@utils": ["src/utils"],
-      "@mocks/*": ["__mocks__/*"],
-      "@route": ["src/router/routes.ts"]
+      "@route": ["src/router"],
+      "@mocks/*": ["__mocks__/*"]
     }
   }
 }

@@ -13,7 +13,7 @@ module.exports = {
           '@utils': './src/utils',
           '@enums': './src/enums',
           '@features': './src/redux/features',
-          '@route': './src/router/routes.ts',
+          '@route': './src/router',
         },
       },
     ],

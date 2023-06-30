@@ -13,9 +13,10 @@ import {
 import {addToCart, decreaseProductOnCart, removeProductOrder} from '@features';
 import {Discount} from '@types';
 import styles from './Cart.style';
+import {CartScreenProps} from '@route';
 
 const CartPage = () => {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation<CartScreenProps['navigation']>();
   const dispatch = useDispatch<AppDispatch>();
   const productOrders = useSelector<RootState, ProductOrder[]>(
     state => state.cart.productOrders,

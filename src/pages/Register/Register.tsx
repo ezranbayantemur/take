@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
-import routes from '@route';
+import {routes, RegisterScreenProps} from '@route';
 import {Button, Input} from '@components';
 
 import {
@@ -14,7 +14,7 @@ import {usePostRegisterMutation} from '../../redux/api';
 import {Status} from '@enums';
 
 const Register = () => {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation<RegisterScreenProps['navigation']>();
   const [register, {data: registerResponse, isLoading, isError}] =
     usePostRegisterMutation();
 
