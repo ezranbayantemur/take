@@ -1,9 +1,8 @@
-import {View} from 'react-native';
 import React from 'react';
+import {View} from 'react-native';
 import {useFuseSearch} from '@hooks';
-import type {SearchBarProps} from './SearchBar.types';
-
 import Input from '../Input';
+import type {SearchBarProps} from './SearchBar.types';
 
 const SearchBar = <T,>({
   data,

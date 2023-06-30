@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import {FlatList, SafeAreaView} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
-import {usePostProductsForCategoryMutation} from '../../redux/api';
 import {
   ErrorPage,
   ProductCard,
@@ -9,8 +8,9 @@ import {
   ProductsPlaceholder,
   SearchBar,
 } from '@components';
-import styles from './Products.style';
 import {routes} from '@route';
+import styles from './Products.style';
+import {usePostProductsForCategoryMutation} from '../../redux/api';
 import type {ProductsScreenProps} from '@route';
 import type {ListRenderItem} from 'react-native';
 import type {Product} from '@types';

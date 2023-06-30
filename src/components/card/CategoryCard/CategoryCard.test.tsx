@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import CategoryCard from './CategoryCard';
 import discoverData from '@mocks/discover_feed/discover.json';
+import CategoryCard from './CategoryCard';
 import type {DiscoverCategory} from '@types';
 
 const mockData: DiscoverCategory = discoverData[0];

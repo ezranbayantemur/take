@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react-native';
 import {SearchBar} from '@components';
+import type {Meta, StoryObj} from '@storybook/react-native';
 import type {SearchBarProps} from './SearchBar.types';
 
 const SearchBarMeta: Meta<SearchBarProps<any>> = {

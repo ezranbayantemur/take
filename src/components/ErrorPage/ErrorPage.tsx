@@ -1,9 +1,8 @@
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
+import styles from './ErrorPage.styles';
 import Button from '../Button';
 import type {ErrorPageProps} from './types';
-
-import styles from './ErrorPage.styles';
 
 const ErrorPage = ({
   message = 'Bir problem oluştu',

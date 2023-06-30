@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import ProductCard from './ProductCard';
 import productData from '@mocks/products_for_category.json';
+import ProductCard from './ProductCard';
 import type {Product} from '@types';
 
 const mockData: Product = productData[0];

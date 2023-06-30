@@ -1,7 +1,7 @@
 import React from 'react';
 import {act, fireEvent, render} from '@testing-library/react-native';
-import SearchBar from './SearchBar';
 import products from '@mocks/products_for_category.json';
+import SearchBar from './SearchBar';
 
 const mockOnSearch = jest.fn();
 

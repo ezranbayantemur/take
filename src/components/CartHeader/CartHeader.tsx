@@ -3,8 +3,8 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
 import {routes} from '@route';
-import Icon from '../Icon/Icon';
 import style from './CartHeader.style';
+import Icon from '../Icon/Icon';
 import type {CartScreenProps} from '@route';
 import type {RootState} from '../../redux/store';
 

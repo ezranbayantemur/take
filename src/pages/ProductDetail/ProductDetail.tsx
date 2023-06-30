@@ -1,12 +1,12 @@
 import React from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
-import {usePostProductDetailMutation} from '../../redux/api';
 import {addToCart} from '@features';
-import styles from './ProductDetail.style';
 import {Button, ErrorPage, ProductDetailPlaceholder} from '@components';
 import {useDispatch} from 'react-redux';
 import {routes} from '@route';
+import styles from './ProductDetail.style';
+import {usePostProductDetailMutation} from '../../redux/api';
 import type {ProductDetailScreenProps} from '@route';
 import type {AppDispatch} from '../../redux/store';
 

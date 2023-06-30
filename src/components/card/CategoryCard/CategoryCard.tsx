@@ -1,10 +1,9 @@
-import {View, Text, ScrollView, TouchableWithoutFeedback} from 'react-native';
 import React from 'react';
+import {View, Text, ScrollView, TouchableWithoutFeedback} from 'react-native';
+import styles from './CategoryCard.style';
 import ShowCaseProductCard from '../ShowCaseProductCard';
 import type {ShowCaseProduct} from '@types';
 import type {CategoryCardProps} from './CategoryCard.types';
-
-import styles from './CategoryCard.style';
 
 const CategoryCard = ({
   testID,

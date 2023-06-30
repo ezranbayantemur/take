@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {state} from './state';
 import {discountApplier} from '@utils';
+import {state} from './state';
 import categoryDiscountPlans from './categoryDiscountPlans';
 import type {Product, ProductOrder} from '@types';
 import type {PayloadAction} from '@reduxjs/toolkit';

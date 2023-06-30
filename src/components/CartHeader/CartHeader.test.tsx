@@ -1,9 +1,9 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import CartHeader from './CartHeader';
 import configureMockStore from 'redux-mock-store';
 import {Provider} from 'react-redux';
 import {routes} from '@route';
+import CartHeader from './CartHeader';
 
 const mockOnProductSelect = jest.fn();
 const mockStore = configureMockStore();

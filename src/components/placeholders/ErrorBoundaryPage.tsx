@@ -1,7 +1,7 @@
 import {Text, StyleSheet, View} from 'react-native';
 import React from 'react';
-import Icon from '../Icon';
 import {color, font, padding, typography} from '@style';
+import Icon from '../Icon';
 
 const ErrorBoundaryPage = () => {
   return (

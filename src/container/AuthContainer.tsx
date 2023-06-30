@@ -1,8 +1,8 @@
 import React from 'react';
 import {Splash} from '@components';
 import {useDispatch, useSelector} from 'react-redux';
-import SplashScreen from '../helpers/splash-screen/splash-screen';
 import {controlSessionThunk} from '@features';
+import SplashScreen from '../helpers/splash-screen/splash-screen';
 import type {AppDispatch, RootState} from '../redux/store';
 
 type Props = {

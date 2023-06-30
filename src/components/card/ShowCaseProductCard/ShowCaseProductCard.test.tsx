@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import ShowCaseProductCard from './ShowCaseProductCard';
 import discoverData from '@mocks/discover_feed/discover.json';
+import ShowCaseProductCard from './ShowCaseProductCard';
 import type {ShowCaseProduct} from '@types';
 
 const mockData: ShowCaseProduct = discoverData[0].showcase_products[0];

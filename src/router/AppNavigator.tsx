@@ -1,10 +1,10 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import routes from './routes';
-import {Discover, Products, ProductDetail, Cart} from '../pages';
 import {CartHeader} from '@components';
 import {color} from '@style';
 import {styles} from './Router.style';
+import routes from './routes';
+import {Discover, Products, ProductDetail, Cart} from '../pages';
 import type {RootStackParamList} from './Router.types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();

@@ -1,9 +1,9 @@
 import {Image, Text, View} from 'react-native';
 import React from 'react';
-import InputCounter from '../../InputCounter';
 import styles from './CartCard.style';
-import type {CartCardProps} from './CartCard.types';
+import InputCounter from '../../InputCounter';
 import Icon from '../../Icon';
+import type {CartCardProps} from './CartCard.types';
 
 const CartCard = ({
   testID,

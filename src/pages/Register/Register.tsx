@@ -4,15 +4,14 @@ import {Formik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
 import {routes} from '@route';
 import {Button, Input} from '@components';
-import type {RegisterScreenProps} from '@route';
-
+import {Status} from '@enums';
+import styles from './Register.style';
 import {
   initialRegisterFormValues,
   registerValidationSchema,
 } from './formHelpers';
-import styles from './Register.style';
 import {usePostRegisterMutation} from '../../redux/api';
-import {Status} from '@enums';
+import type {RegisterScreenProps} from '@route';
 
 const Register = () => {
   const navigation = useNavigation<RegisterScreenProps['navigation']>();

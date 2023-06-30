@@ -1,9 +1,8 @@
 import {ProductCard} from '@components';
+import productsData from '@mocks/products_for_category.json';
 import type {Meta, StoryObj} from '@storybook/react-native';
 import type {Product} from '@types';
 import type {ProductCardProps} from './ProductCard.types';
-
-import productsData from '@mocks/products_for_category.json';
 
 const mockData: Product = productsData[0];
 

@@ -1,6 +1,6 @@
 import {renderHook, act} from '@testing-library/react-hooks';
-import useFuseSearch from './useFuseSearch';
 import products from '@mocks/products_for_category.json';
+import useFuseSearch from './useFuseSearch';
 
 const options = {
   keys: ['product_name'],
