@@ -1,4 +1,4 @@
-import {by, device, expect, element} from 'detox';
+import {by, device, expect, element, waitFor} from 'detox';
 
 describe('Register e2e tests', () => {
   beforeAll(async () => {
@@ -26,12 +26,18 @@ describe('Register e2e tests', () => {
     await element(by.id('register_repassword_input')).typeText('123456');
     await element(by.id('register_sign_button_touchable')).tap();
   });
-  /**
-   * On this test it cannot find the text matcher
-   */
-  it.skip('should show error for sign action with empty input ', async () => {
-    await element(by.id('login_sign_button_touchable')).tap();
-    await expect(element(by.text('Bu alan zorunludur'))).toBeVisible();
+
+  it('should show error for sign action with empty input ', async () => {
+    await element(by.id('register_sign_button_touchable')).tap();
+    await expect(
+      element(by.text('Bu alan zorunludur')).atIndex(0),
+    ).toBeVisible();
+    await expect(
+      element(by.text('Bu alan zorunludur')).atIndex(1),
+    ).toBeVisible();
+    await expect(
+      element(by.text('Bu alan zorunludur')).atIndex(2),
+    ).toBeVisible();
   });
 
   it('should show error for invalid email input ', async () => {
@@ -39,11 +45,10 @@ describe('Register e2e tests', () => {
     await expect(element(by.text('Geçersiz e-posta'))).toBeVisible();
   });
 
-  //TODO: Check this test
-  it.skip('should show error for passwords does not match ', async () => {
+  it('should show error for passwords does not match ', async () => {
     await element(by.id('register_email_input')).typeText('asdg');
-    await element(by.id('register_password_input')).typeText('123456');
-    await element(by.id('register_repassword_input')).typeText('123455');
+    await element(by.id('register_password_input')).replaceText('123456');
+    await element(by.id('register_repassword_input')).replaceText('123455');
 
     await expect(element(by.text('Parolalar uyuşmuyor'))).toBeVisible();
   });
