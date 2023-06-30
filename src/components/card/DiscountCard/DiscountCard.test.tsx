@@ -70,7 +70,7 @@ describe('DiscountCard unit tests', () => {
 
     expect(
       wrapper.queryByText(
-        `Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 0 TL'lik daha ürün sepete ekleyin`,
+        "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 0 TL'lik daha ürün sepete ekleyin",
       ),
     ).toBeNull();
   });

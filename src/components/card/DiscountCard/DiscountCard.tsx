@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-import {DiscountCardProps} from './DiscountCard.types';
 import styles from './DiscountCard.style';
+import type {DiscountCardProps} from './DiscountCard.types';
 
 const categoryTitleParser: Record<string, string> = {
   jewelry: 'Takı',

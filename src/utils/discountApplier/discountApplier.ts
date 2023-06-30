@@ -1,4 +1,4 @@
-import {Discount, Product} from '@types';
+import type {Discount, Product} from '@types';
 
 interface DiscountApplierProps {
   productsInCart: Product[];

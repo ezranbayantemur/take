@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react';
-import {FlatList, ListRenderItem, SafeAreaView} from 'react-native';
+import {FlatList, SafeAreaView} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {usePostProductsForCategoryMutation} from '../../redux/api';
-import {Product} from '@types';
 import {
   ErrorPage,
   ProductCard,
@@ -11,9 +10,12 @@ import {
   SearchBar,
 } from '@components';
 import styles from './Products.style';
-import {routes, ProductsScreenProps} from '@route';
+import {routes} from '@route';
+import type {ProductsScreenProps} from '@route';
+import type {ListRenderItem} from 'react-native';
+import type {Product} from '@types';
 
-const ProductsPage = () => {
+const ProductsPage = (): React.ReactElement => {
   const route = useRoute<ProductsScreenProps['route']>();
   const navigation = useNavigation<ProductsScreenProps['navigation']>();
   const [productList, setProductList] = React.useState<Product[]>([]);

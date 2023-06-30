@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react-native';
 import {CategoryCard} from '@components';
-import {DiscoverCategory} from '@types';
+import type {Meta, StoryObj} from '@storybook/react-native';
+import type {DiscoverCategory} from '@types';
 import type {CategoryCardProps} from './CategoryCard.types';
 
 import discoverData from '@mocks/discover_feed/discover.json';

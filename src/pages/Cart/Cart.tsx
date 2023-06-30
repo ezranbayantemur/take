@@ -1,8 +1,6 @@
-import {FlatList, ListRenderItem, SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
+import {FlatList, SafeAreaView, Text, View} from 'react-native';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
-import {AppDispatch, RootState} from '../../redux/store';
-import {ProductOrder} from '@types';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   Button,
@@ -11,9 +9,12 @@ import {
   CartEmptyPlaceholder,
 } from '@components';
 import {addToCart, decreaseProductOnCart, removeProductOrder} from '@features';
-import {Discount} from '@types';
 import styles from './Cart.style';
-import {CartScreenProps} from '@route';
+import type {Discount} from '@types';
+import type {ListRenderItem} from 'react-native';
+import type {AppDispatch, RootState} from '../../redux/store';
+import type {ProductOrder} from '@types';
+import type {CartScreenProps} from '@route';
 
 const CartPage = () => {
   const navigation = useNavigation<CartScreenProps['navigation']>();

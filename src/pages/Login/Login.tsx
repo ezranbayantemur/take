@@ -2,17 +2,17 @@ import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
-import {routes, LoginScreenProps} from '@route';
+import {routes} from '@route';
 import {Button, Input} from '@components';
 import {usePostLoginMutation} from '../../redux/api';
-
 import {initialLoginFormValues, loginValidationSchema} from './formHelpers';
 import styles from './Login.style';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Status, StorageKeys} from '@enums';
 import {useDispatch} from 'react-redux';
 import {setUserSession} from '@features';
-import {AppDispatch} from 'src/redux/store';
+import type {LoginScreenProps} from '@route';
+import type {AppDispatch} from 'src/redux/store';
 
 const Login = () => {
   const [login, {data: loginResponse, isLoading, isError}] =

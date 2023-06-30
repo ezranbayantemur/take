@@ -1,4 +1,4 @@
-import {ShowCaseProduct} from './Product';
+import type {ShowCaseProduct} from './Product';
 
 export interface DiscoverCategory {
   category_id: string;

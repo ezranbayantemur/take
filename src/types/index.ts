@@ -1,8 +1,8 @@
-import {Discount} from './Discount';
-import {User} from './User';
-import {ProductOrder} from './ProductOrder';
-import {Product, ShowCaseProduct} from './Product';
-import {DiscoverCategory} from './DiscoverCategory';
+import type {Discount} from './Discount';
+import type {User} from './User';
+import type {ProductOrder} from './ProductOrder';
+import type {Product, ShowCaseProduct} from './Product';
+import type {DiscoverCategory} from './DiscoverCategory';
 
 export type {
   Product,

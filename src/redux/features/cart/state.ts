@@ -1,4 +1,4 @@
-import {Product, Discount, ProductOrder} from '@types';
+import type {Product, Discount, ProductOrder} from '@types';
 export interface CartState {
   productOrders: ProductOrder[];
   allProductsInCart: Product[];

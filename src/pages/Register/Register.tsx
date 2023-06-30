@@ -2,8 +2,9 @@ import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {useNavigation} from '@react-navigation/native';
-import {routes, RegisterScreenProps} from '@route';
+import {routes} from '@route';
 import {Button, Input} from '@components';
+import type {RegisterScreenProps} from '@route';
 
 import {
   initialRegisterFormValues,

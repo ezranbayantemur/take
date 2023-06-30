@@ -9,13 +9,17 @@ const URL = Platform.select({
 });
 
 export default createAsyncThunk('session/controlSession', async _ => {
+  if (!URL) {
+    throw new Error('URL is not defined');
+  }
+
   const storedSessionValue = await AsyncStorage.getItem(StorageKeys.SESSION);
 
   if (storedSessionValue) {
     const user = JSON.parse(storedSessionValue);
 
     const userTokenControlResponse = await (
-      await fetch(URL!, {
+      await fetch(URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

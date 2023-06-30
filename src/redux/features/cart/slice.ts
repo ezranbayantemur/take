@@ -1,9 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
-import type {PayloadAction} from '@reduxjs/toolkit';
 import {state} from './state';
-import {Product, ProductOrder} from '@types';
 import {discountApplier} from '@utils';
 import categoryDiscountPlans from './categoryDiscountPlans';
+import type {Product, ProductOrder} from '@types';
+import type {PayloadAction} from '@reduxjs/toolkit';
 
 export const cartSlice = createSlice({
   name: 'cart',

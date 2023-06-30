@@ -1,4 +1,4 @@
-import {IconProps as VectorIconProps} from 'react-native-vector-icons/Icon';
+import type {IconProps as VectorIconProps} from 'react-native-vector-icons/Icon';
 
 type IcoMoonProps = Omit<VectorIconProps, 'name'>;
 

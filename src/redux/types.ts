@@ -1,5 +1,5 @@
-import {Status} from '@enums';
-import {DiscoverCategory, Product, User} from '@types';
+import type {Status} from '@enums';
+import type {DiscoverCategory, Product, User} from '@types';
 
 export interface AuthRequestType {
   email: string;

@@ -1,4 +1,4 @@
-export enum routes {
+enum routes {
   LOGIN = 'LoginScreen',
   REGISTER = 'RegisterScreen',
   DISCOVER = 'DiscoverScreen',

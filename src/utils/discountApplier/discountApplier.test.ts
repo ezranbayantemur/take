@@ -1,5 +1,5 @@
-import {Product} from '@types';
 import discountApplier from './discountApplier';
+import type {Product} from '@types';
 
 const mockData: Product[] = [
   {

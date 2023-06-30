@@ -1,4 +1,4 @@
-import routes from './routes';
+import type routes from './routes';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 export type RootStackParamList = {

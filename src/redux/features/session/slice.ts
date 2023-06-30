@@ -1,8 +1,8 @@
 import {createSlice} from '@reduxjs/toolkit';
-import type {PayloadAction} from '@reduxjs/toolkit';
 import {state} from './state';
 import controlSession from './thunk/controlSession';
-import {User} from '@types';
+import type {PayloadAction} from '@reduxjs/toolkit';
+import type {User} from '@types';
 
 export const authSlice = createSlice({
   name: 'auth',

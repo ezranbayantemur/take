@@ -6,10 +6,11 @@ import {addToCart} from '@features';
 import styles from './ProductDetail.style';
 import {Button, ErrorPage, ProductDetailPlaceholder} from '@components';
 import {useDispatch} from 'react-redux';
-import {routes, ProductDetailScreenProps} from '@route';
-import {AppDispatch} from 'src/redux/store';
+import {routes} from '@route';
+import type {ProductDetailScreenProps} from '@route';
+import type {AppDispatch} from '../../redux/store';
 
-const ProductDetailPage = () => {
+const ProductDetailPage = (): React.ReactElement => {
   const navigation = useNavigation<ProductDetailScreenProps['navigation']>();
   const route = useRoute<ProductDetailScreenProps['route']>();
   const dispatch = useDispatch<AppDispatch>();
@@ -34,7 +35,7 @@ const ProductDetailPage = () => {
   }
 
   if (!productDetailData) {
-    return null;
+    return <React.Fragment />;
   }
 
   if (isError) {

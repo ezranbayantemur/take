@@ -1,7 +1,7 @@
 import React from 'react';
-import type {Meta, StoryObj} from '@storybook/react-native';
 import {DiscountCard} from '@components';
-import {DiscountCardProps} from './DiscountCard.types';
+import type {Meta, StoryObj} from '@storybook/react-native';
+import type {DiscountCardProps} from './DiscountCard.types';
 
 const DiscountCardMeta: Meta<DiscountCardProps> = {
   title: 'DiscountCard',

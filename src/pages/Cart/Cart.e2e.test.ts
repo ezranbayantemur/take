@@ -54,7 +54,7 @@ describe('Cart e2e tests', () => {
     await expect(
       element(
         by.text(
-          `Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin`,
+          "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin",
         ),
       ),
     ).toBeVisible();
@@ -68,7 +68,7 @@ describe('Cart e2e tests', () => {
     await expect(
       element(
         by.text(
-          `Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin`,
+          "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin",
         ),
       ),
     ).toBeVisible();
@@ -81,7 +81,7 @@ describe('Cart e2e tests', () => {
     await expect(
       element(
         by.text(
-          `Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin`,
+          "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin",
         ),
       ),
     ).toBeVisible();
@@ -95,7 +95,7 @@ describe('Cart e2e tests', () => {
     await expect(
       element(
         by.text(
-          `Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin`,
+          "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin",
         ),
       ),
     ).toBeVisible();
@@ -106,7 +106,7 @@ describe('Cart e2e tests', () => {
     await expect(
       element(
         by.text(
-          `Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 200 TL'lik daha ürün sepete ekleyin`,
+          "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 200 TL'lik daha ürün sepete ekleyin",
         ),
       ),
     ).toBeVisible();
@@ -117,7 +117,7 @@ describe('Cart e2e tests', () => {
     await expect(
       element(
         by.text(
-          `Elektronik kategorisindeki ürünlere %5 indirim uygulandı. Yeni toplu fiyat 1200 TL yerine 1140 TL`,
+          'Elektronik kategorisindeki ürünlere %5 indirim uygulandı. Yeni toplu fiyat 1200 TL yerine 1140 TL',
         ),
       ),
     ).toBeVisible();

@@ -3,12 +3,13 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
 import {routes} from '@route';
-import {RootState} from '../../redux/store';
 import Icon from '../Icon/Icon';
 import style from './CartHeader.style';
+import type {CartScreenProps} from '@route';
+import type {RootState} from '../../redux/store';
 
-const CartHeader = () => {
-  const navigation = useNavigation<any>();
+const CartHeader = (): React.ReactElement => {
+  const navigation = useNavigation<CartScreenProps['navigation']>();
   const productInCartCount = useSelector<RootState, number>(
     state => state.cart.allProductsInCart.length,
   );

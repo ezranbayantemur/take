@@ -2,7 +2,7 @@ import React from 'react';
 import {fireEvent, render, waitFor} from '@testing-library/react-native';
 import CartCard from './CartCard';
 import productsData from '@mocks/products_for_category.json';
-import {Product} from '@types';
+import type {Product} from '@types';
 
 const mockData: Product = productsData[2];
 const mockOnRemove = jest.fn();
