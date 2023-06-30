@@ -21,7 +21,7 @@ const DiscountCard = ({
     remainingPricetoApplyDiscount,
     totalPrice,
   },
-}: DiscountCardProps) => {
+}: DiscountCardProps): React.ReactElement | null => {
   if (!hasProduct) {
     return null;
   }
@@ -36,7 +36,7 @@ const DiscountCard = ({
             indirim uygulandı. Yeni toplu fiyat {totalPrice} TL yerine{' '}
             <Text style={styles.discount_new_price_text}>
               {discountedPrice} TL
-            </Text>{' '}
+            </Text>
           </Text>
         </View>
       </View>

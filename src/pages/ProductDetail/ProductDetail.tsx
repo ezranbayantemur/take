@@ -10,7 +10,7 @@ import {usePostProductDetailMutation} from '../../redux/api';
 import type {ProductDetailScreenProps} from '@route';
 import type {AppDispatch} from '../../redux/store';
 
-const ProductDetailPage = (): React.ReactElement => {
+const ProductDetailPage = (): React.ReactElement | null => {
   const navigation = useNavigation<ProductDetailScreenProps['navigation']>();
   const route = useRoute<ProductDetailScreenProps['route']>();
   const dispatch = useDispatch<AppDispatch>();
@@ -35,7 +35,7 @@ const ProductDetailPage = (): React.ReactElement => {
   }
 
   if (!productDetailData) {
-    return <React.Fragment />;
+    return null;
   }
 
   if (isError) {

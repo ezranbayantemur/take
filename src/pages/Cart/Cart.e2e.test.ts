@@ -60,8 +60,7 @@ describe('Cart e2e tests', () => {
     ).toBeVisible();
   });
 
-  // Skipping this test because of detox can't find the last text even if it is visible.
-  it.skip('should show correct discount text if discount not apply for multiple product', async () => {
+  it('should show correct discount text if discount not apply for multiple product', async () => {
     await element(by.text('Cep Telefonu')).tap();
     await element(by.text('400 TL')).tap();
     await element(by.text('Sepete Ekle')).tap();
@@ -81,14 +80,13 @@ describe('Cart e2e tests', () => {
     await expect(
       element(
         by.text(
-          "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 600 TL'lik daha ürün sepete ekleyin",
+          "Elektronik kategorisinde %5 indirim fırsatını yakalamak için bu kategoriden 350 TL'lik daha ürün sepete ekleyin",
         ),
       ),
     ).toBeVisible();
   });
 
-  // Skipping this test because of detox can't find the last text even if it is visible.
-  it.skip('should show correct discount text if there is a discount to apply', async () => {
+  it('should show correct discount text if there is a discount to apply', async () => {
     await element(by.text('Cep Telefonu')).tap();
     await element(by.text('400 TL')).tap();
     await element(by.text('Sepete Ekle')).tap();
@@ -114,6 +112,7 @@ describe('Cart e2e tests', () => {
     await pressBack();
 
     await element(by.text('Sepete Ekle')).tap();
+
     await expect(
       element(
         by.text(
